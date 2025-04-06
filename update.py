@@ -9,9 +9,9 @@ import openai import OpenAI
 rss_url = 'https://pubmed.ncbi.nlm.nih.gov/rss/search/1jeAVjyuKpXgEVWo0CwWvCsGuJkv73KyXjHBP9vV1tH6idhEe7/?limit=100&utm_campaign=pubmed-2&fc=20250406034018'
 
 access_token = os.getenv('GITHUB_TOKEN')
-openaiapikey = os.getenv('OPENAI_API_KEY')
+deepseekapikey = os.getenv('DEEPSEEK_API_KEY')
 
-client = OpenAI(api_key="sk-a178b93d4aa24cb5ac4a09647cdae2b4", base_url="https://api.deepseek.com/v1")
+client = OpenAI(api_key="deepseekapikey", base_url="https://api.deepseek.com/v1")
 
 def extract_scores(text):
     # Use OpenAI API to get Research Score and Social Impact Score separately. Change model to deepseek-chat for deepseek-v3
