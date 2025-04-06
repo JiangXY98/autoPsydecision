@@ -12,28 +12,28 @@ access_token = os.getenv('GITHUB_TOKEN')
 deepseekapikey = os.getenv('DEEPSEEK_API_KEY')
 
 client = OpenAI(
-    api_key=deepseekapikey, 
+    api_key=deepseekapikey,
     base_url="https://api.deepseek.com/v1"
-               )
+)
 
 def extract_scores(text):
     # Use OpenAI API to get Research Score and Social Impact Score separately. Change model to deepseek-chat for deepseek-v3
     response = client.chat.completions.create(
-        model="deepseek-chat", 
+        model="deepseek-chat",
         messages=[
             {"role": "system", "content": f"You are an decision psychologist, neural expert and researcher. You are skilled at selecting interesting/novelty research."},
             {"role": "user", "content": "Given the text '{text}', evaluate this article with two scores:\n"
-                                        "1. Research Score (0-100): Based on research innovation, methodological rigor, and data reliability.\n"
-                                        "2. Social Impact Score (0-100): Based on public attention, policy relevance, and societal impact.\n"
-                                        "Provide the scores in the following format:\n"
-                                        "Research Score: <score>\n"
-                                        "Social Impact Score: <score>"},
+                                            "1. Research Score (0-100): Based on research innovation, methodological rigor, and data reliability.\n"
+                                            "2. Social Impact Score (0-100): Based on public attention, policy relevance, and societal impact.\n"
+                                            "Provide the scores in the following format:\n"
+                                            "Research Score: <score>\n"
+                                            "Social Impact Score: <score>"},
         ],
         max_tokens=100,
         temperature=0.5
     )
 
-    generated_text = response.choices[0].message.content.strip()  
+    generated_text = response.choices[0].message.content.strip()
 
     # Extract research score
     research_score_start = generated_text.find("Research Score:")
@@ -45,28 +45,19 @@ def extract_scores(text):
 
     return research_score, social_impact_score
 
-def get_pubmed_abstracts(rss_url):
+def get_pubmed_abstracts(rss_url, limit = 50):
     abstracts_with_urls = []
-
-    # Parse the PubMed RSS feed
     feed = feedparser.parse(rss_url)
-
-    # Calculate the date one week ago
     one_week_ago = datetime.now(timezone.utc) - timedelta(weeks=1)
-
-    # Iterate over entries in the PubMed RSS feed and extract abstracts and URLs
+    count = 0
     for entry in feed.entries:
-        # Get the publication date of the entry
         published_date = datetime.strptime(entry.published, '%a, %d %b %Y %H:%M:%S %z')
-
-        # If the publication date is within one week, extract the abstract and URL
-        if published_date >= one_week_ago:
-            # Get the abstract and DOI of the entry
+        if published_date >= one_week_ago and count < limit:
             title = entry.title
             abstract = entry.content[0].value
             doi = entry.dc_identifier
             abstracts_with_urls.append({"title": title, "abstract": abstract, "doi": doi})
-
+            count += 1
     return abstracts_with_urls
 
 # Get the abstracts from the PubMed RSS feed
@@ -86,21 +77,24 @@ for abstract_data in pubmed_abstracts:
         "social_impact_score": social_impact_score,
         "doi": doi
     })
-    
+
 # Create issue title and content
 issue_title = f"Weekly Article Score - {datetime.now().strftime('%Y-%m-%d')}"
 issue_body = "Below are the article matching results from the past week:\n\n"
-
+max_body_length = 60000
 for article_data in new_articles_data:
     abstract = article_data["title"]
     research_score = article_data["research_score"]
     social_impact_score = article_data["social_impact_score"]
-    doi = article_data.get("doi", "No DOI available")  # Default to "No DOI available" if DOI field is missing
+    doi = article_data.get("doi", "No DOI available")
 
-    issue_body += f"- **Title**: {abstract}\n"
-    issue_body += f"  **Research Score**: {research_score}\n"
-    issue_body += f"  **Social Impact Score**: {social_impact_score}\n"
-    issue_body += f"  **DOI**: {doi}\n\n"
+    article_info = f"- **Title**: {abstract}\n  **Research Score**: {research_score}\n  **Social Impact Score**: {social_impact_score}\n  **DOI**: {doi}\n\n"
+
+    if len(issue_body + article_info) <= max_body_length:
+        issue_body += article_info
+    else:
+        issue_body += "\n... (后续文章信息因长度限制而被省略) ..."
+        break
 
 def create_github_issue(title, body, access_token):
     url = f"https://api.github.com/repos/JiangXY98/autoPsydecision/issues"
