@@ -11,7 +11,7 @@ rss_url = 'https://pubmed.ncbi.nlm.nih.gov/rss/search/1jeAVjyuKpXgEVWo0CwWvCsGuJ
 access_token = os.getenv('GITHUB_TOKEN')
 openaiapikey = os.getenv('OPENAI_API_KEY')
 
-client = OpenAI(api_key=sk-a178b93d4aa24cb5ac4a09647cdae2b4, base_url="https://api.deepseek.com")
+client = OpenAI(api_key="sk-a178b93d4aa24cb5ac4a09647cdae2b4", base_url="https://api.deepseek.com/v1")
 
 def extract_scores(text):
     # Use OpenAI API to get Research Score and Social Impact Score separately. Change model to deepseek-chat for deepseek-v3
@@ -19,12 +19,12 @@ def extract_scores(text):
         model="deepseek-chat", 
         messages=[
             {"role": "system", "content": "You are an decision psychologist, neural expert and researcher. You are skilled at selecting interesting/novelty research."},
-            {"role": "user", "content": f"Given the text '{text}', evaluate this article with two scores:\n"
+            {"role": "user", "content": "Given the text '{text}', evaluate this article with two scores:\n"
                                         "1. Research Score (0-100): Based on research innovation, methodological rigor, and data reliability.\n"
                                         "2. Social Impact Score (0-100): Based on public attention, policy relevance, and societal impact.\n"
                                         "Provide the scores in the following format:\n"
                                         "Research Score: <score>\n"
-                                        "Social Impact Score: <score>"}
+                                        "Social Impact Score: <score>"},
         ],
         max_tokens=100,
         temperature=0.5
