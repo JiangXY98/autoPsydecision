@@ -3,7 +3,7 @@ from datetime import datetime, timedelta, timezone
 import json
 import requests
 import os
-from openai import OpenAI
+import OpenAI
 
 # Example PubMed RSS feed URL
 rss_url = 'https://pubmed.ncbi.nlm.nih.gov/rss/search/1jeAVjyuKpXgEVWo0CwWvCsGuJkv73KyXjHBP9vV1tH6idhEe7/?limit=100&utm_campaign=pubmed-2&fc=20250406034018'
