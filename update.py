@@ -9,7 +9,7 @@ import openai
 rss_url = 'https://pubmed.ncbi.nlm.nih.gov/rss/search/1jeAVjyuKpXgEVWo0CwWvCsGuJkv73KyXjHBP9vV1tH6idhEe7/?limit=100&utm_campaign=pubmed-2&fc=20250406034018'
 
 access_token = os.getenv('GITHUB_TOKEN')
-openaiapikey = os.getenv('OPENAI_API_KEY')
+openaiapikey = os.getenv('DEEPSEEK')
 
 client = openai.OpenAI(api_key=openaiapikey, base_url="https://api.deepseek.com")
 
