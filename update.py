@@ -3,120 +3,96 @@ from datetime import datetime, timedelta, timezone
 import json
 import requests
 import os
-import openai import OpenAI
+from openai import OpenAI  # 修正导入语法
 
-# Example PubMed RSS feed URL
+# PubMed RSS feed URL
 rss_url = 'https://pubmed.ncbi.nlm.nih.gov/rss/search/1jeAVjyuKpXgEVWo0CwWvCsGuJkv73KyXjHBP9vV1tH6idhEe7/?limit=100&utm_campaign=pubmed-2&fc=20250406034018'
 
+# 从环境变量加载密钥
 access_token = os.getenv('GITHUB_TOKEN')
 deepseekapikey = os.getenv('DEEPSEEK_API_KEY')
 
-client = OpenAI(api_key="deepseekapikey", base_url="https://api.deepseek.com/v1")
+# 初始化 DeepSeek API 客户端
+client = OpenAI(
+    api_key=deepseekapikey,  # 直接使用变量，而非字符串
+    base_url="https://api.deepseek.ai/v1",  # 修正 API 地址
+)
 
 def extract_scores(text):
-    # Use OpenAI API to get Research Score and Social Impact Score separately. Change model to deepseek-chat for deepseek-v3
-    response = client.chat.completions.create(
-        model="deepseek-chat", 
-        messages=[
-            {"role": "system", "content": "You are an decision psychologist, neural expert and researcher. You are skilled at selecting interesting/novelty research."},
-            {"role": "user", "content": "Given the text '{text}', evaluate this article with two scores:\n"
-                                        "1. Research Score (0-100): Based on research innovation, methodological rigor, and data reliability.\n"
-                                        "2. Social Impact Score (0-100): Based on public attention, policy relevance, and societal impact.\n"
-                                        "Provide the scores in the following format:\n"
-                                        "Research Score: <score>\n"
-                                        "Social Impact Score: <score>"},
-        ],
-        max_tokens=100,
-        temperature=0.5
-    )
+    try:
+        response = client.chat.completions.create(
+            model="deepseek-chat",
+            messages=[
+                {"role": "system", "content": "You are a decision psychologist and researcher. Evaluate the text."},
+                {"role": "user", "content": f"Given the text '{text}', provide:\n"
+                                          "1. Research Score (0-100): For innovation and rigor.\n"
+                                          "2. Social Impact Score (0-100): For societal relevance.\n"
+                                          "Format:\n"
+                                          "Research Score: <score>\n"
+                                          "Social Impact Score: <score>"}
+            ],
+            max_tokens=100,
+            temperature=0.5
+        )
+        generated_text = response.choices[0].message.content.strip()
 
-    generated_text = response.choices[0].message.content.strip()  
+        # 更健壮的分数提取逻辑
+        research_score = "N/A"
+        social_impact_score = "N/A"
 
-    # Extract research score
-    research_score_start = generated_text.find("Research Score:")
-    research_score = generated_text[research_score_start+len("Research Score:"):].split("\n")[0].strip()
+        if "Research Score:" in generated_text:
+            research_score = generated_text.split("Research Score:")[1].split("\n")[0].strip()
+        if "Social Impact Score:" in generated_text:
+            social_impact_score = generated_text.split("Social Impact Score:")[1].split("\n")[0].strip()
 
-    # Extract social impact score
-    social_impact_score_start = generated_text.find("Social Impact Score:")
-    social_impact_score = generated_text[social_impact_score_start+len("Social Impact Score:"):].strip()
-
-    return research_score, social_impact_score
+        return research_score, social_impact_score
+    except Exception as e:
+        print(f"Error extracting scores: {e}")
+        return "N/A", "N/A"
 
 def get_pubmed_abstracts(rss_url):
     abstracts_with_urls = []
-
-    # Parse the PubMed RSS feed
     feed = feedparser.parse(rss_url)
-
-    # Calculate the date one week ago
     one_week_ago = datetime.now(timezone.utc) - timedelta(weeks=1)
 
-    # Iterate over entries in the PubMed RSS feed and extract abstracts and URLs
     for entry in feed.entries:
-        # Get the publication date of the entry
         published_date = datetime.strptime(entry.published, '%a, %d %b %Y %H:%M:%S %z')
-
-        # If the publication date is within one week, extract the abstract and URL
         if published_date >= one_week_ago:
-            # Get the abstract and DOI of the entry
-            title = entry.title
-            abstract = entry.content[0].value
-            doi = entry.dc_identifier
-            abstracts_with_urls.append({"title": title, "abstract": abstract, "doi": doi})
-
+            abstracts_with_urls.append({
+                "title": entry.title,
+                "abstract": entry.content[0].value,
+                "doi": entry.dc_identifier
+            })
     return abstracts_with_urls
 
-# Get the abstracts from the PubMed RSS feed
-pubmed_abstracts = get_pubmed_abstracts(rss_url)
+# 主流程
+if __name__ == "__main__":
+    pubmed_abstracts = get_pubmed_abstracts(rss_url)
+    new_articles_data = []
 
-# Create an empty list to store each abstract with its scores
-new_articles_data = []
+    for abstract_data in pubmed_abstracts:
+        research_score, social_impact_score = extract_scores(abstract_data["abstract"])
+        new_articles_data.append({
+            "title": abstract_data["title"],
+            "research_score": research_score,
+            "social_impact_score": social_impact_score,
+            "doi": abstract_data["doi"]
+        })
 
-for abstract_data in pubmed_abstracts:
-    title = abstract_data["title"]
-    research_score, social_impact_score = extract_scores(abstract_data["abstract"])
-    doi = abstract_data["doi"]
-
-    new_articles_data.append({
-        "title": title,
-        "research_score": research_score,
-        "social_impact_score": social_impact_score,
-        "doi": doi
-    })
+    # 生成 GitHub Issue
+    issue_title = f"Weekly Article Score - {datetime.now().strftime('%Y-%m-%d')}"
+    issue_body = "## Weekly Research Evaluation\n\n"
     
-# Create issue title and content
-issue_title = f"Weekly Article Score - {datetime.now().strftime('%Y-%m-%d')}"
-issue_body = "Below are the article matching results from the past week:\n\n"
+    for article in new_articles_data:
+        issue_body += (
+            f"- **Title**: {article['title']}\n"
+            f"  - **Research Score**: {article['research_score']}\n"
+            f"  - **Social Impact Score**: {article['social_impact_score']}\n"
+            f"  - **DOI**: {article.get('doi', 'N/A')}\n\n"
+        )
 
-for article_data in new_articles_data:
-    abstract = article_data["title"]
-    research_score = article_data["research_score"]
-    social_impact_score = article_data["social_impact_score"]
-    doi = article_data.get("doi", "No DOI available")  # Default to "No DOI available" if DOI field is missing
-
-    issue_body += f"- **Title**: {abstract}\n"
-    issue_body += f"  **Research Score**: {research_score}\n"
-    issue_body += f"  **Social Impact Score**: {social_impact_score}\n"
-    issue_body += f"  **DOI**: {doi}\n\n"
-
-def create_github_issue(title, body, access_token):
-    url = f"https://api.github.com/repos/JiangXY98/autoaiscore/issues"
-    headers = {
-        "Authorization": f"token {access_token}",
-        "Accept": "application/vnd.github.v3+json"
-    }
-    payload = {
-        "title": title,
-        "body": body
-    }
-
-    response = requests.post(url, headers=headers, data=json.dumps(payload))
-
-    if response.status_code == 201:
-        print("Issue created successfully!")
+    # 创建 Issue
+    if access_token:
+        create_github_issue(issue_title, issue_body, access_token)
     else:
-        print("Failed to create issue. Status code:", response.status_code)
-        print("Response:", response.text)
-
-# Create the issue
-create_github_issue(issue_title, issue_body, access_token)
+        print("GitHub token not found. Issue content:\n", issue_body)
