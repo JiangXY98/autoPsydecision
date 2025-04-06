@@ -3,7 +3,7 @@ from datetime import datetime, timedelta, timezone
 import json
 import requests
 import os
-import openai
+import openai import OpenAI
 
 # Example PubMed RSS feed URL
 rss_url = 'https://pubmed.ncbi.nlm.nih.gov/rss/search/1jeAVjyuKpXgEVWo0CwWvCsGuJkv73KyXjHBP9vV1tH6idhEe7/?limit=100&utm_campaign=pubmed-2&fc=20250406034018'
@@ -11,7 +11,7 @@ rss_url = 'https://pubmed.ncbi.nlm.nih.gov/rss/search/1jeAVjyuKpXgEVWo0CwWvCsGuJ
 access_token = os.getenv('GITHUB_TOKEN')
 openaiapikey = os.getenv('OPENAI_API_KEY')
 
-client = openai.OpenAI(api_key=openaiapikey, base_url="https://api.deepseek.com/v1/")
+client = OpenAI(api_key=openaiapikey, base_url="https://api.deepseek.com/v1/")
 
 def extract_scores(text):
     # Use OpenAI API to get Research Score and Social Impact Score separately. Change model to deepseek-chat for deepseek-v3
