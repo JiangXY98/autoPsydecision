@@ -22,7 +22,7 @@ def extract_scores(text):
         model="deepseek-chat",
         messages=[
             {"role": "system", "content": f"You are an decision psychologist, neural expert and researcher. You are skilled at selecting interesting/novelty research."},
-            {"role": "user", "content": "Given the text '{text}', evaluate this article with two scores:\n"
+            {"role": "user", "content": f"Given the text '{text}', evaluate this article with two scores:\n"
                                             "1. Research Score (0-100): Based on research innovation, methodological rigor, and data reliability.\n"
                                             "2. Social Impact Score (0-100): Based on public attention, policy relevance, and societal impact.\n"
                                             "Provide the scores in the following format:\n"
@@ -45,19 +45,19 @@ def extract_scores(text):
 
     return research_score, social_impact_score
 
-def get_pubmed_abstracts(rss_url, limit = 50):
+def get_pubmed_abstracts(rss_url):
     abstracts_with_urls = []
     feed = feedparser.parse(rss_url)
     one_week_ago = datetime.now(timezone.utc) - timedelta(weeks=1)
-    count = 0
+
     for entry in feed.entries:
         published_date = datetime.strptime(entry.published, '%a, %d %b %Y %H:%M:%S %z')
-        if published_date >= one_week_ago and count < limit:
+        if published_date >= one_week_ago:
             title = entry.title
             abstract = entry.content[0].value
             doi = entry.dc_identifier
             abstracts_with_urls.append({"title": title, "abstract": abstract, "doi": doi})
-            count += 1
+
     return abstracts_with_urls
 
 # Get the abstracts from the PubMed RSS feed
@@ -82,6 +82,7 @@ for abstract_data in pubmed_abstracts:
 issue_title = f"Weekly Article Score - {datetime.now().strftime('%Y-%m-%d')}"
 issue_body = "Below are the article matching results from the past week:\n\n"
 max_body_length = 60000
+
 for article_data in new_articles_data:
     abstract = article_data["title"]
     research_score = article_data["research_score"]
@@ -89,7 +90,7 @@ for article_data in new_articles_data:
     doi = article_data.get("doi", "No DOI available")
 
     article_info = f"- **Title**: {abstract}\n  **Research Score**: {research_score}\n  **Social Impact Score**: {social_impact_score}\n  **DOI**: {doi}\n\n"
-
+    
     if len(issue_body + article_info) <= max_body_length:
         issue_body += article_info
     else:
