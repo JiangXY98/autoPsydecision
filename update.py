@@ -81,7 +81,6 @@ for abstract_data in pubmed_abstracts:
 # Create issue title and content
 issue_title = f"Weekly Article Score - {datetime.now().strftime('%Y-%m-%d')}"
 issue_body = "Below are the article matching results from the past week:\n\n"
-max_body_length = 60000
 
 for article_data in new_articles_data:
     abstract = article_data["title"]
@@ -89,13 +88,10 @@ for article_data in new_articles_data:
     social_impact_score = article_data["social_impact_score"]
     doi = article_data.get("doi", "No DOI available")
 
-    article_info = f"- **Title**: {abstract}\n  **Research Score**: {research_score}\n  **Social Impact Score**: {social_impact_score}\n  **DOI**: {doi}\n\n"
-    
-    if len(issue_body + article_info) <= max_body_length:
-        issue_body += article_info
-    else:
-        issue_body += "\n... (后续文章信息因长度限制而被省略) ..."
-        break
+    issue_body += f"- **Title**: {abstract}\n"
+    issue_body += f"  **Research Score**: {research_score}\n"
+    issue_body += f"  **Social Impact Score**: {social_impact_score}\n"
+    issue_body += f"  **DOI**: https://doi.org/{doi}\n\n"
 
 def create_github_issue(title, body, access_token):
     url = f"https://api.github.com/repos/JiangXY98/autoPsydecision/issues"
