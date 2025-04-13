@@ -20,7 +20,7 @@ def extract_scores(text):
     response = client.chat.completions.create(
         model="deepseek-chat",
         messages=[
-            {"role": "system", "content": f"You are an decision psychologist, neural expert and researcher. You are skilled at selecting interesting/novelty research."},
+            {"role": "system", "content": f"You are an psychologist and researcher. You are skilled at selecting interesting/novelty research."},
             {"role": "user", "content": f"Given the text '{text}', evaluate this article with two scores:\n"
                                       "1. Research Score (0-100): Based on research innovation, methodological rigor, and data reliability.\n"
                                       "2. Social Impact Score (0-100): Based on public attention, policy relevance, and societal impact.\n"
@@ -45,12 +45,15 @@ def extract_scores(text):
 def get_pubmed_abstracts(rss_url):
     abstracts_with_urls = []
     feed = feedparser.parse(rss_url)
+    one_week_ago = datetime.now(timezone.utc) - timedelta(weeks=1)
 
     for entry in feed.entries:
-        title = entry.title
-        abstract = entry.content[0].value
-        doi = entry.dc_identifier
-        abstracts_with_urls.append({"title": title, "abstract": abstract, "doi": doi})
+        published_date = datetime.strptime(entry.published, '%a, %d %b %Y %H:%M:%S %z')
+        if published_date >= one_week_ago:
+            title = entry.title
+            abstract = entry.content[0].value
+            doi = entry.dc_identifier
+            abstracts_with_urls.append({"title": title, "abstract": abstract, "doi": doi})
 
     return abstracts_with_urls
 
@@ -63,31 +66,20 @@ for abstract_data in pubmed_abstracts:
     research_score, social_impact_score = extract_scores(abstract_data["abstract"])
     doi = abstract_data["doi"]
 
-    try:
-        research_score = int(research_score)
-        social_impact_score = int(social_impact_score)
-        total_score = research_score + social_impact_score
-    except ValueError:
-        total_score = 0  # 如果评分无法转换为整数，则综合分数为0
-
     scored_articles.append({
         "title": title,
         "research_score": research_score,
         "social_impact_score": social_impact_score,
-        "doi": doi,
-        "total_score": total_score
+        "doi": doi
     })
 
-sorted_articles = sorted(scored_articles, key=lambda x: x["total_score"], reverse=True)[:20]
+issue_title = f"Weekly Article Scores - {datetime.now().strftime('%Y-%m-%d')}"
+issue_body = "Below are the article scores from the past week:\n\n"
 
-issue_title = f"Top 20 Article Scores - {datetime.now().strftime('%Y-%m-%d')}"
-issue_body = "Below are the top 20 article scores:\n\n"
-
-for article_data in sorted_articles:
+for article_data in scored_articles:
     issue_body += f"- **Title**: {article_data['title']}\n"
     issue_body += f"  **Research Score**: {article_data['research_score']}\n"
     issue_body += f"  **Social Impact Score**: {article_data['social_impact_score']}\n"
-    issue_body += f"  **Total Score**: {article_data['total_score']}\n"
     issue_body += f"  **DOI**: https://doi.org/{article_data['doi']}\n\n"
 
 def create_github_issue(title, body, access_token):
