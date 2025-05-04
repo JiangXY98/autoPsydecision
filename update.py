@@ -17,45 +17,49 @@ client = OpenAI(
     base_url="https://api.deepseek.com/v1"
 )
 
-def extract_scores(text):
+def extract_scores_and_reasons(text):
     response = client.chat.completions.create(
         model="deepseek-chat",
         messages=[
             {"role": "system", "content": f"You are an psychologist and researcher. You are skilled at selecting interesting/novelty research."},
-            {"role": "user", "content": f"Given the text '{text}', evaluate this article with two scores:\n"
-                                      "1. Research Score (0-100): Based on research innovation, methodological rigor, and data reliability.\n"
-                                      "2. Social Impact Score (0-100): Based on public attention, policy relevance, and societal impact.\n"
-                                      "Provide ONLY the scores in the following format, with each score on a new line and nothing else:\n"
-                                      "Research Score: <score>\n"
-                                      "Social Impact Score: <score>\n"},
+            {"role": "user", "content": f"Given the text '{text}', evaluate this article with two scores and a brief justification for each score:\n"
+                                        f"1. Research Score (0-100): Based on research innovation, methodological rigor, and data reliability.\n"
+                                        f"2. Social Impact Score (0-100): Based on public attention, policy relevance, and societal impact.\n"
+                                        f"Provide the scores and justifications in the following format, with each on a new line:\n"
+                                        f"Research Score: <score>\n"
+                                        f"Reasoning (Research): <reasoning>\n"
+                                        f"Social Impact Score: <score>\n"
+                                        f"Reasoning (Social Impact): <reasoning>\n"},
         ],
-        max_tokens=60,
-        temperature=0.2
+        max_tokens=200,
+        temperature=0.3
     )
 
     generated_text = response.choices[0].message.content.strip()
 
-    # 使用正则表达式提取分数
-    research_score = "N/A" # 默认值
-    social_impact_score = "N/A" # 默认值
+    research_score = "N/A"
+    reasoning_research = "N/A"
+    social_impact_score = "N/A"
+    reasoning_social_impact = "N/A"
 
-    # 查找 "Research Score: <数字>"
     research_match = re.search(r"Research Score:\s*(\d+)", generated_text, re.IGNORECASE)
     if research_match:
-        research_score = research_match.group(1) # 提取括号匹配的数字部分
+        research_score = research_match.group(1)
 
-    # 查找 "Social Impact Score: <数字>"
+    reason_research_match = re.search(r"Reasoning \(Research\):\s*(.+)", generated_text, re.IGNORECASE)
+    if reason_research_match:
+        reasoning_research = reason_research_match.group(1).strip()
+
     social_match = re.search(r"Social Impact Score:\s*(\d+)", generated_text, re.IGNORECASE)
     if social_match:
-        social_impact_score = social_match.group(1) # 提取括号匹配的数字部分
+        social_impact_score = social_match.group(1)
 
-    # 打印提取结果用于调试 (可选)
-    # print(f"Generated Text:\n{generated_text}")
-    # print(f"Extracted Research Score: {research_score}")
-    # print(f"Extracted Social Impact Score: {social_impact_score}")
+    reason_social_match = re.search(r"Reasoning \(Social Impact\):\s*(.+)", generated_text, re.IGNORECASE)
+    if reason_social_match:
+        reasoning_social_impact = reason_social_match.group(1).strip()
 
-    return research_score, social_impact_score
-    
+    return research_score, reasoning_research, social_impact_score, reasoning_social_impact
+
 def get_pubmed_abstracts(rss_url):
     abstracts_with_urls = []
     feed = feedparser.parse(rss_url)
@@ -77,29 +81,34 @@ scored_articles = []
 
 for abstract_data in pubmed_abstracts:
     title = abstract_data["title"]
-    research_score, social_impact_score = extract_scores(abstract_data["abstract"])
+    research_score, reasoning_research, social_impact_score, reasoning_social_impact = extract_scores_and_reasons(abstract_data["abstract"])
     doi = abstract_data["doi"]
 
     scored_articles.append({
         "title": title,
         "research_score": research_score,
+        "reasoning_research": reasoning_research,
         "social_impact_score": social_impact_score,
+        "reasoning_social_impact": reasoning_social_impact,
         "doi": doi
     })
 
-issue_title = f"Weekly Article Scores - {datetime.now().strftime('%Y-%m-%d')}"
-issue_body = "Below are the article scores from the past week:\n\n"
+issue_title = f"Weekly Article Scores and Reasoning - {datetime.now().strftime('%Y-%m-%d')}"
+issue_body = "Below are the article scores and reasoning from the past week:\n\n"
 
-for abstract_data in pubmed_abstracts:
-    title = abstract_data["title"].strip()
-    doi = abstract_data["doi"].strip()
-    # 调用更新后的函数提取分数
-    research_score, social_impact_score = extract_scores(abstract_data["abstract"])
+for article_data in scored_articles:
+    title = article_data["title"].strip()
+    research_score = article_data["research_score"]
+    reasoning_research = article_data["reasoning_research"]
+    social_impact_score = article_data["social_impact_score"]
+    reasoning_social_impact = article_data["reasoning_social_impact"]
+    doi = article_data["doi"].strip()
 
-    # 格式化输出 - 保持之前的格式或者使用块引用格式
     issue_body += f"- **Title**: {title}\n"
     issue_body += f"  **Research Score**: {research_score}\n"
+    issue_body += f"  **Reasoning (Research)**: {reasoning_research}\n"
     issue_body += f"  **Social Impact Score**: {social_impact_score}\n"
+    issue_body += f"  **Reasoning (Social Impact)**: {reasoning_social_impact}\n"
     issue_body += f"  **DOI**: https://doi.org/{doi}\n\n"
 
 def create_github_issue(title, body, access_token):
