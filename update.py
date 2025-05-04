@@ -21,12 +21,12 @@ def extract_scores(text):
         model="deepseek-chat",
         messages=[
             {"role": "system", "content": f"You are an psychologist and researcher. You are skilled at selecting interesting/novelty research."},
-            {"role": "user", "content": f"Given the text '{text}', evaluate this article with two scores:\n"
+            {"role": "user", "content": f"Given the text '{text}', evaluate this article with two scores, but do not provide detailed explanations:\n"
                                       "1. Research Score (0-100): Based on research innovation, methodological rigor, and data reliability.\n"
                                       "2. Social Impact Score (0-100): Based on public attention, policy relevance, and societal impact.\n"
                                       "Provide the scores in the following format:\n"
                                       "Research Score: <score>\n"
-                                      "Social Impact Score: <score>"},
+                                      "Social Impact Score: <score>\n"},
         ],
         max_tokens=100,
         temperature=0.5
