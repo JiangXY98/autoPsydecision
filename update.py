@@ -31,7 +31,7 @@ def extract_scores_and_reasons(text):
                                         f"Social Impact Score: <score>\n"
                                         f"Reasoning (Social Impact): <reasoning>\n"},
         ],
-        max_tokens=200,
+        max_tokens=150,
         temperature=0.3
     )
 
