@@ -32,7 +32,7 @@ def extract_scores_and_reasons(text):
                                         f"Social Impact Score: <score>\n"
                                         f"Reasoning (Social Impact): <reasoning>\n"},
         ],
-        max_tokens=150,
+        max_tokens=300,
         temperature=0.3
     )
 
@@ -72,12 +72,7 @@ def get_pubmed_abstracts(rss_url):
             title = entry.title
             abstract = entry.content[0].value
             doi = entry.dc_identifier
-            
-            # 使用 hasattr 检查以安全地访问嵌套字段
-            journal = "N/A"
-            if hasattr(entry, 'source') and hasattr(entry.source, 'title'):
-                journal = entry.source.title
-
+            journal = entry.get('dc_source', 'N/A')
             abstracts_with_urls.append({"title": title, "abstract": abstract, "doi": doi, "journal": journal})
 
     return abstracts_with_urls
