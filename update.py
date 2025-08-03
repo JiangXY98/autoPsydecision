@@ -71,7 +71,15 @@ def get_pubmed_abstracts(rss_url):
             title = entry.title
             abstract = entry.content[0].value
             doi = entry.dc_identifier
-            abstracts_with_urls.append({"title": title, "abstract": abstract, "doi": doi})
+
+            # 提取期刊名称
+            journal_match = re.search(r'\[([^\]]+)\]', title)
+            journal = journal_match.group(1) if journal_match else "N/A"
+
+            # 清理标题，移除期刊名称
+            cleaned_title = re.sub(r'\[[^\]]+\]', '', title).strip()
+
+            abstracts_with_urls.append({"title": cleaned_title, "abstract": abstract, "doi": doi, "journal": journal})
 
     return abstracts_with_urls
 
@@ -83,6 +91,7 @@ for abstract_data in pubmed_abstracts:
     title = abstract_data["title"]
     research_score, reasoning_research, social_impact_score, reasoning_social_impact = extract_scores_and_reasons(abstract_data["abstract"])
     doi = abstract_data["doi"]
+    journal = abstract_data["journal"]
 
     scored_articles.append({
         "title": title,
@@ -90,7 +99,8 @@ for abstract_data in pubmed_abstracts:
         "reasoning_research": reasoning_research,
         "social_impact_score": social_impact_score,
         "reasoning_social_impact": reasoning_social_impact,
-        "doi": doi
+        "doi": doi,
+        "journal": journal
     })
 
 issue_title = f"Weekly Article Scores and Reasoning - {datetime.now().strftime('%Y-%m-%d')}"
@@ -103,13 +113,15 @@ for article_data in scored_articles:
     social_impact_score = article_data["social_impact_score"]
     reasoning_social_impact = article_data["reasoning_social_impact"]
     doi = article_data["doi"].strip()
+    journal = article_data["journal"]
 
     issue_body += f"- **Title**: {title}\n"
+    issue_body += f"  **Journal**: {journal}\n\n"
     issue_body += f"  **Research Score**: {research_score}\n"
     issue_body += f"  **Reasoning (Research)**: {reasoning_research}\n"
     issue_body += f"  **Social Impact Score**: {social_impact_score}\n"
     issue_body += f"  **Reasoning (Social Impact)**: {reasoning_social_impact}\n"
-    issue_body += f"  **DOI**: https://doi.org/{doi}\n\n"
+    issue_body += f"  **DOI**: https://doi.org/{doi}\n"
 
 def create_github_issue(title, body, access_token):
     url = f"https://api.github.com/repos/JiangXY98/autoPsydecision/issues"
