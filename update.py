@@ -18,6 +18,7 @@ client = OpenAI(
 )
 
 def extract_scores_and_reasons(text):
+    # 此函数保持不变
     response = client.chat.completions.create(
         model="deepseek-chat",
         messages=[
@@ -71,15 +72,13 @@ def get_pubmed_abstracts(rss_url):
             title = entry.title
             abstract = entry.content[0].value
             doi = entry.dc_identifier
+            
+            # 使用 hasattr 检查以安全地访问嵌套字段
+            journal = "N/A"
+            if hasattr(entry, 'source') and hasattr(entry.source, 'title'):
+                journal = entry.source.title
 
-            # 提取期刊名称
-            journal_match = re.search(r'\[([^\]]+)\]', title)
-            journal = journal_match.group(1) if journal_match else "N/A"
-
-            # 清理标题，移除期刊名称
-            cleaned_title = re.sub(r'\[[^\]]+\]', '', title).strip()
-
-            abstracts_with_urls.append({"title": cleaned_title, "abstract": abstract, "doi": doi, "journal": journal})
+            abstracts_with_urls.append({"title": title, "abstract": abstract, "doi": doi, "journal": journal})
 
     return abstracts_with_urls
 
@@ -113,15 +112,15 @@ for article_data in scored_articles:
     social_impact_score = article_data["social_impact_score"]
     reasoning_social_impact = article_data["reasoning_social_impact"]
     doi = article_data["doi"].strip()
-    journal = article_data["journal"]
+    journal = article_data["journal"].strip()
 
     issue_body += f"- **Title**: {title}\n"
-    issue_body += f"  **Journal**: {journal}\n\n"
-    issue_body += f"  **Research Score**: {research_score}\n"
-    issue_body += f"  **Reasoning (Research)**: {reasoning_research}\n"
-    issue_body += f"  **Social Impact Score**: {social_impact_score}\n"
-    issue_body += f"  **Reasoning (Social Impact)**: {reasoning_social_impact}\n"
-    issue_body += f"  **DOI**: https://doi.org/{doi}\n"
+    issue_body += f"  **Journal**: {journal}\n"
+    issue_body += f"  **Research Score**: {research_score}\n"
+    issue_body += f"  **Reasoning (Research)**: {reasoning_research}\n"
+    issue_body += f"  **Social Impact Score**: {social_impact_score}\n"
+    issue_body += f"  **Reasoning (Social Impact)**: {reasoning_social_impact}\n"
+    issue_body += f"  **DOI**: https://doi.org/{doi}\n\n"
 
 def create_github_issue(title, body, access_token):
     url = f"https://api.github.com/repos/JiangXY98/autoPsydecision/issues"
@@ -143,5 +142,3 @@ def create_github_issue(title, body, access_token):
         print("Response:", response.text)
 
 create_github_issue(issue_title, issue_body, access_token)
-
-
