@@ -138,6 +138,8 @@ def extract_scores_and_reasons(title: str, abstract: str):
     reasoning_research = "N/A"
     impact_score = "N/A"
     reasoning_impact = "N/A"
+    topic_tags = []
+    method_tags = []
 
     try:
         obj = safe_json_loads(generated)
@@ -202,9 +204,9 @@ for abstract_data in pubmed_abstracts:
     title = abstract_data["title"]
     abstract_clean = strip_html(abstract_data["abstract"])
     
-    research_score, reasoning_research, impact_score, reasoning_impact = extract_scores_and_reasons(
-        title,
-        abstract_clean
+    research_score, reasoning_research, impact_score, reasoning_impact, topic_tags, method_tags = extract_scores_and_reasons(
+    title,
+    abstract_clean
     )
     
     doi = abstract_data["doi"]
