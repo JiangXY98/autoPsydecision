@@ -46,9 +46,14 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           REPORT_FILE=$(ls -1 reports/audit_*.md | tail -n 1)
-          TITLE=$(head -n 1 "$REPORT_FILE" | sed 's/# //')
+          if [ -z "$REPORT_FILE" ]; then
+            echo "No audit report found under reports/audit_*.md"
+            exit 1
+          fi
 
-          python - << 'PY'
+          TITLE=$(head -n 1 "$REPORT_FILE" | sed 's/^# //')
+
+          env REPORT_FILE="$REPORT_FILE" TITLE="$TITLE" python - << 'PY'
           import os, json, requests, pathlib
 
           token = os.environ["GITHUB_TOKEN"]
@@ -64,6 +69,3 @@ jobs:
           print(r.status_code)
           print(r.text)
           PY
-        env:
-          REPORT_FILE: reports/audit_$(date -u +'%Y-%m').md
-          TITLE: Monthly Audit Report $(date -u +'%Y-%m')
