@@ -1,0 +1,86 @@
+[
+  {
+    "title": "Drug Development",
+    "topic_tags": [
+      "clinical_neuro",
+      "sequential_sampling",
+      "attention"
+    ],
+    "method_tags": [
+      "ddm",
+      "computational_modeling_general"
+    ],
+    "research_score": 75,
+    "reasoning_research": "The study employs a rigorous preclinical design with a transgenic rat model, incorporates computational modeling (DDM) to analyze decision processes, and reports genotype- and sex-specific effects. Methodological strength is indicated by the use of a two-alternative forced-choice task, reaction time distribution analysis (ExGauss), and explicit DDM parameter estimation (drift, bounds, non-decision time).",
+    "impact_score": 70,
+    "reasoning_impact": "The work directly addresses the translational potential of computational decision neuroscience for identifying early behavioral biomarkers in Alzheimer's disease, a core challenge in clinical neuropsychology. By revealing latent cognitive changes in a prodromal animal model not captured by standard metrics, it could influence future research directions in preclinical assessment and biomarker development.",
+    "doi": "doi:10.1002/alz70859_105666",
+    "journal": "Alzheimer's & dementia : the journal of the Alzheimer's Association"
+  },
+  {
+    "title": "Dual learning systems in talker identification: the effects of language, accent, and feedback",
+    "topic_tags": [
+      "attention",
+      "reinforcement_learning",
+      "sequential_sampling"
+    ],
+    "method_tags": [
+      "ddm",
+      "computational_modeling_general"
+    ],
+    "research_score": 75,
+    "reasoning_research": "The study employs a clear factorial design (language, accent, feedback type) and uses drift diffusion modeling to analyze decision processes, indicating methodological rigor. Data reliability is supported by explicit mention of sample (Mandarin-speaking listeners), performance measures (accuracy, RT), and open data/code availability. The conceptual novelty lies in applying the dual learning systems framework to talker identification.",
+    "impact_score": 65,
+    "reasoning_impact": "The findings directly contribute to understanding how learning systems (reflective vs. reflexive) operate in perceptual categorization, with clear implications for models of speech processing and category learning. The demonstration that feedback type and language context modulate decision efficiency offers a specific advance for research on auditory decision-making and learning dynamics.",
+    "doi": "doi:10.3758/s13414-025-03201-8",
+    "journal": "Attention, perception & psychophysics"
+  },
+  {
+    "title": "Clinical Manifestations",
+    "topic_tags": [
+      "effort_decision",
+      "clinical_neuro",
+      "value_based_choice"
+    ],
+    "method_tags": [
+      "ddm",
+      "computational_modeling_general"
+    ],
+    "research_score": 68,
+    "reasoning_research": "The study employs a multi-group design with clinical populations and controls, uses computational modeling (drift diffusion) to analyze choice and reaction time data, and controls for age and cognition in analyses. However, the sample sizes are modest, particularly for the control group, and the abstract does not mention preregistration or detailed robustness checks.",
+    "impact_score": 75,
+    "reasoning_impact": "The work directly addresses a core clinical symptom (loss of motivation/apathy) in two major neurodegenerative disorders by linking it to latent decision processes, which is highly relevant to understanding goal-directed behavior. Its computational approach to dissecting effort-based decision-making could influence theoretical models and future research on motivation in clinical populations.",
+    "doi": "doi:10.1002/alz70857_105243",
+    "journal": "Alzheimer's & dementia : the journal of the Alzheimer's Association"
+  },
+  {
+    "title": "Biomarkers",
+    "topic_tags": [
+      "clinical_neuro"
+    ],
+    "method_tags": [],
+    "research_score": 65,
+    "reasoning_research": "The study demonstrates a clear methodological approach with synthetic data generation, radiologist validation, and comparison against established benchmarks, indicating technical rigor. However, the abstract lacks details on sample size of the original dataset, statistical tests for model comparison, and any mention of preregistration or robustness checks beyond accuracy.",
+    "impact_score": 40,
+    "reasoning_impact": "The work is highly relevant to clinical neuroimaging applications, but its direct relevance to core topics in decision neuroscience (e.g., self-control, reinforcement learning, value-based choice) is not established in the provided text. The impact appears confined to methodological advances in medical image analysis for dementia diagnosis.",
+    "doi": "doi:10.1002/alz70856_098727",
+    "journal": "Alzheimer's & dementia : the journal of the Alzheimer's Association"
+  },
+  {
+    "title": "Conjunctive population coding integrates sensory evidence to guide adaptive behavior",
+    "topic_tags": [
+      "attention",
+      "sequential_sampling",
+      "value_based_choice"
+    ],
+    "method_tags": [
+      "eeg"
+    ],
+    "research_score": 85,
+    "reasoning_research": "The study employs large-scale human intracranial electroencephalography, a methodologically rigorous and high-resolution approach for assessing neural population dynamics. The abstract explicitly frames the research around a clear computational challenge regarding the integration of sequential sensory evidence, suggesting a strong conceptual foundation. However, specific details on sample size, statistical methods, preregistration, or robustness checks are not provided in the abstract, limiting a full assessment of methodological rigor.",
+    "impact_score": 80,
+    "reasoning_impact": "The findings directly address a core challenge in decision neuroscience—how the brain integrates sequential information to guide adaptive, context-dependent behavior—which is highly relevant to theories of evidence accumulation and cognitive flexibility. The proposed mechanism of 'conjunctive population coding' has clear potential to influence future research on the neural basis of dynamic decision-making and perceptual inference.",
+    "doi": "doi:10.1073/pnas.2520444122",
+    "journal": "Proceedings of the National Academy of Sciences of the United States of America"
+  }
+]
