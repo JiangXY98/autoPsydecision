@@ -3,6 +3,7 @@ from datetime import datetime, timezone, timedelta
 import json
 import requests
 import os
+import re
 from openai import OpenAI
 
 # Example PubMed RSS feed URL
@@ -52,6 +53,21 @@ Return a valid JSON object only (no extra text):
 }
 """
 
+def strip_html(x: str) -> str:
+    return re.sub(r"<[^>]+>", " ", x or "").strip()
+
+def safe_json_loads(s: str):
+    s = (s or "").strip()
+    s = s.replace("```json", "").replace("```", "").strip()
+    try:
+        return json.loads(s)
+    except Exception:
+        start = s.find("{")
+        end = s.rfind("}")
+        if start != -1 and end != -1 and end > start:
+            return json.loads(s[start:end+1])
+        raise
+        
 def extract_scores_and_reasons(title: str, abstract: str):
     response = client.chat.completions.create(
         model="deepseek-chat",
@@ -67,7 +83,7 @@ def extract_scores_and_reasons(title: str, abstract: str):
                 ),
             },
         ],
-        max_tokens=300,
+        max_tokens=500,
         temperature=0.2,
     )
 
@@ -80,10 +96,14 @@ def extract_scores_and_reasons(title: str, abstract: str):
     reasoning_impact = "N/A"
 
     try:
-        obj = json.loads(generated)
-        research_score = int(obj.get("research_quality_score"))
+        obj = safe_json_loads(generated)
+        rq = obj.get("research_quality_score")
+        pi = obj.get("potential_impact_score")
+        if rq is not None:
+            research_score = int(float(rq))
+        if pi is not None:
+            impact_score = int(float(pi))
         reasoning_research = str(obj.get("research_reasoning", "")).strip() or "N/A"
-        impact_score = int(obj.get("potential_impact_score"))
         reasoning_impact = str(obj.get("impact_reasoning", "")).strip() or "N/A"
     except Exception:
         # Keep N/A; optionally log generated for debugging
@@ -97,13 +117,34 @@ def get_pubmed_abstracts(rss_url):
     one_week_ago = datetime.now(timezone.utc) - timedelta(weeks=1)
 
     for entry in feed.entries:
-        published_date = datetime.strptime(entry.published, '%a, %d %b %Y %H:%M:%S %z')
+        published_raw = entry.get("published")
+        if not published_raw:
+            continue
+
+        try:
+            published_date = datetime.strptime(
+                published_raw, '%a, %d %b %Y %H:%M:%S %z'
+            )
+        except ValueError:
+            continue
+
         if published_date >= one_week_ago:
-            title = entry.title
-            abstract = entry.content[0].value
+            title = entry.get("title", "N/A")
+
+            if getattr(entry, "content", None) and len(entry.content) > 0:
+                abstract = entry.content[0].value
+            else:
+                abstract = entry.get("summary", "")
+
             doi = entry.get("dc_identifier", "N/A")
-            journal = entry.get('dc_source', 'N/A')
-            abstracts_with_urls.append({"title": title, "abstract": abstract, "doi": doi, "journal": journal})
+            journal = entry.get("dc_source", "N/A")
+
+            abstracts_with_urls.append({
+                "title": title,
+                "abstract": abstract,
+                "doi": doi,
+                "journal": journal
+            })
 
     return abstracts_with_urls
 
@@ -113,7 +154,13 @@ scored_articles = []
 
 for abstract_data in pubmed_abstracts:
     title = abstract_data["title"]
-    research_score, reasoning_research, impact_score, reasoning_impact = extract_scores_and_reasons(abstract_data["title"],abstract_data["abstract"])
+    abstract_clean = strip_html(abstract_data["abstract"])
+    
+    research_score, reasoning_research, impact_score, reasoning_impact = extract_scores_and_reasons(
+        title,
+        abstract_clean
+    )
+    
     doi = abstract_data["doi"]
     journal = abstract_data["journal"]
 
@@ -136,16 +183,18 @@ for article_data in scored_articles:
     reasoning_research = article_data["reasoning_research"]
     impact_score = article_data["impact_score"]
     reasoning_impact = article_data["reasoning_impact"]
-    doi = article_data["doi"].strip()
     journal = article_data["journal"].strip()
+    doi = (article_data["doi"] or "N/A").strip()
+    doi_clean = doi.replace("doi:", "").strip()
+    doi_link = f"https://doi.org/{doi_clean}" if doi_clean != "N/A" and "/" in doi_clean else doi
 
     issue_body += f"- **Title**: {title}\n"
-    issue_body += f"  **Journal**: {journal}\n"
-    issue_body += f"  **Research Score**: {research_score}\n"
-    issue_body += f"  **Reasoning (Research)**: {reasoning_research}\n"
-    issue_body += f"  **Impact Score**: {impact_score}\n"
-    issue_body += f"  **Reasoning Impact**: {reasoning_impact}\n"
-    issue_body += f"  **DOI**: https://doi.org/{doi}\n\n"
+    issue_body += f"  **Journal**: {journal}\n"
+    issue_body += f"  **Research Score**: {research_score}\n"
+    issue_body += f"  **Reasoning (Research)**: {reasoning_research}\n"
+    issue_body += f"  **Impact Score**: {impact_score}\n"
+    issue_body += f"  **Reasoning (Impact)**: {reasoning_impact}\n"
+    issue_body += f"  **DOI**: {doi_link}\n\n"
 
 def create_github_issue(title, body, access_token):
     url = f"https://api.github.com/repos/JiangXY98/autoPsydecision/issues"
