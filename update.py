@@ -3,7 +3,6 @@ from datetime import datetime, timezone, timedelta
 import json
 import requests
 import os
-import re
 from openai import OpenAI
 
 # Example PubMed RSS feed URL
@@ -122,8 +121,8 @@ for abstract_data in pubmed_abstracts:
         "title": title,
         "research_score": research_score,
         "reasoning_research": reasoning_research,
-        "social_impact_score": social_impact_score,
-        "reasoning_social_impact": reasoning_social_impact,
+        "impact_score": impact_score,
+        "reasoning_impact": reasoning_impact,
         "doi": doi,
         "journal": journal
     })
@@ -135,8 +134,8 @@ for article_data in scored_articles:
     title = article_data["title"].strip()
     research_score = article_data["research_score"]
     reasoning_research = article_data["reasoning_research"]
-    social_impact_score = article_data["social_impact_score"]
-    reasoning_social_impact = article_data["reasoning_social_impact"]
+    impact_score = article_data["impact_score"]
+    reasoning_impact = article_data["reasoning_impact"]
     doi = article_data["doi"].strip()
     journal = article_data["journal"].strip()
 
