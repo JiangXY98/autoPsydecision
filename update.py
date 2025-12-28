@@ -7,7 +7,7 @@ import re
 from openai import OpenAI
 
 # Example PubMed RSS feed URL
-rss_url = 'https://pubmed.ncbi.nlm.nih.gov/rss/search/1ZM29-VQ7Y3AIGmXtfwB55QSl-K3N1gWErGoQ5G0krIim7hsty/?limit=100&utm_campaign=pubmed-2&fc=20250411080910'
+rss_url = 'https://pubmed.ncbi.nlm.nih.gov/rss/search/1bYz7DSbRS5nPC1Sop1SziAxQ38TJj7lsnpC-_682rLIkEkg-h/?limit=100&utm_campaign=pubmed-2&fc=20251227231501'
 
 access_token = os.getenv('GITHUB_TOKEN')
 deepseekapikey = os.getenv('DEEPSEEK_API_KEY')
@@ -17,49 +17,80 @@ client = OpenAI(
     base_url="https://api.deepseek.com/v1"
 )
 
-def extract_scores_and_reasons(text):
-    # 此函数保持不变
+JSON_PROMPT = """
+You are a senior researcher in decision neuroscience and computational psychology.
+
+You will be given the TITLE and ABSTRACT of a peer-reviewed journal article.
+
+Evaluate conservatively based ONLY on the provided text.
+Do not speculate or invent information not explicitly stated.
+
+=== Scoring Guidelines ===
+
+1. Research Quality Score (0–100)
+Evaluate based on:
+- Conceptual novelty
+- Methodological rigor (design, modeling, statistics, sample; preregistration if mentioned)
+- Data reliability (human data, clarity of sample, robustness indicators)
+
+2. Potential Impact Score (0–100)
+Evaluate based on:
+- Relevance to self-control and attention in decision-making (e.g., reinforcement learning, deception, social norms)
+- Potential to influence future research directions or theory
+- Clarity of implications within the field
+
+Do NOT assume media attention or policy uptake unless explicitly stated.
+
+=== Output Format (STRICT JSON ONLY) ===
+
+Return a valid JSON object only (no extra text):
+
+{
+  "research_quality_score": <integer 0-100>,
+  "research_reasoning": "<2–3 concise sentences>",
+  "potential_impact_score": <integer 0-100>,
+  "impact_reasoning": "<2–3 concise sentences>"
+}
+"""
+
+def extract_scores_and_reasons(title: str, abstract: str):
     response = client.chat.completions.create(
         model="deepseek-chat",
         messages=[
-            {"role": "system", "content": f"You are an psychologist and researcher. You are skilled at selecting interesting/novelty research."},
-            {"role": "user", "content": f"Given the text '{text}', evaluate this article with two scores and a brief justification for each score:\n"
-                                        f"1. Research Score (0-100): Based on research innovation, methodological rigor, and data reliability.\n"
-                                        f"2. Social Impact Score (0-100): Based on public attention, policy relevance, and societal impact.\n"
-                                        f"Provide the scores and justifications in the following format, with each on a new line:\n"
-                                        f"Research Score: <score>\n"
-                                        f"Reasoning (Research): <reasoning>\n"
-                                        f"Social Impact Score: <score>\n"
-                                        f"Reasoning (Social Impact): <reasoning>\n"},
+            {"role": "system", "content": "You are a careful and conservative academic reviewer."},
+            {
+                "role": "user",
+                "content": (
+                    f"{JSON_PROMPT}\n\n"
+                    f"=== Article to Evaluate ===\n"
+                    f"TITLE:\n{title}\n\n"
+                    f"ABSTRACT:\n{abstract}\n"
+                ),
+            },
         ],
         max_tokens=300,
-        temperature=0.3
+        temperature=0.2,
     )
 
-    generated_text = response.choices[0].message.content.strip()
+    generated = response.choices[0].message.content.strip()
 
+    # Defaults (robust fallback)
     research_score = "N/A"
     reasoning_research = "N/A"
-    social_impact_score = "N/A"
-    reasoning_social_impact = "N/A"
+    impact_score = "N/A"
+    reasoning_impact = "N/A"
 
-    research_match = re.search(r"Research Score:\s*(\d+)", generated_text, re.IGNORECASE)
-    if research_match:
-        research_score = research_match.group(1)
+    try:
+        obj = json.loads(generated)
+        research_score = int(obj.get("research_quality_score"))
+        reasoning_research = str(obj.get("research_reasoning", "")).strip() or "N/A"
+        impact_score = int(obj.get("potential_impact_score"))
+        reasoning_impact = str(obj.get("impact_reasoning", "")).strip() or "N/A"
+    except Exception:
+        # Keep N/A; optionally log generated for debugging
+        pass
 
-    reason_research_match = re.search(r"Reasoning \(Research\):\s*(.+)", generated_text, re.IGNORECASE)
-    if reason_research_match:
-        reasoning_research = reason_research_match.group(1).strip()
-
-    social_match = re.search(r"Social Impact Score:\s*(\d+)", generated_text, re.IGNORECASE)
-    if social_match:
-        social_impact_score = social_match.group(1)
-
-    reason_social_match = re.search(r"Reasoning \(Social Impact\):\s*(.+)", generated_text, re.IGNORECASE)
-    if reason_social_match:
-        reasoning_social_impact = reason_social_match.group(1).strip()
-
-    return research_score, reasoning_research, social_impact_score, reasoning_social_impact
+    return research_score, reasoning_research, impact_score, reasoning_impact
 
 def get_pubmed_abstracts(rss_url):
     abstracts_with_urls = []
@@ -71,7 +102,7 @@ def get_pubmed_abstracts(rss_url):
         if published_date >= one_week_ago:
             title = entry.title
             abstract = entry.content[0].value
-            doi = entry.dc_identifier
+            doi = entry.get("dc_identifier", "N/A")
             journal = entry.get('dc_source', 'N/A')
             abstracts_with_urls.append({"title": title, "abstract": abstract, "doi": doi, "journal": journal})
 
@@ -83,7 +114,7 @@ scored_articles = []
 
 for abstract_data in pubmed_abstracts:
     title = abstract_data["title"]
-    research_score, reasoning_research, social_impact_score, reasoning_social_impact = extract_scores_and_reasons(abstract_data["abstract"])
+    research_score, reasoning_research, impact_score, reasoning_impact = extract_scores_and_reasons(abstract_data["title"],abstract_data["abstract"])
     doi = abstract_data["doi"]
     journal = abstract_data["journal"]
 
@@ -113,8 +144,8 @@ for article_data in scored_articles:
     issue_body += f"  **Journal**: {journal}\n"
     issue_body += f"  **Research Score**: {research_score}\n"
     issue_body += f"  **Reasoning (Research)**: {reasoning_research}\n"
-    issue_body += f"  **Social Impact Score**: {social_impact_score}\n"
-    issue_body += f"  **Reasoning (Social Impact)**: {reasoning_social_impact}\n"
+    issue_body += f"  **Impact Score**: {impact_score}\n"
+    issue_body += f"  **Reasoning Impact**: {reasoning_impact}\n"
     issue_body += f"  **DOI**: https://doi.org/{doi}\n\n"
 
 def create_github_issue(title, body, access_token):
