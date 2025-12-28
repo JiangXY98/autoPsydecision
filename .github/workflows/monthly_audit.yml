@@ -7,8 +7,9 @@ on:
 jobs:
   audit:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write     # 允许 push 报告
+  permissions:
+    contents: write
+    issues: write
 
     steps:
       - name: Checkout Repository
@@ -38,3 +39,25 @@ jobs:
 
           git commit -m "monthly audit: $(date -u +'%Y-%m')"
           git push
+
+      - name: Create audit issue
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          REPORT_FILE=$(ls -1 reports/audit_*.md | tail -n 1)
+          TITLE=$(head -n 1 "$REPORT_FILE" | sed 's/# //')
+          BODY=$(cat "$REPORT_FILE")
+
+          python - << 'PY'
+          import os, json, requests
+          title = os.environ["TITLE"]
+          body = os.environ["BODY"]
+          token = os.environ["GITHUB_TOKEN"]
+          url = "https://api.github.com/repos/JiangXY98/autoPsydecision/issues"
+          headers = {"Authorization": f"token {token}", "Accept": "application/vnd.github.v3+json"}
+          r = requests.post(url, headers=headers, data=json.dumps({"title": title, "body": body}))
+          print(r.status_code, r.text)
+          PY
+        env:
+          TITLE: ${{ env.TITLE }}
+          BODY: ${{ env.BODY }}
