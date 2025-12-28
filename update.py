@@ -41,6 +41,48 @@ Evaluate based on:
 
 Do NOT assume media attention or policy uptake unless explicitly stated.
 
+=== Tagging Rules ===
+
+Select up to 3 topic tags from the ENUM list below that best describe the article.
+Return an empty list if none apply.
+
+TOPIC_TAGS_ENUM (choose only from these exact strings):
+[
+  "self_control",
+  "inhibitory_control",
+  "impulsivity",
+  "attention",
+  "salience",
+  "value_based_choice",
+  "reinforcement_learning",
+  "belief_learning",
+  "sequential_sampling",
+  "deception_dishonesty",
+  "moral_decision",
+  "social_norms",
+  "prosocial_choice",
+  "economic_games",
+  "effort_decision",
+  "delay_discounting",
+  "clinical_neuro",
+  "neuroimaging_neurophys"
+]
+
+Also select any method tags mentioned explicitly in the text (0–5 tags).
+METHOD_TAGS_ENUM (choose only from these exact strings):
+[
+  "ddm",
+  "hddm",
+  "ssm_eam", 
+  "rl_modeling",
+  "bayesian_modeling",
+  "computational_modeling_general",
+  "eye_tracking",
+  "eeg",
+  "fnirs",
+  "fmri"
+]
+
 === Output Format (STRICT JSON ONLY) ===
 
 Return a valid JSON object only (no extra text):
@@ -49,7 +91,9 @@ Return a valid JSON object only (no extra text):
   "research_quality_score": <integer 0-100>,
   "research_reasoning": "<2–3 concise sentences>",
   "potential_impact_score": <integer 0-100>,
-  "impact_reasoning": "<2–3 concise sentences>"
+  "impact_reasoning": "<2–3 concise sentences>",
+  "topic_tags": ["<up to 3 from TOPIC_TAGS_ENUM>"],
+  "method_tags": ["<0 to 5 from METHOD_TAGS_ENUM>"]
 }
 """
 
@@ -105,11 +149,13 @@ def extract_scores_and_reasons(title: str, abstract: str):
             impact_score = int(float(pi))
         reasoning_research = str(obj.get("research_reasoning", "")).strip() or "N/A"
         reasoning_impact = str(obj.get("impact_reasoning", "")).strip() or "N/A"
+        topic_tags = obj.get("topic_tags", []) or []
+        method_tags = obj.get("method_tags", []) or []
     except Exception:
         # Keep N/A; optionally log generated for debugging
         pass
 
-    return research_score, reasoning_research, impact_score, reasoning_impact
+    return research_score, reasoning_research, impact_score, reasoning_impact, topic_tags, method_tags
 
 def get_pubmed_abstracts(rss_url):
     abstracts_with_urls = []
@@ -166,6 +212,8 @@ for abstract_data in pubmed_abstracts:
 
     scored_articles.append({
         "title": title,
+        "topic_tags": topic_tags,
+        "method_tags": method_tags,
         "research_score": research_score,
         "reasoning_research": reasoning_research,
         "impact_score": impact_score,
@@ -187,9 +235,13 @@ for article_data in scored_articles:
     doi = (article_data["doi"] or "N/A").strip()
     doi_clean = doi.replace("doi:", "").strip()
     doi_link = f"https://doi.org/{doi_clean}" if doi_clean != "N/A" and "/" in doi_clean else doi
+    topic_tags = article_data.get("topic_tags", [])
+    method_tags = article_data.get("method_tags", [])
 
     issue_body += f"- **Title**: {title}\n"
     issue_body += f"  **Journal**: {journal}\n"
+    issue_body += f"  **Topic tags**: {', '.join(topic_tags) if topic_tags else 'N/A'}\n"
+    issue_body += f"  **Method tags**: {', '.join(method_tags) if method_tags else 'N/A'}\n"
     issue_body += f"  **Research Score**: {research_score}\n"
     issue_body += f"  **Reasoning (Research)**: {reasoning_research}\n"
     issue_body += f"  **Impact Score**: {impact_score}\n"
@@ -216,3 +268,13 @@ def create_github_issue(title, body, access_token):
         print("Response:", response.text)
 
 create_github_issue(issue_title, issue_body, access_token)
+
+import pathlib
+
+run_date = datetime.now().strftime("%Y-%m-%d")
+out_dir = pathlib.Path("data/weekly")
+out_dir.mkdir(parents=True, exist_ok=True)
+
+out_path = out_dir / f"{run_date}.json"
+with open(out_path, "w", encoding="utf-8") as f:
+    json.dump(scored_articles, f, ensure_ascii=False, indent=2)
