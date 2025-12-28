@@ -1,0 +1,40 @@
+name: Monthly Audit
+on:
+  schedule:
+    - cron: '0 3 1 * *'   # 每月 1 日 03:00 UTC
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write     # 允许 push 报告
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: pip install -U pip
+
+      - name: Run monthly audit
+        run: python scripts/monthly_audit.py
+
+      - name: Commit audit report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add reports/*.md || true
+          git diff --cached --quiet && echo "No changes to commit." && exit 0
+
+          git commit -m "monthly audit: $(date -u +'%Y-%m')"
+          git push
