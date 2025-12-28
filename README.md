@@ -1,6 +1,11 @@
 # Autoaiscore
 This is a repo template to generate score for PubMed RSS update based on research abstract. You could custom this repo by changing the propmt and RSS links.
 
+	•	✅ 自动、可复现的文献扫描 + 结构化判断记录
+	•	✅ 每周判断 → 持久化数据
+	•	✅ 每月对“自己判断系统”的审计
+	•	✅ 可回放的科研判断轨迹
+
 # Usage
 
 - Fork and clone this repo to your own account or click `use this template - Create a new Repository`
