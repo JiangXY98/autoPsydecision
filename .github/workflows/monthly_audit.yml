@@ -1,4 +1,5 @@
 name: Monthly Audit
+
 on:
   schedule:
     - cron: '0 3 1 * *'   # 每月 1 日 03:00 UTC
@@ -7,9 +8,9 @@ on:
 jobs:
   audit:
     runs-on: ubuntu-latest
-  permissions:
-    contents: write
-    issues: write
+    permissions:
+      contents: write
+      issues: write
 
     steps:
       - name: Checkout Repository
@@ -46,18 +47,23 @@ jobs:
         run: |
           REPORT_FILE=$(ls -1 reports/audit_*.md | tail -n 1)
           TITLE=$(head -n 1 "$REPORT_FILE" | sed 's/# //')
-          BODY=$(cat "$REPORT_FILE")
 
           python - << 'PY'
-          import os, json, requests
-          title = os.environ["TITLE"]
-          body = os.environ["BODY"]
+          import os, json, requests, pathlib
+
           token = os.environ["GITHUB_TOKEN"]
+          report_file = pathlib.Path(os.environ["REPORT_FILE"])
+          title = os.environ["TITLE"]
+          body = report_file.read_text(encoding="utf-8")
+
           url = "https://api.github.com/repos/JiangXY98/autoPsydecision/issues"
           headers = {"Authorization": f"token {token}", "Accept": "application/vnd.github.v3+json"}
-          r = requests.post(url, headers=headers, data=json.dumps({"title": title, "body": body}))
-          print(r.status_code, r.text)
+          payload = {"title": title, "body": body}
+
+          r = requests.post(url, headers=headers, data=json.dumps(payload))
+          print(r.status_code)
+          print(r.text)
           PY
         env:
-          TITLE: ${{ env.TITLE }}
-          BODY: ${{ env.BODY }}
+          REPORT_FILE: reports/audit_$(date -u +'%Y-%m').md
+          TITLE: Monthly Audit Report $(date -u +'%Y-%m')
