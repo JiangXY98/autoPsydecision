@@ -19,4 +19,4 @@ This is a repo template to generate score for PubMed RSS update based on researc
 
 Click your repo's Actions, select Weekly Article, and click run workflow in the right panel.
 
-Thank to yufree.cn
+Thank to [yufree.cn](https://yufree.cn)
