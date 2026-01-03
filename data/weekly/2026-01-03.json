@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Meta-path guided policy distillation for resilient coordination in autonomous unmanned swarm",
+    "topic_tags": [
+      "reinforcement_learning"
+    ],
+    "method_tags": [
+      "rl_modeling",
+      "computational_modeling_general"
+    ],
+    "research_score": 65,
+    "reasoning_research": "The abstract describes a novel computational framework (MPGPD-RC) that integrates meta-path-guided graph embeddings with a teacher-student policy distillation scheme, suggesting conceptual novelty in method integration. Methodological rigor is implied through empirical evaluations against state-of-the-art baselines across diverse perturbation scenarios, though specific details on sample size, statistical tests, or preregistration are absent. Data reliability is not addressed regarding human data, as the work appears focused on autonomous swarm simulation.",
+    "impact_score": 40,
+    "reasoning_impact": "The work is highly relevant to reinforcement learning and computational modeling for autonomous systems coordination, but its direct relevance to core topics in decision neuroscience and computational psychology (e.g., self-control, attention, value-based choice) is minimal based solely on the provided text. Its potential impact appears confined to specialized domains like multi-agent RL and swarm robotics, with no stated implications for theories of human decision-making.",
+    "doi": "doi:10.1371/journal.pone.0339675",
+    "journal": "PloS one"
+  },
+  {
+    "title": "Health professions education and unprofessional behaviour in the global south: a scoping review of conceptions, theoretical frameworks, and prevalence",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": 45,
+    "reasoning_research": "The review is clearly scoped and follows a systematic search protocol across multiple databases, which provides methodological structure. However, the final sample of only 14 articles from an initial 382 suggests potentially restrictive inclusion criteria or a fragmented literature base, limiting the robustness and generalizability of the mapped evidence. The reliance on predominantly cross-sectional designs (71.5%) from the included studies inherently limits causal inference about the phenomena studied.",
+    "impact_score": 30,
+    "reasoning_impact": "The topic is highly relevant to applied educational and clinical ethics within a specific geopolitical context (Global South), which could inform local institutional reforms. Its potential impact on the core fields of decision neuroscience and computational psychology is minimal, as it does not engage with cognitive mechanisms, computational models, or neural substrates of decision-making, focusing instead on behavioral categorization and educational sociology.",
+    "doi": "doi:10.1186/s12909-025-08318-w",
+    "journal": "BMC medical education"
+  },
+  {
+    "title": "Pathways to honesty: Exploring the ecological desistance of atypical lying features",
+    "topic_tags": [
+      "deception_dishonesty",
+      "moral_decision",
+      "impulsivity"
+    ],
+    "method_tags": [],
+    "research_score": 68,
+    "reasoning_research": "The study uses a large longitudinal sample (N=1354) with a 12-year follow-up period, which provides strong data reliability for tracking developmental trajectories. Methodological rigor is indicated by the analysis of baseline levels and changes in multiple factors, though specific statistical models or preregistration details are not provided in the abstract. The conceptual novelty lies in examining 'atypical lying' as a specific construct within a developmental framework.",
+    "impact_score": 72,
+    "reasoning_impact": "The research is highly relevant to understanding the developmental pathways of dishonesty, specifically linking social and individual factors to persistent atypical lying. It has clear implications for intervention programs aimed at promoting honesty by identifying modifiable risk and protective factors. The findings could influence theory on how moral decision-making and self-control develop in adolescence and early adulthood.",
+    "doi": "doi:10.1111/jora.70130",
+    "journal": "Journal of research on adolescence : the official journal of the Society for Research on Adolescence"
+  }
+]
