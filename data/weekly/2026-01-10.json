@@ -1,0 +1,13 @@
+[
+  {
+    "title": "Diagnostic yield of clinical exome sequencing in patients with suspected hereditary neuropathy",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": 55,
+    "reasoning_research": "The study presents a clear clinical cohort and diagnostic pipeline, but the sample size is small (n=21) and the methodology is descriptive without experimental manipulation or computational modeling. The reliance on standard clinical guidelines (ACMG) and commercial software provides a baseline of rigor, but there is no mention of preregistration, control groups, or robustness checks beyond standard clinical reporting.",
+    "impact_score": 30,
+    "reasoning_impact": "The findings are relevant to clinical genetics and diagnostic neurology, but they have minimal direct relevance to the core topics of decision neuroscience, such as self-control, attention, or computational models of choice. The implications are confined to improving diagnostic yield in hereditary neuropathies, with no stated connection to decision-making processes or theoretical advances in psychology.",
+    "doi": "doi:10.55730/1300-0144.6105",
+    "journal": "Turkish journal of medical sciences"
+  }
+]
