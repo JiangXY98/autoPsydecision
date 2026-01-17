@@ -1,0 +1,64 @@
+[
+  {
+    "title": "Synergistic Effects of Nanochitosan and Demineralized Dentin Matrix on Alveolar Bone Substitution",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": 65,
+    "reasoning_research": "The study employs a controlled animal model with random assignment and longitudinal sampling, which provides a basic methodological structure. However, the abstract lacks details on statistical methods, sample size justification, preregistration, or robustness checks, limiting the assessment of rigor.",
+    "impact_score": 0,
+    "reasoning_impact": "The article's focus is on dental biomaterials and bone regeneration in guinea pigs, with no connection to decision neuroscience, computational psychology, self-control, attention, or related decision-making processes described in the scoring guidelines.",
+    "doi": "doi:10.1590/0103-644020256759",
+    "journal": "Brazilian dental journal"
+  },
+  {
+    "title": "Gender and anxiety reveal distinct computational sources of underconfidence",
+    "topic_tags": [
+      "attention",
+      "belief_learning",
+      "clinical_neuro"
+    ],
+    "method_tags": [
+      "computational_modeling_general"
+    ],
+    "research_score": 78,
+    "reasoning_research": "The study demonstrates conceptual novelty by developing a novel dynamic computational model to dissect metacognitive biases and employs a large online sample (N=1,447) for robust analysis. Methodological rigor is indicated by the computational modeling approach and the examination of temporal dynamics in judgment, though specific details on preregistration, task design, or statistical robustness checks are not provided in the abstract.",
+    "impact_score": 82,
+    "reasoning_impact": "The findings have clear relevance to understanding the computational sources of metacognitive biases in decision-making, specifically linking anxiety and gender to distinct temporal mechanisms in underconfidence. This work has strong potential to influence future theoretical and clinical research by proposing specific, dissociable pathways for remediation of confidence deficits.",
+    "doi": "doi:10.1017/S0033291725102808",
+    "journal": "Psychological medicine"
+  },
+  {
+    "title": "A unifying account of replay as context-driven memory reactivation",
+    "topic_tags": [
+      "attention",
+      "salience",
+      "reinforcement_learning"
+    ],
+    "method_tags": [
+      "computational_modeling_general"
+    ],
+    "research_score": 78,
+    "reasoning_research": "The abstract proposes a novel theoretical framework and computational model to unify disparate replay phenomena, addressing a conceptual gap in the literature. Methodological rigor is implied through computational modeling that explains existing findings and accounts for observations other models fail to capture, though specific details about model validation, statistical comparisons, or sample characteristics are not provided.",
+    "impact_score": 85,
+    "reasoning_impact": "The work directly addresses a fundamental question about the nature and purpose of neural replay, offering a unifying account that challenges reinforcement learning interpretations. It has high potential to influence theoretical directions in memory consolidation research by providing a mechanistic framework linking encoding, context, and replay.",
+    "doi": "doi:10.7554/eLife.99931",
+    "journal": "eLife"
+  },
+  {
+    "title": "Bayesian hierarchical cognitive modeling with the EMC2 package",
+    "topic_tags": [
+      "value_based_choice",
+      "reinforcement_learning"
+    ],
+    "method_tags": [
+      "bayesian_modeling",
+      "computational_modeling_general"
+    ],
+    "research_score": 75,
+    "reasoning_research": "The article presents a methodological tool (EMC2 R package) with a clear, comprehensive five-phase workflow for Bayesian hierarchical cognitive modeling, indicating strong conceptual integration and methodological design. The reliability is supported by its application to leading evidence-accumulation models and a tutorial, though the abstract does not detail specific sample sizes, preregistration, or robustness checks for empirical data.",
+    "impact_score": 70,
+    "reasoning_impact": "The tool directly addresses methodological rigor in computational psychology and decision neuroscience by streamlining Bayesian hierarchical analysis of cognitive models, which is highly relevant for research on value-based choice and reinforcement learning. Its potential impact lies in influencing future research practices and theory development through improved modeling accessibility and standardization.",
+    "doi": "doi:10.3758/s13428-025-02869-y",
+    "journal": "Behavior research methods"
+  }
+]
