@@ -1,0 +1,28 @@
+[
+  {
+    "title": "Stabilization versus flexibility: Detergent-dependent trade-offs in neurotensin receptor 1 GPCR ensembles",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": 78,
+    "reasoning_research": "The study employs a rigorous multi-method approach combining ligand binding assays, thermostability measurements, thermodynamic analysis, and atomistic molecular dynamics simulations on a well-defined thermostabilized receptor system. The methodology is clearly described and the findings are internally consistent across experimental and computational approaches, demonstrating robust data reliability.",
+    "impact_score": 65,
+    "reasoning_impact": "The research addresses a fundamental methodological trade-off in structural biology with clear implications for experimental design in GPCR studies, particularly regarding detergent selection for structural versus dynamic characterization. While technically sound, the direct relevance to decision neuroscience and computational psychology is limited as it focuses on biophysical protein chemistry rather than cognitive or behavioral processes.",
+    "doi": "doi:10.1002/pro.70475",
+    "journal": "Protein science : a publication of the Protein Society"
+  },
+  {
+    "title": "Test-retest reliability of the gaze index for sign-tracking and goal-tracking",
+    "topic_tags": [
+      "attention",
+      "salience",
+      "reinforcement_learning"
+    ],
+    "method_tags": [],
+    "research_score": 65,
+    "reasoning_research": "The study directly addresses a key methodological inconsistency in human research by assessing the test-retest reliability and stability of a specific gaze index over a four-month period, which is a clear strength. However, the abstract lacks details on sample size, specific statistical methods for reliability assessment, or any mention of preregistration, limiting the evaluation of methodological rigor.",
+    "impact_score": 55,
+    "reasoning_impact": "The findings are directly relevant to understanding attention and salience in Pavlovian conditioning, a core process in value-based choice and reinforcement learning. The conclusion that the current index may be insufficient for reliably detecting goal-tracking behavior provides a clear, methodological implication for future research in this area.",
+    "doi": "doi:10.3758/s13428-025-02919-5",
+    "journal": "Behavior research methods"
+  }
+]
