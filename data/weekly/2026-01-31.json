@@ -1,0 +1,39 @@
+[
+  {
+    "title": "Causal evidence for a domain-specific role of left superior frontal sulcus in human perceptual decision-making",
+    "topic_tags": [
+      "attention",
+      "value_based_choice",
+      "sequential_sampling"
+    ],
+    "method_tags": [
+      "fmri",
+      "computational_modeling_general"
+    ],
+    "research_score": 85,
+    "reasoning_research": "The study employs a comprehensive multi-method approach combining fMRI, TMS, computational modeling, and behavioral paradigms to test specific theoretical predictions, indicating high methodological rigor. The explicit mention of testing predictions from a sequential sampling model and examining effects at behavioral, computational, and neural levels suggests a robust, theory-driven design aimed at establishing causal evidence.",
+    "impact_score": 80,
+    "reasoning_impact": "The work directly addresses a core debate in prefrontal cortex function regarding domain-general versus domain-specific processing, with clear implications for theories of perceptual and value-based decision-making. The finding of a causal, domain-specific role for the left SFS provides a specific neural target that could significantly influence future research on the neural circuitry of evidence integration.",
+    "doi": "doi:10.7554/eLife.94576",
+    "journal": "eLife"
+  },
+  {
+    "title": "The role of altered decision dynamics and dorsolateral prefrontal cortex to amygdala causal circuitry in the aberrant efficacy of emotion suppression in subthreshold depression",
+    "topic_tags": [
+      "attention",
+      "value_based_choice",
+      "clinical_neuro"
+    ],
+    "method_tags": [
+      "ddm",
+      "bayesian_modeling",
+      "fmri"
+    ],
+    "research_score": 78,
+    "reasoning_research": "The study demonstrates methodological rigor through a multi-sample design, computational modeling (drift diffusion modeling), and neuroimaging with dynamic causal modeling, though the smaller fMRI sample size (n=43) limits statistical power. The conceptual novelty is moderate, linking altered decision dynamics to neural circuitry in a subclinical population.",
+    "impact_score": 72,
+    "reasoning_impact": "The findings directly address mechanisms of emotion regulation and decision-making in subthreshold depression, potentially influencing research on early intervention and computational psychiatry. The integration of behavioral modeling with causal neurocircuit analysis offers a clear framework for future studies on affective disorders.",
+    "doi": "doi:10.1017/S0033291725103097",
+    "journal": "Psychological medicine"
+  }
+]
