@@ -1,0 +1,50 @@
+[
+  {
+    "title": "The human dorsal anterior cingulate facilitates acceptance of unfair offers and regulates inequity aversion",
+    "topic_tags": [
+      "social_norms",
+      "economic_games",
+      "value_based_choice"
+    ],
+    "method_tags": [
+      "fmri",
+      "ddm",
+      "computational_modeling_general"
+    ],
+    "research_score": 78,
+    "reasoning_research": "The study employs a rigorous multi-method approach combining fMRI, computational modeling (DDM), and behavioral analysis within the established Ultimatum Game paradigm. The methodology explicitly links model parameters (DDM weight for DI) to neural measures (dACC representations, dACC-vlPFC connectivity) and behavioral outcomes, demonstrating a clear analytical chain. The sample size and preregistration status are not specified, limiting a full assessment of robustness.",
+    "impact_score": 82,
+    "reasoning_impact": "The findings directly challenge traditional reward-maximization accounts of bargaining by proposing a specific neural circuit (dACC-vlPFC) for regulating inequity aversion to facilitate socially pragmatic decisions. This offers a novel, mechanistic framework for understanding self-control in social economic games, potentially redirecting theory on how cognitive control systems manage social emotions like unfairness.",
+    "doi": "doi:10.1371/journal.pbio.3003007",
+    "journal": "PLoS biology"
+  },
+  {
+    "title": "The Difficulty in Numerical Computation Impacts Motor Decisions in a Stop-Signal Task",
+    "topic_tags": [
+      "inhibitory_control",
+      "attention",
+      "sequential_sampling"
+    ],
+    "method_tags": [
+      "ddm",
+      "computational_modeling_general"
+    ],
+    "research_score": 68,
+    "reasoning_research": "The study employs a novel task design (NC-SST) to manipulate cognitive demand via numerical distance, uses a computational model (generalized drift-diffusion model) to analyze data, and reports a sample size of 32 participants. Methodological details on preregistration, robustness checks, or specific statistical thresholds are not provided in the abstract.",
+    "impact_score": 72,
+    "reasoning_impact": "The work directly links cognitive difficulty in numerical processing to motor initiation and inhibition, core components of decision-making and self-control. It proposes an extension to the classical race model framework by integrating cognitive information with perceptual features, which could influence theoretical models of inhibitory control.",
+    "doi": "doi:10.1111/ejn.70410",
+    "journal": "The European journal of neuroscience"
+  },
+  {
+    "title": "Low-Input Proteomics Protocols for Laser-Captured FFPE Samples with Orbitrap Astral DIA-MS",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": 65,
+    "reasoning_research": "The abstract describes methodological optimization for low-input proteomics with clear practical guidance and mentions reproducibility, but lacks explicit details on sample size, statistical validation, or preregistration. The focus is on protocol development rather than hypothesis-driven experimental research.",
+    "impact_score": 20,
+    "reasoning_impact": "The article is a methods paper in proteomics and mass spectrometry, with no stated connection to decision neuroscience, psychology, or any cognitive processes. Its potential impact is confined to technical improvements in tissue analysis methodology.",
+    "doi": "doi:10.1007/978-1-0716-5154-4_8",
+    "journal": "Methods in molecular biology (Clifton, N.J.)"
+  }
+]
