@@ -1,0 +1,69 @@
+[
+  {
+    "title": "Deception Detection from Five-Channel Wearable EEG on LieWaves: A Reproducible Baseline for Subject-Dependent and Subject-Independent Evaluation",
+    "topic_tags": [
+      "deception_dishonesty"
+    ],
+    "method_tags": [
+      "eeg",
+      "computational_modeling_general"
+    ],
+    "research_score": 65,
+    "reasoning_research": "The study demonstrates methodological rigor through clear evaluation protocols (subject-dependent vs. subject-independent), use of a public dataset, and explicit reporting of windowing and aggregation rules. However, the subject-independent results show limited performance (66.70% accuracy, AUC 0.58), indicating modest data reliability and generalization challenges with the current approach.",
+    "impact_score": 40,
+    "reasoning_impact": "The work is relevant to deception detection using wearable neurophysiology, but its direct implications for decision neuroscience theories of self-control or attention are not stated. Its primary impact is methodological, providing a reproducible baseline and cautioning against optimistic evaluation designs in EEG-based deception research.",
+    "doi": "doi:10.3390/s26031027",
+    "journal": "Sensors (Basel, Switzerland)"
+  },
+  {
+    "title": "Mechanistic interpretability of reinforcement learning in Medicaid care coordination",
+    "topic_tags": [
+      "reinforcement_learning"
+    ],
+    "method_tags": [
+      "rl_modeling"
+    ],
+    "research_score": 78,
+    "reasoning_research": "The study demonstrates strong methodological rigor through a large-scale retrospective audit (N=250,000 decisions), multiple interpretability techniques (attention analysis, Shapley explanations, sparse autoencoders), and clinician adjudication with statistical confidence intervals. The inclusion of fairness optimization and subgroup analysis adds robustness, though the abstract lacks details on specific reinforcement learning modeling approaches and preregistration.",
+    "impact_score": 65,
+    "reasoning_impact": "The work has clear relevance to reinforcement learning applications in healthcare decision-making and provides a framework for algorithmic governance with fairness considerations. Its potential impact is primarily in clinical AI deployment and audit methodologies rather than fundamental neuroscience or psychology of decision-making.",
+    "doi": "doi:10.1136/bmjhci-2025-101935",
+    "journal": "BMJ health & care informatics"
+  },
+  {
+    "title": "Augmentation of frontoparietal gamma-band phase coupling enhances human altruistic behavior",
+    "topic_tags": [
+      "prosocial_choice",
+      "moral_decision",
+      "social_norms"
+    ],
+    "method_tags": [
+      "eeg",
+      "computational_modeling_general"
+    ],
+    "research_score": 78,
+    "reasoning_research": "The study builds on prior EEG evidence to test a causal hypothesis using transcranial alternating current stimulation, demonstrating a specific effect on disadvantageous inequality as predicted. It employs computational modeling to interpret the mechanism as increasing the weight of other-regarding concerns, suggesting methodological integration beyond simple behavioral observation. The abstract mentions a specific sample size or preregistration, limiting assessment of full rigor.",
+    "impact_score": 85,
+    "reasoning_impact": "The work directly addresses the neurobiological basis of variability in altruistic behavior and demonstrates a causal intervention to enhance it, which is highly relevant to prosocial decision-making. It identifies a specific neural target (frontoparietal gamma-band coupling) for modulating social preferences, potentially influencing future research on neuromodulation of social behavior and theory linking neural synchronization to value integration.",
+    "doi": "doi:10.1371/journal.pbio.3003602",
+    "journal": "PLoS biology"
+  },
+  {
+    "title": "Decision for self and other modulates risk attitude and electrophysiological processing: evidence from a behavioral and electrophysiological experiment",
+    "topic_tags": [
+      "value_based_choice",
+      "prosocial_choice",
+      "attention"
+    ],
+    "method_tags": [
+      "ddm",
+      "eeg"
+    ],
+    "research_score": 72,
+    "reasoning_research": "The study employs a clear experimental design combining a mixed gambling task with EEG recording, and uses computational modeling (drift-diffusion model) to account for individual differences. The sample size is not specified, and while preregistration is not mentioned, the methodological approach appears systematic.",
+    "impact_score": 68,
+    "reasoning_impact": "The research directly addresses a central question in decision neuroscience regarding self-other differences in risk preference, with clear implications for understanding social decision-making. The identification of P300 as a neural marker for agent-specific risk processing could influence future neurophysiological research in social contexts.",
+    "doi": "doi:10.1093/cercor/bhag001",
+    "journal": "Cerebral cortex (New York, N.Y. : 1991)"
+  }
+]
