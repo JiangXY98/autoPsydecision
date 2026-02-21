@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Revisiting the post-resolution positivity effect in conflict tasks: Meta-analytic and behavioral evidence for context-dependent affective valence of conflict resolution",
+    "topic_tags": [
+      "self_control",
+      "attention",
+      "value_based_choice"
+    ],
+    "method_tags": [
+      "ddm",
+      "computational_modeling_general"
+    ],
+    "research_score": 75,
+    "reasoning_research": "The study employs a multi-method approach including meta-analysis, behavioral replication, and computational modeling, indicating methodological rigor. The sample sizes are clearly stated (N=992 for meta-analysis, N=66 for replication), and the use of drift-diffusion modeling provides a quantitative framework. However, the replication sample is modest, and the failure to replicate prior findings suggests potential reliability issues in the broader literature.",
+    "impact_score": 70,
+    "reasoning_impact": "The findings directly challenge a core theoretical assumption about the affective valence of control exertion in decision-making, suggesting it is context-dependent rather than universally positive. This has clear implications for theories of self-control and attention by questioning a proposed motivational signal for control upregulation. The evidence for publication bias also contributes to methodological discourse in the field.",
+    "doi": "doi:10.3758/s13423-026-02866-y",
+    "journal": "Psychonomic bulletin & review"
+  },
+  {
+    "title": "Signatures proposed to index perceptual effects emerge in a purely cognitive task",
+    "topic_tags": [
+      "attention",
+      "value_based_choice"
+    ],
+    "method_tags": [
+      "ddm",
+      "computational_modeling_general"
+    ],
+    "research_score": 78,
+    "reasoning_research": "The study employs a strong, falsification-based methodology by testing proposed signatures in a purely cognitive task where perceptual effects are impossible, providing a direct test of theoretical claims. The use of a computational model (DDM) and analysis of confidence and RT distributions indicates methodological rigor, though the abstract lacks details on sample size, preregistration, or specific robustness checks.",
+    "impact_score": 85,
+    "reasoning_impact": "The findings directly challenge fundamental assumptions in perception and consciousness research regarding how to dissociate perceptual from cognitive effects, which is highly relevant to theories of decision-making and evidence accumulation. This has clear potential to influence future methodological approaches and theoretical interpretations across related fields.",
+    "doi": "doi:10.3758/s13423-026-02863-1",
+    "journal": "Psychonomic bulletin & review"
+  }
+]
