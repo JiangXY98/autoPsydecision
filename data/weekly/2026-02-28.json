@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Understanding human metacontrol and its pathologies using deep neural networks",
+    "topic_tags": [
+      "reinforcement_learning",
+      "attention",
+      "clinical_neuro"
+    ],
+    "method_tags": [
+      "rl_modeling",
+      "computational_modeling_general"
+    ],
+    "research_score": 78,
+    "reasoning_research": "The study demonstrates conceptual novelty by using deep RL agents to model human metacontrol and its pathologies, and shows methodological rigor through a comparative design with human data and computational simulations. However, the abstract lacks specific details on human sample size, statistical robustness, or preregistration, limiting a full assessment of data reliability.",
+    "impact_score": 85,
+    "reasoning_impact": "The work is highly relevant to understanding the computational basis of control valuation and error monitoring in decision-making, with clear implications for linking computational models to clinical traits like depression and anxiety. It has strong potential to influence future research on metacontrol theory and computational psychiatry.",
+    "doi": "doi:10.1073/pnas.2510334123",
+    "journal": "Proceedings of the National Academy of Sciences of the United States of America"
+  },
+  {
+    "title": "Prediction of uncertain visual trajectories is biased toward motion continuity",
+    "topic_tags": [
+      "attention",
+      "value_based_choice",
+      "sequential_sampling"
+    ],
+    "method_tags": [
+      "ddm"
+    ],
+    "research_score": 75,
+    "reasoning_research": "The study employs a systematic experimental design with three experiments manipulating noise characteristics and stimulus properties to test trajectory extrapolation. Methodological rigor is demonstrated through the use of behavioral analysis and the Diffusion Decision Model (DDM) to quantify decision processes. However, the abstract lacks details on sample size, statistical robustness indicators, and whether the study was preregistered.",
+    "impact_score": 65,
+    "reasoning_impact": "The findings directly contribute to understanding perceptual decision-making under uncertainty, specifically how kinematic properties like motion continuity bias prediction. The results have clear implications for theories of visual perception and prediction, suggesting a default strategy favoring smooth motion interpretation. Its influence may extend to related fields studying how prior assumptions guide decisions in noisy environments.",
+    "doi": "doi:10.3758/s13414-025-03210-7",
+    "journal": "Attention, perception & psychophysics"
+  }
+]
