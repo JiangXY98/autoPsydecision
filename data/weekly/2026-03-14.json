@@ -1,0 +1,34 @@
+[
+  {
+    "title": "NeuroMorphFusion: A Neuro-Inspired Hybrid Learning Framework for Interpretable Deep Lesion Detection in IoT-Enabled Healthcare Systems",
+    "topic_tags": [],
+    "method_tags": [
+      "rl_modeling",
+      "computational_modeling_general"
+    ],
+    "research_score": 65,
+    "reasoning_research": "The abstract describes a methodologically complex framework integrating multiple computational approaches with clear performance metrics and benchmark comparisons, though details on sample size, data reliability, and statistical validation are absent. The mention of multi-objective optimization and experimental evaluation on a specific dataset suggests systematic testing, but the lack of information about preregistration, robustness checks, or human data limits the assessment of rigor.",
+    "impact_score": 40,
+    "reasoning_impact": "The work is highly relevant to applied medical imaging and IoT systems, with potential for clinical integration, but its direct connection to core topics in decision neuroscience (e.g., self-control, attention in decision-making) is not established in the provided text. The impact within computational psychology or decision neuroscience appears limited, as the focus is on engineering optimization and diagnostic accuracy rather than theoretical advances in decision processes.",
+    "doi": "doi:10.1177/15330338251391080",
+    "journal": "Technology in cancer research & treatment"
+  },
+  {
+    "title": "Recursion beyond language: Lexical and arithmetic interference in visual hierarchical embedding",
+    "topic_tags": [
+      "attention",
+      "inhibitory_control",
+      "impulsivity"
+    ],
+    "method_tags": [
+      "ddm",
+      "computational_modeling_general"
+    ],
+    "research_score": 78,
+    "reasoning_research": "The study employs a rigorous dual-task paradigm with multiple interference conditions and a matched control task (iteration), supported by drift diffusion modeling to decompose decision processes. The use of cognitive covariates (verbal working memory) and the comparison of two experiments suggest methodological thoroughness, though specific sample details, preregistration, or robustness checks are not mentioned in the abstract.",
+    "impact_score": 65,
+    "reasoning_impact": "The findings directly address a core debate in cognitive science about the domain-generality of recursive processing and its relationship to language, with clear implications for theories of hierarchical representation. The proposed hybrid architecture and identification of differential resilience between recursion and iteration could influence future research on symbolic thought and cognitive resource allocation.",
+    "doi": "doi:10.1007/s00426-026-02252-2",
+    "journal": "Psychological research"
+  }
+]
