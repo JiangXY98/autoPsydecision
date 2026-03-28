@@ -1,0 +1,65 @@
+[
+  {
+    "title": "Adaptive Knowledge Tracing with Dynamic Memory and Reinforcement Learning",
+    "topic_tags": [
+      "reinforcement_learning"
+    ],
+    "method_tags": [
+      "rl_modeling",
+      "computational_modeling_general"
+    ],
+    "research_score": 65,
+    "reasoning_research": "The study proposes a novel computational model (DRAKT) with clear methodological innovations, including a Q-learning mechanism and dynamic memory module. It demonstrates empirical validation against state-of-the-art baselines on multiple public datasets with reported performance metrics, indicating a degree of robustness.",
+    "impact_score": 40,
+    "reasoning_impact": "The work is highly relevant to personalized educational technology and adaptive learning systems, with stated practical implications. Its direct relevance to core topics in decision neuroscience and computational psychology (e.g., self-control, attention, reinforcement learning in decision-making) is not explicitly established in the provided abstract.",
+    "doi": "doi:10.3390/s26061878",
+    "journal": "Sensors (Basel, Switzerland)"
+  },
+  {
+    "title": "It's Probably Mine: Self-Prioritization Can Be a Decisional Strategy",
+    "topic_tags": [
+      "attention",
+      "value_based_choice",
+      "self_control"
+    ],
+    "method_tags": [
+      "computational_modeling_general"
+    ],
+    "research_score": 78,
+    "reasoning_research": "The study employs a psychophysical approach with computational modeling across two experiments, demonstrating methodological rigor through task modification and analysis of decisional strategy under varying demands. The sample and data reliability are not explicitly detailed, but the combination of experimental manipulation and computational tracing of effects indicates a robust approach.",
+    "impact_score": 72,
+    "reasoning_impact": "The findings directly inform understanding of how ownership influences decisional processing and the mechanisms of self-bias, with clear implications for theoretical accounts in cognitive science. The relevance to value-based choice and attention in decision-making is evident, though the specific impact on broader fields like reinforcement learning or social norms is not explicitly stated.",
+    "doi": "doi:10.1111/cogs.70190",
+    "journal": "Cognitive science"
+  },
+  {
+    "title": "Environmental sustainability assessment based on accounting information audit",
+    "topic_tags": [],
+    "method_tags": [
+      "reinforcement_learning"
+    ],
+    "research_score": 65,
+    "reasoning_research": "The abstract describes a novel computational framework with experimental validation on real-world datasets, reporting specific performance metrics (AUC improvement, feature redundancy reduction). However, no methodological details about sample size, data collection, statistical testing, or preregistration are provided, limiting assessment of rigor and reliability.",
+    "impact_score": 40,
+    "reasoning_impact": "The work is applied to ESG accounting and auditing, which is relevant to sustainable decision-making in finance, but its direct relevance to core topics in decision neuroscience and computational psychology (e.g., self-control, attention, reinforcement learning in behavior) is not established. The impact appears focused on applied auditing technology rather than fundamental theory in decision science.",
+    "doi": "doi:10.1371/journal.pone.0345544",
+    "journal": "PloS one"
+  },
+  {
+    "title": "Footstep sounds influence bistable biological motion perception",
+    "topic_tags": [
+      "attention",
+      "sequential_sampling"
+    ],
+    "method_tags": [
+      "hddm",
+      "computational_modeling_general"
+    ],
+    "research_score": 68,
+    "reasoning_research": "The study addresses methodological limitations of prior work by using ecologically valid footstep sounds and controlling for visual bias, and employs a computational model (HDDM) to explore mechanisms. However, the sample size is small (N=24), and the abstract explicitly states the experiments were not preregistered, limiting confidence in the robustness of the findings.",
+    "impact_score": 55,
+    "reasoning_impact": "The work is relevant to understanding multisensory integration and attention in perceptual decision-making, specifically for bistable biological motion. It provides a computational mechanism (two-stage modulation of nondecision time and drift rate) that could influence future modeling of audiovisual interactions. Its implications are clear but likely confined to the specific domain of bistable perception.",
+    "doi": "doi:10.3758/s13414-026-03240-9",
+    "journal": "Attention, perception & psychophysics"
+  }
+]
