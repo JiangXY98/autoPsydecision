@@ -1,0 +1,30 @@
+[
+  {
+    "title": "An illustrative guide to expressing cognitive theories using evidence accumulation modelling",
+    "topic_tags": [
+      "attention",
+      "value_based_choice"
+    ],
+    "method_tags": [
+      "ssm_eam",
+      "computational_modeling_general"
+    ],
+    "research_score": 75,
+    "reasoning_research": "The article presents a methodological tutorial with clear practical application, demonstrating the instantiation of cognitive theories using a specific R package (EMC2) and an augmented linear model language. The methodological approach is explicitly described with two concrete examples (prospective memory and integration of automated advice), suggesting structured implementation guidance. However, the abstract does not provide details on empirical data reliability, sample characteristics, or statistical robustness for the examples used, limiting the assessment of empirical rigor.",
+    "impact_score": 70,
+    "reasoning_impact": "The work directly addresses a methodological gap in using evidence accumulation models to express cognitive theories, which is highly relevant to computational modeling in decision neuroscience. By providing a framework to map complex experimental designs to model parameters, it has clear potential to influence how researchers implement and test cognitive theories. The implications are focused on methodological advancement within computational psychology and cognitive modeling, though the abstract does not specify broader theoretical shifts.",
+    "doi": "doi:10.3758/s13428-026-02970-w",
+    "journal": "Behavior research methods"
+  },
+  {
+    "title": "The Role and Importance of Society, Family, and Schools in Promoting Adolescent Health",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": 40,
+    "reasoning_research": "The abstract describes a review chapter summarizing existing ecological models and research, indicating it is not a primary empirical study with novel data collection or methodological testing. No specific methodological details, sample characteristics, statistical analyses, or preregistration are mentioned, limiting the assessment of its empirical rigor.",
+    "impact_score": 55,
+    "reasoning_impact": "The topic is broadly relevant to developmental and health decision-making contexts, and it synthesizes evidence across systems (family, school, society) which could inform intervention frameworks. However, its direct relevance to core computational or neuroscientific theories of decision-making (e.g., reinforcement learning, attention) is not explicitly stated, and its impact is likely confined to public health and developmental science rather than decision neuroscience.",
+    "doi": "doi:10.1007/978-981-95-7000-3_21",
+    "journal": "Advances in experimental medicine and biology"
+  }
+]
