@@ -1,0 +1,15 @@
+[
+  {
+    "title": "Can a public health awareness campaign effectively address loneliness on a population level?",
+    "topic_tags": [
+      "social_norms"
+    ],
+    "method_tags": [],
+    "research_score": 40,
+    "reasoning_research": "The article is explicitly labeled as a commentary, not an empirical study, and therefore lacks methodological details such as experimental design, sample characteristics, statistical analysis, or computational modeling. The reasoning is based on reviewing existing evidence and conceptual arguments rather than presenting new data or formal models.",
+    "impact_score": 65,
+    "reasoning_impact": "The article directly addresses a major public health priority (loneliness) and proposes a shift in intervention strategy from individual-level to population-wide approaches, which could influence future research and policy directions in public health psychology. It clearly outlines theoretical implications for stigma reduction and social norm change.",
+    "doi": "doi:10.1186/s12963-026-00474-5",
+    "journal": "Population health metrics"
+  }
+]
