@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Using Group Chats to Drive Behavior Change in Digital Health Interventions: Scoping Review and Realist Synthesis",
+    "topic_tags": [
+      "self_control",
+      "social_norms",
+      "prosocial_choice"
+    ],
+    "method_tags": [],
+    "research_score": 72,
+    "reasoning_research": "The study demonstrates methodological rigor through a comprehensive scoping review and realist synthesis of 81 empirical studies across multiple databases, with clear inclusion criteria and systematic data extraction. The application of reflexive thematic analysis informed by social cognitive theory to develop context-mechanism-outcome configurations provides a structured analytical framework. However, the review nature limits direct assessment of primary data reliability, and the sample consists of existing studies rather than original human data collection.",
+    "impact_score": 65,
+    "reasoning_impact": "The work has clear relevance to understanding mechanisms of behavior change in digital health interventions, particularly through the lens of social cognitive processes like modeling, norms, and self-regulation. By developing a program theory explaining how group chat contexts activate change mechanisms, it provides a conceptual foundation for designing more effective interventions. Its impact lies in shifting focus from narrow effectiveness studies to mechanism-based understanding of how digital social environments drive behavior.",
+    "doi": "doi:10.2196/88911",
+    "journal": "Journal of medical Internet research"
+  }
+]
