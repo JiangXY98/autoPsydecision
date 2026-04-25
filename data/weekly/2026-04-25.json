@@ -1,0 +1,88 @@
+[
+  {
+    "title": "Reverse Hierarchical Processing of Speech in Talker Identification",
+    "topic_tags": [
+      "attention",
+      "salience",
+      "value_based_choice"
+    ],
+    "method_tags": [
+      "ddm",
+      "eye_tracking",
+      "computational_modeling_general"
+    ],
+    "research_score": 75,
+    "reasoning_research": "The study employs multiple methodological approaches (pupillometry, error pattern analysis, drift diffusion models) to examine talker identification, which provides convergent evidence. The design includes cross-language comparison (English vs. Mandarin) and uses native English speakers, but the sample is limited to one language group and no preregistration is mentioned. The use of DDM and pupillometry adds rigor, though effect sizes and robustness checks are not detailed in the abstract.",
+    "impact_score": 60,
+    "reasoning_impact": "The findings are relevant to understanding how listeners balance acoustic and higher-level cues in talker identification, supporting a reverse hierarchical processing framework. This could influence theories of speech perception and learning, but the direct relevance to self-control or attention in decision-making is indirect. The implications for future research on cue utilization and processing costs are clear within the field of speech perception.",
+    "doi": "doi:10.1111/ejn.70520",
+    "journal": "The European journal of neuroscience"
+  },
+  {
+    "title": "Ten years Diffusion Model for Conflict (DMC) tasks: Theoretical foundations, applications, practical recommendations, and open challenges",
+    "topic_tags": [
+      "attention",
+      "salience",
+      "inhibitory_control"
+    ],
+    "method_tags": [
+      "ssm_eam",
+      "computational_modeling_general"
+    ],
+    "research_score": 82,
+    "reasoning_research": "The article provides a comprehensive review of the Diffusion Model for Conflict (DMC) tasks, covering theoretical foundations, applications, and practical recommendations over a decade. It critically assesses limitations and outlines open challenges, demonstrating methodological rigor and balanced evaluation. However, as a review, it does not present new empirical data or novel modeling, which slightly limits its originality.",
+    "impact_score": 78,
+    "reasoning_impact": "The DMC framework directly addresses selective attention and cognitive control in conflict tasks, core topics in decision neuroscience. The review synthesizes applications across psychological domains and offers practical guidance, which could influence future research and standardization. However, the impact is somewhat constrained by the model's current limited standardization and need for extension to other conflict tasks.",
+    "doi": "doi:10.3758/s13423-026-02878-8",
+    "journal": "Psychonomic bulletin & review"
+  },
+  {
+    "title": "Domain-specific effects of hunger on attention and choice",
+    "topic_tags": [
+      "self_control",
+      "attention",
+      "value_based_choice"
+    ],
+    "method_tags": [
+      "eye_tracking",
+      "computational_modeling_general"
+    ],
+    "research_score": 72,
+    "reasoning_research": "The study uses a within-subject design with eye-tracking and cognitive modeling, which provides methodological rigor. However, the sample size and preregistration status are not mentioned, limiting full assessment of data reliability. The novelty is moderate, as it extends known effects of hunger on food choice to test domain specificity.",
+    "impact_score": 65,
+    "reasoning_impact": "The findings support a domain-specific view of hunger effects, which could refine theories of state-dependent decision-making. The relevance to self-control and attention in food choice is clear, but implications for non-food domains are null results, limiting broader impact. The study may influence future research on attentional mechanisms in value-based choice.",
+    "doi": "doi:10.1038/s41598-026-48772-0",
+    "journal": "Scientific reports"
+  },
+  {
+    "title": "Multimodal Sentiment and Emotion Analysis Framework for Personalized Health Coaching Messages: Proof-of-Concept Study",
+    "topic_tags": [],
+    "method_tags": [
+      "computational_modeling_general"
+    ],
+    "research_score": 45,
+    "reasoning_research": "The study is a proof-of-concept using synthetically generated data, which limits its immediate methodological rigor and generalizability. The reported accuracies and emotion detection results are based on a small set of tools and a single dataset, with no preregistration or advanced modeling. The methods are straightforward comparisons of existing NLP tools, lacking novelty in design or statistical sophistication.",
+    "impact_score": 30,
+    "reasoning_impact": "The work is tangentially related to self-control and attention in decision-making only through the context of health coaching messages, but it does not directly address core mechanisms of self-control or attention. The findings are preliminary and require validation with real-world data, limiting their potential to influence future research directions in decision neuroscience or computational psychology.",
+    "doi": "doi:10.2196/79558",
+    "journal": "JMIR formative research"
+  },
+  {
+    "title": "Dopaminergic modulation of the sense of agency influences moral behavior in Parkinson's disease",
+    "topic_tags": [
+      "moral_decision",
+      "self_control",
+      "deception_dishonesty"
+    ],
+    "method_tags": [
+      "ddm",
+      "computational_modeling_general"
+    ],
+    "research_score": 72,
+    "reasoning_research": "The study uses a within-subject medication manipulation in Parkinson's disease, which provides a strong quasi-experimental design, and includes a healthy control group. The sample size is modest (23 PD patients, 24 controls), and while drift diffusion modeling is applied, no preregistration is mentioned. The methods are clearly described and appropriate for the research question.",
+    "impact_score": 68,
+    "reasoning_impact": "The findings directly link dopaminergic modulation of sense of agency to moral behavior, offering mechanistic insight into embodied morality. This could influence future research on self-awareness and decision-making in clinical and healthy populations, though the small sample and specific patient group limit generalizability. The implications for theory are clear but remain preliminary.",
+    "doi": "doi:10.1073/pnas.2513356123",
+    "journal": "Proceedings of the National Academy of Sciences of the United States of America"
+  }
+]
