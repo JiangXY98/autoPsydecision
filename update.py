@@ -114,7 +114,7 @@ def safe_json_loads(s: str):
         
 def extract_scores_and_reasons(title: str, abstract: str):
     response = client.chat.completions.create(
-        model="deepseek-chat",
+        model="deepseek-v4-flash",
         messages=[
             {"role": "system", "content": "You are a careful and conservative academic reviewer."},
             {
