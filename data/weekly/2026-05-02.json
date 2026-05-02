@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Effects of mindful breathing meditation on stereotype expression in two randomized controlled double-blinded trials",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": "N/A",
+    "reasoning_research": "N/A",
+    "impact_score": "N/A",
+    "reasoning_impact": "N/A",
+    "doi": "doi:10.1371/journal.pone.0347871",
+    "journal": "PloS one"
+  },
+  {
+    "title": "Decision time is associated with future cooperation and social rewiring decisions in network public goods games",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": "N/A",
+    "reasoning_research": "N/A",
+    "impact_score": "N/A",
+    "reasoning_impact": "N/A",
+    "doi": "doi:10.1371/journal.pone.0347919",
+    "journal": "PloS one"
+  },
+  {
+    "title": "Selective Modulation of Evidence Accumulation by Hippocampal Theta Oscillations During Mnemonic Decision-Making",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": "N/A",
+    "reasoning_research": "N/A",
+    "impact_score": "N/A",
+    "reasoning_impact": "N/A",
+    "doi": "doi:10.1002/hbm.70529",
+    "journal": "Human brain mapping"
+  },
+  {
+    "title": "Strategies for the prevention and treatment of peritoneal metastases in large Borrmann type III and type IV gastric cancer",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": 10,
+    "reasoning_research": "The article is a clinical review on gastric cancer treatment, completely outside the domains of decision neuroscience and computational psychology. No methodological rigor, modeling, or human behavioral data relevant to self-control or attention is presented.",
+    "impact_score": 5,
+    "reasoning_impact": "The paper has no relevance to self-control, attention, or decision-making processes in the stated fields. It addresses a surgical oncology topic and thus offers no implications for future research in decision neuroscience or computational psychology.",
+    "doi": "doi:10.3760/cma.j.cn441530-20260202-00073",
+    "journal": "Zhonghua wei chang wai ke za zhi = Chinese journal of gastrointestinal surgery"
+  }
+]
