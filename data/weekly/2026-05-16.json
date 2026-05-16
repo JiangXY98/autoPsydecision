@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Speed and quality of complex strategic decisions",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": "N/A",
+    "reasoning_research": "N/A",
+    "impact_score": "N/A",
+    "reasoning_impact": "N/A",
+    "doi": "doi:10.1073/pnas.2531472123",
+    "journal": "Proceedings of the National Academy of Sciences of the United States of America"
+  },
+  {
+    "title": "Global trends in robot-assisted ureteral reimplantation: a bibliometric and visualization analysis",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": 20,
+    "reasoning_research": "The article is a bibliometric analysis of a surgical technique (robot-assisted ureteral reimplantation) with no connection to decision neuroscience, computational psychology, or self-control/attention research. The methods are standard bibliometric tools, not experimental or modeling approaches relevant to the field. There is no conceptual novelty or methodological rigor pertaining to decision-making processes.",
+    "impact_score": 10,
+    "reasoning_impact": "The findings are specific to urology and have no relevance to self-control, attention, reinforcement learning, or any core topic in decision neuroscience. The work cannot influence future research directions in computational psychology or behavioral decision-making. Its implications are confined to a narrow surgical specialty.",
+    "doi": "doi:10.1007/s11701-026-03452-z",
+    "journal": "Journal of robotic surgery"
+  },
+  {
+    "title": "Humanoid Robot Walking and Grasping Method Using Similarity Reward-Augmented Generative Adversarial Imitation Learning",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": "N/A",
+    "reasoning_research": "N/A",
+    "impact_score": "N/A",
+    "reasoning_impact": "N/A",
+    "doi": "doi:10.3390/s26092756",
+    "journal": "Sensors (Basel, Switzerland)"
+  },
+  {
+    "title": "A geometry-aware generative framework integrating GPS-VAE and Transformer-SELFIES for structure-based de novo drug design",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": "N/A",
+    "reasoning_research": "N/A",
+    "impact_score": "N/A",
+    "reasoning_impact": "N/A",
+    "doi": "doi:10.1007/s00894-026-06733-4",
+    "journal": "Journal of molecular modeling"
+  }
+]
