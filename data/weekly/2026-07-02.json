@@ -25,12 +25,16 @@
   },
   {
     "title": "Drunk Shopping Online: A Conceptual Framework of Impaired Consumer Decision-Making and Implications for Ethical Marketing",
-    "topic_tags": [],
+    "topic_tags": [
+      "impulsivity",
+      "value_based_choice",
+      "self_control"
+    ],
     "method_tags": [],
-    "research_score": "N/A",
-    "reasoning_research": "N/A",
-    "impact_score": "N/A",
-    "reasoning_impact": "N/A",
+    "research_score": 30,
+    "reasoning_research": "The article is conceptual, lacking empirical data, modeling, or rigorous methodology. It relies on existing theory (alcohol myopia) and proposes a framework without any quantitative or qualitative analysis. The absence of original data or validation limits its scientific rigor.",
+    "impact_score": 40,
+    "reasoning_impact": "The topic of drunk shopping is novel and has ethical implications for marketing. The framework may inspire future empirical research, but its impact is limited by its conceptual nature and lack of direct applications to decision-making theory. The field of ethical marketing may find it relevant, but broader neuroscience or psychology impact is modest.",
     "doi": "https://doi.org/10.1007/s10551-026-06368-8",
     "journal": "Journal of Business Ethics",
     "source_type": "journal",
@@ -49,12 +53,15 @@
   },
   {
     "title": "Supporting in Ways That Do Not Align With What We Feel, Believe, or Want: Theorizing About Deceptive/Reluctant Support Provision in Interpersonal Relationships",
-    "topic_tags": [],
+    "topic_tags": [
+      "deception_dishonesty",
+      "social_norms"
+    ],
     "method_tags": [],
-    "research_score": "N/A",
-    "reasoning_research": "N/A",
-    "impact_score": "N/A",
-    "reasoning_impact": "N/A",
+    "research_score": 45,
+    "reasoning_research": "The study uses qualitative interviews with a small sample (N=22) and lacks quantitative rigor, preregistration, or computational modeling. Conceptual contributions are novel but methodological limitations reduce confidence in generalizability.",
+    "impact_score": 35,
+    "reasoning_impact": "The focus on deceptive/reluctant support is relevant to deception and social norms in relationships, but its direct relevance to self-control and attention in decision-making is limited. The findings may influence future work on interpersonal communication but are unlikely to shift major theories in decision neuroscience.",
     "doi": "https://doi.org/10.1177/02654075261463317",
     "journal": "Journal of Social and Personal Relationships",
     "source_type": "journal",
