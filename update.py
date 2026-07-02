@@ -431,6 +431,7 @@ def extract_scores_and_reasons(title: str, abstract: str):
         ],
         max_tokens=500,
         temperature=0.2,
+        response_format={"type": "json_object"},
     )
 
     generated = response.choices[0].message.content.strip()
@@ -456,8 +457,8 @@ def extract_scores_and_reasons(title: str, abstract: str):
         topic_tags = obj.get("topic_tags", []) or []
         method_tags = obj.get("method_tags", []) or []
     except Exception:
-        # Keep N/A; optionally log generated for debugging
-        pass
+        print(f"Failed to parse model output for: {title}")
+        print(generated[:500])
 
     return research_score, reasoning_research, impact_score, reasoning_impact, topic_tags, method_tags
 
