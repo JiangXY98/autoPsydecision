@@ -429,7 +429,7 @@ def extract_scores_and_reasons(title: str, abstract: str):
                 ),
             },
         ],
-        max_tokens=500,
+        max_tokens=900,
         temperature=0.2,
         response_format={"type": "json_object"},
     )
