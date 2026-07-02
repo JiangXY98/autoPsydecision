@@ -278,6 +278,9 @@ def add_openalex_work(articles_by_key, work, source_label):
 def get_openalex_articles():
     articles_by_key = {}
     from_date = (datetime.now(timezone.utc) - timedelta(days=7)).date().isoformat()
+    date_filter_field = "from_created_date"
+    sort_field = "created_date"
+    fallback_notice_printed = False
     select = ",".join([
         "id",
         "doi",
@@ -294,14 +297,35 @@ def get_openalex_articles():
         for keyword in keywords:
             params = {
                 "search": keyword,
-                "filter": f"from_created_date:{from_date},type:article",
+                "filter": f"{date_filter_field}:{from_date},type:article",
                 "per-page": OPENALEX_PER_KEYWORD_LIMIT,
-                "sort": "created_date:desc",
+                "sort": f"{sort_field}:desc",
                 "select": select,
             }
 
             try:
                 results = openalex_request(params).get("results", [])
+            except requests.HTTPError as exc:
+                if (
+                    exc.response is not None
+                    and exc.response.status_code == 429
+                    and date_filter_field == "from_created_date"
+                ):
+                    date_filter_field = "from_publication_date"
+                    sort_field = "publication_date"
+                    if not fallback_notice_printed:
+                        print("OpenAlex rejected from_created_date; falling back to from_publication_date.")
+                        fallback_notice_printed = True
+                    params["filter"] = f"{date_filter_field}:{from_date},type:article"
+                    params["sort"] = f"{sort_field}:desc"
+                    try:
+                        results = openalex_request(params).get("results", [])
+                    except requests.RequestException as fallback_exc:
+                        print(f"OpenAlex request failed for {query_name}/{keyword}: {fallback_exc}")
+                        continue
+                else:
+                    print(f"OpenAlex request failed for {query_name}/{keyword}: {exc}")
+                    continue
             except requests.RequestException as exc:
                 print(f"OpenAlex request failed for {query_name}/{keyword}: {exc}")
                 continue
@@ -349,6 +373,9 @@ for abstract_data in openalex_articles:
 
 issue_title = f"Weekly OpenAlex Literature Report - {datetime.now().strftime('%Y-%m-%d')}"
 issue_body = "Below are the OpenAlex article scores and reasoning from the past week:\n\n"
+
+if not scored_articles:
+    issue_body += "No articles matched the current filters this week.\n"
 
 for article_data in scored_articles:
     title = article_data["title"].strip()
