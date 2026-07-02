@@ -1,12 +1,16 @@
 [
   {
     "title": "Open-skill vs. closed-skill sports and executive function in children and adolescents: a mini review of mechanisms and moderating factors",
-    "topic_tags": [],
+    "topic_tags": [
+      "self_control",
+      "attention",
+      "impulsivity"
+    ],
     "method_tags": [],
-    "research_score": "N/A",
-    "reasoning_research": "N/A",
-    "impact_score": "N/A",
-    "reasoning_impact": "N/A",
+    "research_score": 65,
+    "reasoning_research": "This mini-review synthesizes existing evidence on open- vs. closed-skill sports and executive function, but it is not original empirical research. It discusses mechanisms and moderators, though conclusions are domain-specific and not uniform. Methodological gaps are acknowledged, limiting novelty and rigor.",
+    "impact_score": 75,
+    "reasoning_impact": "The topic is relevant to self-control, attention, and impulsivity in developmental populations. It may inform future research on exercise-cognition interactions, but the findings are preliminary and context-dependent. The review highlights important moderators and methodological needs.",
     "doi": "https://doi.org/10.3389/fpsyg.2026.1873432",
     "journal": "Frontiers in Psychology",
     "source_type": "journal",
@@ -26,15 +30,15 @@
   {
     "title": "Drunk Shopping Online: A Conceptual Framework of Impaired Consumer Decision-Making and Implications for Ethical Marketing",
     "topic_tags": [
+      "self_control",
       "impulsivity",
-      "value_based_choice",
-      "self_control"
+      "attention"
     ],
     "method_tags": [],
-    "research_score": 30,
-    "reasoning_research": "The article is conceptual, lacking empirical data, modeling, or rigorous methodology. It relies on existing theory (alcohol myopia) and proposes a framework without any quantitative or qualitative analysis. The absence of original data or validation limits its scientific rigor.",
-    "impact_score": 40,
-    "reasoning_impact": "The topic of drunk shopping is novel and has ethical implications for marketing. The framework may inspire future empirical research, but its impact is limited by its conceptual nature and lack of direct applications to decision-making theory. The field of ethical marketing may find it relevant, but broader neuroscience or psychology impact is modest.",
+    "research_score": 35,
+    "reasoning_research": "The article is conceptual, proposing a framework and propositions without empirical data, modeling, or statistical analysis. It relies on a literature review and alcohol myopia theory, lacking methodological rigor.",
+    "impact_score": 60,
+    "reasoning_impact": "The phenomenon of drunk shopping is novel and relevant to self-control and impaired decision-making in digital environments. The framework could guide future research on ethical marketing and consumer vulnerability, but its impact is limited by its conceptual nature.",
     "doi": "https://doi.org/10.1007/s10551-026-06368-8",
     "journal": "Journal of Business Ethics",
     "source_type": "journal",
@@ -58,10 +62,10 @@
       "social_norms"
     ],
     "method_tags": [],
-    "research_score": 45,
-    "reasoning_research": "The study uses qualitative interviews with a small sample (N=22) and lacks quantitative rigor, preregistration, or computational modeling. Conceptual contributions are novel but methodological limitations reduce confidence in generalizability.",
-    "impact_score": 35,
-    "reasoning_impact": "The focus on deceptive/reluctant support is relevant to deception and social norms in relationships, but its direct relevance to self-control and attention in decision-making is limited. The findings may influence future work on interpersonal communication but are unlikely to shift major theories in decision neuroscience.",
+    "research_score": 30,
+    "reasoning_research": "The study uses a qualitative approach with 22 interviews, which is appropriate for initial conceptualization but lacks the methodological rigor typical in decision neuroscience (e.g., computational modeling, preregistration). The analysis identifies thematic features, but no quantitative robustness indicators are provided.",
+    "impact_score": 20,
+    "reasoning_impact": "The concept of deceptive/reluctant support is novel within interpersonal communication, but its direct relevance to self-control and attention in decision-making is limited. The findings may influence relationship research but are unlikely to shape computational or neuroscientific theories of decision-making.",
     "doi": "https://doi.org/10.1177/02654075261463317",
     "journal": "Journal of Social and Personal Relationships",
     "source_type": "journal",
