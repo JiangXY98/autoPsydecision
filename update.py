@@ -9,6 +9,7 @@ from openai import OpenAI
 OPENALEX_WORKS_URL = "https://api.openalex.org/works"
 OPENALEX_PER_KEYWORD_LIMIT = 10
 OPENALEX_MAX_ARTICLES = 30
+MAX_FUTURE_PUBLICATION_DAYS = 365
 
 OPENALEX_QUERIES = {
     "dishonesty": [
@@ -20,51 +21,37 @@ OPENALEX_QUERIES = {
         "moral decision making",
         "moral identity",
         "self-concept maintenance",
-        "reputation concern",
-        "prosocial lying",
+        "reputation management",
     ],
     "decision_process": [
         "drift diffusion model",
-        "diffusion model decision making",
         "HDDM",
         "evidence accumulation",
         "sequential sampling model",
-        "decision process model",
-        "boundary separation",
-        "drift rate",
-        "nondecision time",
-        "RLDDM",
+        "computational psychiatry",
+        "computational modeling",
+        "reinforcement learning",
     ],
     "cognitive_control": [
         "cognitive control",
-        "executive control",
-        "self-control",
         "response inhibition",
         "conflict monitoring",
-        "mental effort",
-        "effort allocation",
         "expected value of control",
     ],
     "consumer_decision": [
-        "consumer neuroscience",
         "consumer decision making",
         "consumer behavior",
-        "value-based decision",
-        "purchase decision",
-        "choice behavior",
+        "value-based decision making",
         "intertemporal choice",
+        "delay discounting",
         "loss aversion",
         "risk preference",
-        "decision under uncertainty",
     ],
-    "computational_neuroscience": [
-        "computational psychiatry",
-        "computational cognitive neuroscience",
-        "computational modeling",
-        "latent decision process",
-        "computational phenotyping",
-        "hierarchical Bayesian",
-        "reinforcement learning decision making",
+    "additional_decision_topics": [
+        "decision conflict",
+        "choice architecture",
+        "moral behavior",
+        "honest behavior",
     ],
 }
 
@@ -171,6 +158,21 @@ def reconstruct_abstract(inverted_index):
 
     return " ".join(word for _, word in sorted(words))
 
+def parse_openalex_date(value):
+    if not value:
+        return None
+    try:
+        return datetime.strptime(value, "%Y-%m-%d").date()
+    except ValueError:
+        return None
+
+def publication_date_is_reasonable(publication_date):
+    parsed = parse_openalex_date(publication_date)
+    if not parsed:
+        return True
+    latest_allowed = datetime.now(timezone.utc).date() + timedelta(days=MAX_FUTURE_PUBLICATION_DAYS)
+    return parsed <= latest_allowed
+
 def safe_json_loads(s: str):
     s = (s or "").strip()
     s = s.replace("```json", "").replace("```", "").strip()
@@ -240,6 +242,39 @@ def openalex_request(params):
     response.raise_for_status()
     return response.json()
 
+def add_openalex_work(articles_by_key, work, source_label):
+    openalex_id = work.get("id") or ""
+    doi = work.get("doi") or ""
+    if not doi:
+        return
+    dedupe_key = doi.lower()
+
+    title = work.get("title") or work.get("display_name") or "N/A"
+    source = ((work.get("primary_location") or {}).get("source") or {})
+    journal = source.get("display_name") or "N/A"
+    source_type = source.get("type") or "N/A"
+    publication_date = work.get("publication_date") or "N/A"
+
+    if source_type != "journal":
+        return
+
+    if not publication_date_is_reasonable(publication_date):
+        return
+
+    article = articles_by_key.setdefault(dedupe_key, {
+        "title": title,
+        "abstract": reconstruct_abstract(work.get("abstract_inverted_index")),
+        "doi": doi or "N/A",
+        "journal": journal,
+        "source_type": source_type,
+        "created_date": work.get("created_date") or "N/A",
+        "publication_date": publication_date,
+        "openalex_id": openalex_id,
+        "source_queries": [],
+    })
+    if source_label not in article["source_queries"]:
+        article["source_queries"].append(source_label)
+
 def get_openalex_articles():
     articles_by_key = {}
     from_date = (datetime.now(timezone.utc) - timedelta(days=7)).date().isoformat()
@@ -248,8 +283,10 @@ def get_openalex_articles():
         "doi",
         "title",
         "display_name",
+        "created_date",
         "publication_date",
         "primary_location",
+        "authorships",
         "abstract_inverted_index",
     ])
 
@@ -257,9 +294,9 @@ def get_openalex_articles():
         for keyword in keywords:
             params = {
                 "search": keyword,
-                "filter": f"from_publication_date:{from_date},type:article",
+                "filter": f"from_created_date:{from_date},type:article",
                 "per-page": OPENALEX_PER_KEYWORD_LIMIT,
-                "sort": "publication_date:desc",
+                "sort": "created_date:desc",
                 "select": select,
             }
 
@@ -270,31 +307,10 @@ def get_openalex_articles():
                 continue
 
             for work in results:
-                openalex_id = work.get("id") or ""
-                doi = work.get("doi") or ""
-                dedupe_key = (doi or openalex_id).lower()
-                if not dedupe_key:
-                    continue
-
-                title = work.get("title") or work.get("display_name") or "N/A"
-                source = ((work.get("primary_location") or {}).get("source") or {})
-                journal = source.get("display_name") or "N/A"
-
-                article = articles_by_key.setdefault(dedupe_key, {
-                    "title": title,
-                    "abstract": reconstruct_abstract(work.get("abstract_inverted_index")),
-                    "doi": doi or "N/A",
-                    "journal": journal,
-                    "publication_date": work.get("publication_date") or "N/A",
-                    "openalex_id": openalex_id,
-                    "source_queries": [],
-                })
-                source_label = f"{query_name}: {keyword}"
-                if source_label not in article["source_queries"]:
-                    article["source_queries"].append(source_label)
+                add_openalex_work(articles_by_key, work, f"keyword:{query_name}: {keyword}")
 
     articles = list(articles_by_key.values())
-    articles.sort(key=lambda x: x.get("publication_date") or "", reverse=True)
+    articles.sort(key=lambda x: x.get("created_date") or "", reverse=True)
     return articles[:OPENALEX_MAX_ARTICLES]
 
 openalex_articles = get_openalex_articles()
@@ -324,6 +340,8 @@ for abstract_data in openalex_articles:
         "reasoning_impact": reasoning_impact,
         "doi": doi,
         "journal": journal,
+        "source_type": abstract_data.get("source_type", "N/A"),
+        "created_date": abstract_data.get("created_date", "N/A"),
         "publication_date": abstract_data.get("publication_date", "N/A"),
         "openalex_id": abstract_data.get("openalex_id", "N/A"),
         "source_queries": abstract_data.get("source_queries", []),
@@ -339,6 +357,8 @@ for article_data in scored_articles:
     impact_score = article_data["impact_score"]
     reasoning_impact = article_data["reasoning_impact"]
     journal = article_data["journal"].strip()
+    source_type = article_data.get("source_type", "N/A")
+    created_date = article_data.get("created_date", "N/A")
     publication_date = article_data.get("publication_date", "N/A")
     openalex_id = article_data.get("openalex_id", "N/A")
     source_queries = article_data.get("source_queries", [])
@@ -350,6 +370,8 @@ for article_data in scored_articles:
 
     issue_body += f"- **Title**: {title}\n"
     issue_body += f"  **Journal**: {journal}\n"
+    issue_body += f"  **Source type**: {source_type}\n"
+    issue_body += f"  **OpenAlex created date**: {created_date}\n"
     issue_body += f"  **Publication date**: {publication_date}\n"
     issue_body += f"  **Matched queries**: {', '.join(source_queries) if source_queries else 'N/A'}\n"
     issue_body += f"  **Topic tags**: {', '.join(topic_tags) if topic_tags else 'N/A'}\n"
