@@ -1,16 +1,27 @@
 [
   {
     "title": "Open-skill vs. closed-skill sports and executive function in children and adolescents: a mini review of mechanisms and moderating factors",
+    "authors": [
+      "Huiyan Zhang",
+      "Wei Wei",
+      "Wei Zhang"
+    ],
+    "abstract": "Executive function (EF), comprising inhibitory control, working memory, and cognitive flexibility, undergoes critical maturation during childhood and adolescence and predicts academic achievement, social adjustment, and mental health. Although physical exercise is now broadly accepted as a cognitive enhancer, growing evidence suggests that the type of motor activity matters: open-skill sports (e.g., basketball, badminton), performed in unpredictable, externally-paced environments demanding rapid perception–action coupling, may differ from closed-skill sports (e.g., running, swimming), performed at self-selected pace in stable settings, in their cognitive yields. This mini-review synthesizes recent evidence on (a) the differential effects of open- vs. closed-skill exercise on EF subcomponents in children and adolescents, (b) the underlying neurophysiological and molecular mechanisms, (c) moderators including dose parameters and individual characteristics, and (d) ongoing controversies and methodological gaps. Open-skill sports tend to confer larger benefits for inhibitory control and cognitive flexibility through enhanced conflict monitoring and improved neural efficiency, whereas closed-skill sports often outperform them on working memory and on hyperactivity/impulsivity in attention-deficit/hyperactivity disorder (ADHD). Findings are, however, not uniform, and some syntheses report no significant overall difference between sport types, indicating that any advantage is domain-specific rather than absolute. These benefits are dose-dependent and moderated by age, sex, and baseline cognition. Future work should employ longitudinal designs, finer-grained sport taxonomies that move beyond the open–closed dichotomy, individualized intervention prescriptions, and multimodal neuroimaging to clarify the neural and molecular pathways linking exercise type to EF development.",
+    "keywords": [
+      "Attention Deficit Hyperactivity Disorder",
+      "Sport Psychology and Performance",
+      "Neural and Behavioral Psychology Studies"
+    ],
     "topic_tags": [
       "self_control",
-      "attention",
-      "impulsivity"
+      "inhibitory_control",
+      "attention"
     ],
     "method_tags": [],
     "research_score": 65,
-    "reasoning_research": "This mini-review synthesizes existing evidence on open- vs. closed-skill sports and executive function, but it is not original empirical research. It discusses mechanisms and moderators, though conclusions are domain-specific and not uniform. Methodological gaps are acknowledged, limiting novelty and rigor.",
+    "reasoning_research": "This is a mini-review synthesizing existing studies, offering a structured comparison of open-skill and closed-skill sports on executive function. The review is systematic in covering mechanisms, moderators, and gaps, but lacks primary data and does not mention preregistration or systematic search methods.",
     "impact_score": 75,
-    "reasoning_impact": "The topic is relevant to self-control, attention, and impulsivity in developmental populations. It may inform future research on exercise-cognition interactions, but the findings are preliminary and context-dependent. The review highlights important moderators and methodological needs.",
+    "reasoning_impact": "The topic is highly relevant to self-control and attention development, with clear implications for designing sports interventions for children and adolescents. The review identifies domain-specific benefits and moderators that could guide future longitudinal and neuroimaging studies, though it does not specify direct applications.",
     "doi": "https://doi.org/10.3389/fpsyg.2026.1873432",
     "journal": "Frontiers in Psychology",
     "source_type": "journal",
@@ -29,16 +40,28 @@
   },
   {
     "title": "Drunk Shopping Online: A Conceptual Framework of Impaired Consumer Decision-Making and Implications for Ethical Marketing",
+    "authors": [
+      "Solon Magrizos",
+      "Minas N. Kastanakis",
+      "Katerina Kampouri",
+      "Michael Christofi"
+    ],
+    "abstract": "Abstract “Drunk shopping,” or shopping online under the influence of alcohol, is a rapidly growing but largely overlooked consumption phenomenon with significant ethical and managerial implications. Intoxicated consumers generate billions of dollars in annual revenue, yet the cognitive and affective impairments of alcohol use raise concerns about consumer vulnerability and online retailers’ responsibility. Employing the theoretical lens of alcohol myopia theory and further drawing from literature in psychology, neuroscience, and alcohol misuse, this conceptual research aims to provide an understanding of this phenomenon and to facilitate development of future research within the ethical marketing literature. We develop an integrative framework that explains the antecedents, mechanisms, and outcomes of drunk shopping in an online environment. We further identify the consequences for consumer well-being and outline the ethical tensions for firms that may profit from, ignore, or even encourage this behavior. We conclude by proposing future research directions and seven propositions to advance ethical marketing scholarship on vulnerable consumers, impaired decision-making, and digital responsibility and call for critical attention on drunk shopping from scholars, practitioners, and policy makers alike.",
+    "keywords": [
+      "Substance Abuse Treatment and Outcomes",
+      "Wine Industry and Tourism",
+      "Consumer Retail Behavior Studies"
+    ],
     "topic_tags": [
       "self_control",
       "impulsivity",
       "attention"
     ],
     "method_tags": [],
-    "research_score": 35,
-    "reasoning_research": "The article is conceptual, proposing a framework and propositions without empirical data, modeling, or statistical analysis. It relies on a literature review and alcohol myopia theory, lacking methodological rigor.",
+    "research_score": 50,
+    "reasoning_research": "The paper is conceptual, offering a framework but no empirical data or new modeling. It synthesizes existing literature but lacks methodological rigor or hypothesis testing.",
     "impact_score": 60,
-    "reasoning_impact": "The phenomenon of drunk shopping is novel and relevant to self-control and impaired decision-making in digital environments. The framework could guide future research on ethical marketing and consumer vulnerability, but its impact is limited by its conceptual nature.",
+    "reasoning_impact": "The topic is novel and practically relevant, potentially influencing ethical marketing and consumer protection research. However, the impact is limited by the conceptual nature and specific context of online drunk shopping.",
     "doi": "https://doi.org/10.1007/s10551-026-06368-8",
     "journal": "Journal of Business Ethics",
     "source_type": "journal",
@@ -57,15 +80,26 @@
   },
   {
     "title": "Supporting in Ways That Do Not Align With What We Feel, Believe, or Want: Theorizing About Deceptive/Reluctant Support Provision in Interpersonal Relationships",
+    "authors": [
+      "Kylie J. Johnson",
+      "Meara H. Faw",
+      "Joshua Pederson"
+    ],
+    "abstract": "In this study, we investigate deceptive/reluctant support (D/RS), which we define as verbal and nonverbal supportive communication that is communicated unwillingly (i.e., hesitantly or against their wishes), does not align with support providers’ true feelings or beliefs (i.e., disingenuous or inauthentic), or both. In addition, relational norms and patterns of behavior specific to providers' relationships with support recipients were central to their D/RS experiences. By analyzing 22 semi-structured, narrative-focused interviews, we offer novel conceptualizations for how D/RS manifests in relationships. Our analysis indicated three defining features of D/RS: unwillingness , dishonesty , and norms . Additionally, our results provided insight into complicating contextual factors that further nuance D/RS: fear of repercussions , justification , values , networks , and isolation . This research offers insight into how support providers engage in D/RS, which could be an intermediate step between offering positive support and choosing to disengage as a support provider. Moreover, understanding how providers navigate challenges when communicating support is key as scholars strive to understand what creates satisfying supportive relationships.",
+    "keywords": [
+      "Attachment and Relationship Dynamics",
+      "Patient-Provider Communication in Healthcare",
+      "Language, Discourse, Communication Strategies"
+    ],
     "topic_tags": [
       "deception_dishonesty",
       "social_norms"
     ],
     "method_tags": [],
-    "research_score": 30,
-    "reasoning_research": "The study uses a qualitative approach with 22 interviews, which is appropriate for initial conceptualization but lacks the methodological rigor typical in decision neuroscience (e.g., computational modeling, preregistration). The analysis identifies thematic features, but no quantitative robustness indicators are provided.",
-    "impact_score": 20,
-    "reasoning_impact": "The concept of deceptive/reluctant support is novel within interpersonal communication, but its direct relevance to self-control and attention in decision-making is limited. The findings may influence relationship research but are unlikely to shape computational or neuroscientific theories of decision-making.",
+    "research_score": 55,
+    "reasoning_research": "The study introduces a novel concept (deceptive/reluctant support) but relies on a small qualitative sample of 22 interviews without quantitative validation, preregistration, or robustness checks. Methodological rigor is limited.",
+    "impact_score": 50,
+    "reasoning_impact": "The concept may influence interpersonal communication and support research but has indirect relevance to decision neuroscience or self-control. Implications are specific to relational dynamics rather than broader theory.",
     "doi": "https://doi.org/10.1177/02654075261463317",
     "journal": "Journal of Social and Personal Relationships",
     "source_type": "journal",
