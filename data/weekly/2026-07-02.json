@@ -1,87 +1,90 @@
 [
   {
-    "title": "Molybdenum Disulfide",
+    "title": "Open-skill vs. closed-skill sports and executive function in children and adolescents: a mini review of mechanisms and moderating factors",
     "topic_tags": [],
     "method_tags": [],
     "research_score": "N/A",
     "reasoning_research": "N/A",
     "impact_score": "N/A",
     "reasoning_impact": "N/A",
-    "doi": "https://doi.org/10.57159/jcmm.5.3.25438",
-    "journal": "Journal of Computers Mechanical and Management",
+    "doi": "https://doi.org/10.3389/fpsyg.2026.1873432",
+    "journal": "Frontiers in Psychology",
     "source_type": "journal",
     "created_date": "2026-07-01T00:00:00",
     "publication_date": "2026-06-30",
-    "openalex_id": "https://openalex.org/W7166730496",
+    "openalex_id": "https://openalex.org/W7166705611",
     "source_queries": [
-      "keyword:decision_process: drift diffusion model"
+      "keyword:cognitive_control: response inhibition decision making"
+    ],
+    "matched_relevance_terms": [
+      "attention",
+      "conflict",
+      "conflict monitoring",
+      "neural"
     ]
   },
   {
-    "title": "MAKING IDOLS LEGIBLE: NARRATIVE LABOR IN K-POP FANFICTION",
+    "title": "Drunk Shopping Online: A Conceptual Framework of Impaired Consumer Decision-Making and Implications for Ethical Marketing",
+    "topic_tags": [
+      "self_control",
+      "attention",
+      "impulsivity"
+    ],
+    "method_tags": [],
+    "research_score": 35,
+    "reasoning_research": "The paper is conceptual and provides no empirical data, modeling, or statistical analysis. It relies on existing theory (alcohol myopia) to propose a framework without methodological rigor or validation.",
+    "impact_score": 55,
+    "reasoning_impact": "The framework addresses a novel and growing phenomenon with ethical and managerial relevance, potentially guiding future research on impaired decision-making and digital responsibility. However, its impact is limited by the lack of empirical support.",
+    "doi": "https://doi.org/10.1007/s10551-026-06368-8",
+    "journal": "Journal of Business Ethics",
+    "source_type": "journal",
+    "created_date": "2026-07-01T00:00:00",
+    "publication_date": "2026-06-30",
+    "openalex_id": "https://openalex.org/W7166688598",
+    "source_queries": [
+      "keyword:consumer_decision: delay discounting decision making"
+    ],
+    "matched_relevance_terms": [
+      "behavior",
+      "consumer",
+      "consumer decision",
+      "decision"
+    ]
+  },
+  {
+    "title": "The Influence of Ethical Challenges on Professional Misconduct in the Malaysian Legal Profession: A Conceptual Analysis",
     "topic_tags": [],
     "method_tags": [],
     "research_score": "N/A",
     "reasoning_research": "N/A",
     "impact_score": "N/A",
     "reasoning_impact": "N/A",
-    "doi": "https://doi.org/10.66532/jhai.2026.0014",
-    "journal": "Journal of Humanities and AI",
+    "doi": "https://doi.org/10.52650/tvmnqy95",
+    "journal": "International Journal of Business Management (IJBM)",
     "source_type": "journal",
-    "created_date": "2026-07-01T00:00:00",
-    "publication_date": "2026-06-30",
-    "openalex_id": "https://openalex.org/W7166654159",
+    "created_date": "2026-06-30T00:00:00",
+    "publication_date": "2026-06-29",
+    "openalex_id": "https://openalex.org/W7166503898",
     "source_queries": [
-      "keyword:decision_process: computational psychiatry"
-    ]
-  },
-  {
-    "title": "Virtual reality for activities of daily living rehabilitation after acquired brain injury",
-    "topic_tags": [],
-    "method_tags": [],
-    "research_score": 50,
-    "reasoning_research": "The study uses a small sample (15 participants with ABI and 5 therapists) and a pre-post design without a control group, limiting causal inference. Statistical analysis is minimal (single linear mixed-effects model), and no preregistration or robustness checks are mentioned.",
-    "impact_score": 40,
-    "reasoning_impact": "The work provides practical implementation insights for VR-based ADL rehabilitation, but direct relevance to self-control, attention, or decision-making mechanisms is weak. The impact is confined to clinical rehabilitation practice and unlikely to shift broader theoretical directions in decision neuroscience.",
-    "doi": "https://doi.org/10.3389/fresc.2026.1726559",
-    "journal": "Frontiers in Rehabilitation Sciences",
-    "source_type": "journal",
-    "created_date": "2026-07-01T00:00:00",
-    "publication_date": "2026-06-30",
-    "openalex_id": "https://openalex.org/W7166739889",
-    "source_queries": [
-      "keyword:decision_process: computational psychiatry"
-    ]
-  },
-  {
-    "title": "SOCIAL SECURITY AS AN INTERNAL STABILIZER OF FINANCIAL AND ECONOMIC RESILIENCE DURING WAR AND UNCERTAINTY IN UKRAINE",
-    "topic_tags": [],
-    "method_tags": [],
-    "research_score": "N/A",
-    "reasoning_research": "N/A",
-    "impact_score": "N/A",
-    "reasoning_impact": "N/A",
-    "doi": "https://doi.org/10.55643/fcaptp.3.68.2026.5182",
-    "journal": "Financial and credit activity problems of theory and practice",
-    "source_type": "journal",
-    "created_date": "2026-07-01T00:00:00",
-    "publication_date": "2026-06-30",
-    "openalex_id": "https://openalex.org/W7166722792",
-    "source_queries": [
-      "keyword:consumer_decision: intertemporal choice"
+      "keyword:dishonesty: dishonesty decision making",
+      "keyword:dishonesty: reputation management dishonesty"
+    ],
+    "matched_relevance_terms": [
+      "behaviour",
+      "decision",
+      "dishonesty",
+      "ethical",
+      "honesty"
     ]
   },
   {
     "title": "The Role of Islamic Religious Education in Responding to the Moral Crisis: Internalizing the Value of Trust and Honesty as an Anti-Corruption Effort",
-    "topic_tags": [
-      "moral_decision",
-      "social_norms"
-    ],
+    "topic_tags": [],
     "method_tags": [],
-    "research_score": 25,
-    "reasoning_research": "The article is a qualitative literature review without primary data, experimental design, or quantitative analysis, which limits methodological rigor. It does not present novel computational or neurocognitive approaches relevant to decision neuroscience, and the sample or data reliability is unclear.",
-    "impact_score": 20,
-    "reasoning_impact": "The focus on Islamic religious education and anti-corruption values has limited direct relevance to self-control, attention, and computational models of decision-making. The implications are primarily pedagogical and cultural, unlikely to influence mainstream decision neuroscience or computational psychology.",
+    "research_score": "N/A",
+    "reasoning_research": "N/A",
+    "impact_score": "N/A",
+    "reasoning_impact": "N/A",
     "doi": "https://doi.org/10.59548/rc.v3i1.680",
     "journal": "Recoms",
     "source_type": "journal",
@@ -89,119 +92,82 @@
     "publication_date": "2026-06-30",
     "openalex_id": "https://openalex.org/W7166523251",
     "source_queries": [
-      "keyword:dishonesty: dishonesty",
-      "keyword:dishonesty: cheating"
-    ]
-  },
-  {
-    "title": "IAS-19 and The Challenges of Comparability: Multinational Pension Disclosures Across IFRS and US GAAP",
-    "topic_tags": [],
-    "method_tags": [],
-    "research_score": "N/A",
-    "reasoning_research": "N/A",
-    "impact_score": "N/A",
-    "reasoning_impact": "N/A",
-    "doi": "https://doi.org/10.21315/aamjaf2026.22.1.2",
-    "journal": "Asian Academy of Management Journal of Accounting and Finance",
-    "source_type": "journal",
-    "created_date": "2026-06-30T00:00:00",
-    "publication_date": "2026-06-30",
-    "openalex_id": "https://openalex.org/W7166578924",
-    "source_queries": [
-      "keyword:consumer_decision: intertemporal choice"
-    ]
-  },
-  {
-    "title": "The Spending Effects of a Tax Rebate in Italy: A Fuzzy RKD Experiment",
-    "topic_tags": [],
-    "method_tags": [],
-    "research_score": "N/A",
-    "reasoning_research": "N/A",
-    "impact_score": "N/A",
-    "reasoning_impact": "N/A",
-    "doi": "https://doi.org/10.1007/s11205-026-03879-9",
-    "journal": "Social Indicators Research",
-    "source_type": "journal",
-    "created_date": "2026-06-30T00:00:00",
-    "publication_date": "2026-06-29",
-    "openalex_id": "https://openalex.org/W7166579017",
-    "source_queries": [
-      "keyword:consumer_decision: intertemporal choice"
-    ]
-  },
-  {
-    "title": "Reassessing the environmental Kuznets curve: a multidimensional analysis of air pollution indices and economic development in ASEM",
-    "topic_tags": [],
-    "method_tags": [],
-    "research_score": "N/A",
-    "reasoning_research": "N/A",
-    "impact_score": "N/A",
-    "reasoning_impact": "N/A",
-    "doi": "https://doi.org/10.1108/ijccsm-01-2026-0008",
-    "journal": "International Journal of Climate Change Strategies and Management",
-    "source_type": "journal",
-    "created_date": "2026-06-30T00:00:00",
-    "publication_date": "2026-06-29",
-    "openalex_id": "https://openalex.org/W7166508639",
-    "source_queries": [
-      "keyword:consumer_decision: intertemporal choice"
-    ]
-  },
-  {
-    "title": "Scenario modelling shows urban planning can reduce city-scale GHG emissions in transport and buildings by 14% in 2050",
-    "topic_tags": [],
-    "method_tags": [],
-    "research_score": 10,
-    "reasoning_research": "The article addresses urban planning and climate mitigation, with no connection to decision neuroscience, computational psychology, or self-control/attention mechanisms. The modeling methodology is not evaluated due to irrelevance to the specified field.",
-    "impact_score": 10,
-    "reasoning_impact": "The study's focus on GHG emissions and urban form lacks direct relevance to self-control, attention, or decision-making processes as defined in the review criteria. It is unlikely to influence research directions in decision neuroscience or computational psychology.",
-    "doi": "https://doi.org/10.1088/1748-9326/ae83d1",
-    "journal": "Environmental Research Letters",
-    "source_type": "journal",
-    "created_date": "2026-06-30T00:00:00",
-    "publication_date": "2026-06-29",
-    "openalex_id": "https://openalex.org/W7166505157",
-    "source_queries": [
-      "keyword:consumer_decision: intertemporal choice"
-    ]
-  },
-  {
-    "title": "Fostering Opportunities for Resiliency, Growth, and Empowerment (FORGE): A New Guiding Vision for Juvenile Justice",
-    "topic_tags": [
-      "prosocial_choice",
-      "social_norms"
+      "keyword:dishonesty: cheating behavior",
+      "keyword:dishonesty: honesty behavior"
     ],
-    "method_tags": [],
-    "research_score": 25,
-    "reasoning_research": "The article presents a conceptual framework without any empirical data, computational modeling, or formal analysis. It is a descriptive policy-oriented model with no methodological rigor or statistical validation.",
-    "impact_score": 55,
-    "reasoning_impact": "The FORGE model may influence juvenile justice policy and practice by promoting a strength-based approach, but its direct relevance to decision neuroscience or computational psychology is minimal. The implications for self-control or attention in decision-making are not explicitly developed.",
-    "doi": "https://doi.org/10.1007/s40865-026-00308-w",
-    "journal": "Journal of Developmental and Life-Course Criminology",
-    "source_type": "journal",
-    "created_date": "2026-06-30T00:00:00",
-    "publication_date": "2026-06-29",
-    "openalex_id": "https://openalex.org/W7166543967",
-    "source_queries": [
-      "keyword:consumer_decision: intertemporal choice"
+    "matched_relevance_terms": [
+      "honesty",
+      "moral"
     ]
   },
   {
-    "title": "Stress-consistent macroprudential overlay for derivative pricing",
+    "title": "Lavender Marriage and the Failure of Maqasid al-Usrah: Sexual Orientation Deception and the Violation of Wives’ Rights",
     "topic_tags": [],
     "method_tags": [],
     "research_score": "N/A",
     "reasoning_research": "N/A",
     "impact_score": "N/A",
     "reasoning_impact": "N/A",
-    "doi": "https://doi.org/10.1007/s11147-026-09241-y",
-    "journal": "Review of Derivatives Research",
+    "doi": "https://doi.org/10.36701/nukhbah.v12i1.3049",
+    "journal": "NUKHBATUL ULUM Jurnal Bidang Kajian Islam",
     "source_type": "journal",
-    "created_date": "2026-06-29T00:00:00",
-    "publication_date": "2026-06-29",
-    "openalex_id": "https://openalex.org/W7166452948",
+    "created_date": "2026-06-30T00:00:00",
+    "publication_date": "2026-06-27",
+    "openalex_id": "https://openalex.org/W7166510730",
     "source_queries": [
-      "keyword:consumer_decision: intertemporal choice"
+      "keyword:dishonesty: reputation management dishonesty"
+    ],
+    "matched_relevance_terms": [
+      "deception",
+      "honesty",
+      "moral",
+      "social"
+    ]
+  },
+  {
+    "title": "Supporting in Ways That Do Not Align With What We Feel, Believe, or Want: Theorizing About Deceptive/Reluctant Support Provision in Interpersonal Relationships",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": "N/A",
+    "reasoning_research": "N/A",
+    "impact_score": "N/A",
+    "reasoning_impact": "N/A",
+    "doi": "https://doi.org/10.1177/02654075261463317",
+    "journal": "Journal of Social and Personal Relationships",
+    "source_type": "journal",
+    "created_date": "2026-06-28T00:00:00",
+    "publication_date": "2026-06-27",
+    "openalex_id": "https://openalex.org/W7166312271",
+    "source_queries": [
+      "keyword:dishonesty: moral identity dishonesty"
+    ],
+    "matched_relevance_terms": [
+      "behavior",
+      "dishonesty",
+      "honesty"
+    ]
+  },
+  {
+    "title": "A review on safe reinforcement learning using Lyapunov and barrier functions",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": "N/A",
+    "reasoning_research": "N/A",
+    "impact_score": "N/A",
+    "reasoning_impact": "N/A",
+    "doi": "https://doi.org/10.1007/s10462-026-11611-9",
+    "journal": "Artificial Intelligence Review",
+    "source_type": "journal",
+    "created_date": "2025-10-16T00:00:00",
+    "publication_date": "2026-06-29",
+    "openalex_id": "https://openalex.org/W4415237758",
+    "source_queries": [
+      "keyword:decision_process: hierarchical drift diffusion model",
+      "keyword:decision_process: reinforcement learning drift diffusion model"
+    ],
+    "matched_relevance_terms": [
+      "decision",
+      "reinforcement learning"
     ]
   }
 ]
