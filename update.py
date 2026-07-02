@@ -70,7 +70,6 @@ RELEVANCE_RULES = {
             "dishonesty",
             "cheating",
             "deception",
-            "honesty",
             "honest behavior",
             "prosocial lying",
             "moral identity",
@@ -78,16 +77,17 @@ RELEVANCE_RULES = {
             "reputation management",
         ],
         "domain": [
-            "decision",
+            "decision making",
             "choice",
             "behavior",
             "behaviour",
-            "moral",
-            "ethical",
-            "social",
             "experiment",
-            "reputation",
-            "lying",
+            "participant",
+            "psychology",
+            "relationship",
+            "consumer",
+            "economic game",
+            "social norm",
         ],
     },
     "decision_process": {
@@ -102,7 +102,7 @@ RELEVANCE_RULES = {
             "computational modelling",
         ],
         "domain": [
-            "decision",
+            "decision making",
             "choice",
             "behavior",
             "behaviour",
@@ -187,6 +187,46 @@ RELEVANCE_RULES = {
             "human",
         ],
     },
+}
+
+STRONG_TITLE_TERMS = {
+    "dishonesty": [
+        "dishonesty",
+        "cheating behavior",
+        "deception decision making",
+        "prosocial lying",
+    ],
+    "decision_process": [
+        "drift diffusion",
+        "hddm",
+        "evidence accumulation",
+        "sequential sampling",
+        "computational psychiatry",
+    ],
+    "cognitive_control": [
+        "cognitive control",
+        "executive control",
+        "response inhibition",
+        "conflict monitoring",
+        "expected value of control",
+    ],
+    "consumer_decision": [
+        "consumer decision",
+        "consumer behavior",
+        "consumer behaviour",
+        "purchase decision",
+        "intertemporal choice",
+        "delay discounting",
+        "loss aversion",
+        "risk preference",
+    ],
+    "additional_decision_topics": [
+        "decision conflict",
+        "choice architecture",
+        "moral behavior",
+        "moral behaviour",
+        "moral choice",
+    ],
 }
 
 access_token = os.getenv('GITHUB_TOKEN')
@@ -290,9 +330,20 @@ def normalize_for_match(x: str) -> str:
 def matched_terms(text: str, terms):
     return [term for term in terms if normalize_for_match(term) in text]
 
+def has_enough_text_for_filter(query_name: str, title: str, abstract: str):
+    abstract_words = normalize_for_match(abstract).split()
+    if len(abstract_words) >= 30:
+        return True
+
+    title_text = normalize_for_match(title)
+    return bool(matched_terms(title_text, STRONG_TITLE_TERMS.get(query_name, [])))
+
 def relevance_matches(query_name: str, title: str, abstract: str):
     rule = RELEVANCE_RULES.get(query_name)
     if not rule:
+        return []
+
+    if not has_enough_text_for_filter(query_name, title, abstract):
         return []
 
     text = normalize_for_match(f"{title} {abstract}")
