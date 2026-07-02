@@ -6,10 +6,14 @@ import re
 import pathlib
 from openai import OpenAI
 
+import time
+
 OPENALEX_WORKS_URL = "https://api.openalex.org/works"
 OPENALEX_PER_KEYWORD_LIMIT = 10
 OPENALEX_MAX_ARTICLES = 30
 MAX_FUTURE_PUBLICATION_DAYS = 365
+OPENALEX_MAX_RETRIES = 3
+OPENALEX_RETRY_DELAY = 10
 
 OPENALEX_QUERIES = {
     "dishonesty": [
@@ -475,9 +479,24 @@ def openalex_request(params):
 
     params = dict(params)
     params["api_key"] = openalex_api_key
-    response = requests.get(OPENALEX_WORKS_URL, params=params, timeout=30)
-    response.raise_for_status()
-    return response.json()
+
+    for attempt in range(OPENALEX_MAX_RETRIES):
+        try:
+            response = requests.get(OPENALEX_WORKS_URL, params=params, timeout=30)
+            if response.status_code == 503 and attempt < OPENALEX_MAX_RETRIES - 1:
+                print(f"OpenAlex 503 on attempt {attempt + 1}, retrying in {OPENALEX_RETRY_DELAY}s...")
+                time.sleep(OPENALEX_RETRY_DELAY)
+                continue
+            response.raise_for_status()
+            return response.json()
+        except requests.ConnectionError as exc:
+            if attempt < OPENALEX_MAX_RETRIES - 1:
+                print(f"OpenAlex connection error on attempt {attempt + 1}, retrying in {OPENALEX_RETRY_DELAY}s...")
+                time.sleep(OPENALEX_RETRY_DELAY)
+                continue
+            raise
+
+    raise RuntimeError("OpenAlex request failed after max retries")
 
 def add_openalex_work(articles_by_key, work, query_name, keyword):
     openalex_id = work.get("id") or ""
