@@ -25,16 +25,12 @@
   },
   {
     "title": "Drunk Shopping Online: A Conceptual Framework of Impaired Consumer Decision-Making and Implications for Ethical Marketing",
-    "topic_tags": [
-      "self_control",
-      "attention",
-      "impulsivity"
-    ],
+    "topic_tags": [],
     "method_tags": [],
-    "research_score": 35,
-    "reasoning_research": "The paper is conceptual and provides no empirical data, modeling, or statistical analysis. It relies on existing theory (alcohol myopia) to propose a framework without methodological rigor or validation.",
-    "impact_score": 55,
-    "reasoning_impact": "The framework addresses a novel and growing phenomenon with ethical and managerial relevance, potentially guiding future research on impaired decision-making and digital responsibility. However, its impact is limited by the lack of empirical support.",
+    "research_score": "N/A",
+    "reasoning_research": "N/A",
+    "impact_score": "N/A",
+    "reasoning_impact": "N/A",
     "doi": "https://doi.org/10.1007/s10551-026-06368-8",
     "journal": "Journal of Business Ethics",
     "source_type": "journal",
@@ -55,10 +51,10 @@
     "title": "The Influence of Ethical Challenges on Professional Misconduct in the Malaysian Legal Profession: A Conceptual Analysis",
     "topic_tags": [],
     "method_tags": [],
-    "research_score": "N/A",
-    "reasoning_research": "N/A",
-    "impact_score": "N/A",
-    "reasoning_impact": "N/A",
+    "research_score": 20,
+    "reasoning_research": "This is a conceptual paper with no original empirical data, no computational modeling, and no methodological rigor typical of decision neuroscience or computational psychology. The analysis is based solely on a literature review with no specified systematic methodology.",
+    "impact_score": 10,
+    "reasoning_impact": "The paper addresses professional ethics in the Malaysian legal profession, which is outside the core domains of self-control, attention, and decision-making in neuroscience or computational psychology. Its relevance to future research in those fields is minimal.",
     "doi": "https://doi.org/10.52650/tvmnqy95",
     "journal": "International Journal of Business Management (IJBM)",
     "source_type": "journal",
@@ -71,43 +67,18 @@
     ],
     "matched_relevance_terms": [
       "behaviour",
-      "decision",
-      "dishonesty",
-      "ethical",
-      "honesty"
-    ]
-  },
-  {
-    "title": "The Role of Islamic Religious Education in Responding to the Moral Crisis: Internalizing the Value of Trust and Honesty as an Anti-Corruption Effort",
-    "topic_tags": [],
-    "method_tags": [],
-    "research_score": "N/A",
-    "reasoning_research": "N/A",
-    "impact_score": "N/A",
-    "reasoning_impact": "N/A",
-    "doi": "https://doi.org/10.59548/rc.v3i1.680",
-    "journal": "Recoms",
-    "source_type": "journal",
-    "created_date": "2026-06-30T00:00:00",
-    "publication_date": "2026-06-30",
-    "openalex_id": "https://openalex.org/W7166523251",
-    "source_queries": [
-      "keyword:dishonesty: cheating behavior",
-      "keyword:dishonesty: honesty behavior"
-    ],
-    "matched_relevance_terms": [
-      "honesty",
-      "moral"
+      "decision making",
+      "dishonesty"
     ]
   },
   {
     "title": "Lavender Marriage and the Failure of Maqasid al-Usrah: Sexual Orientation Deception and the Violation of Wives’ Rights",
     "topic_tags": [],
     "method_tags": [],
-    "research_score": "N/A",
-    "reasoning_research": "N/A",
-    "impact_score": "N/A",
-    "reasoning_impact": "N/A",
+    "research_score": 15,
+    "reasoning_research": "The study uses a qualitative netnographic approach with a limited sample of three podcasts, lacking methodological rigor for generalizability. There is no mention of hypothesis testing, quantitative analysis, or replicability, which undermines its reliability in empirical science.",
+    "impact_score": 10,
+    "reasoning_impact": "The research is framed within legal and religious studies (Maqasid al-Usrah) and has no direct relevance to decision neuroscience, self-control, or attention in decision-making. Its potential to influence future directions in these fields is negligible.",
     "doi": "https://doi.org/10.36701/nukhbah.v12i1.3049",
     "journal": "NUKHBATUL ULUM Jurnal Bidang Kajian Islam",
     "source_type": "journal",
@@ -119,9 +90,7 @@
     ],
     "matched_relevance_terms": [
       "deception",
-      "honesty",
-      "moral",
-      "social"
+      "relationship"
     ]
   },
   {
@@ -144,7 +113,7 @@
     "matched_relevance_terms": [
       "behavior",
       "dishonesty",
-      "honesty"
+      "relationship"
     ]
   },
   {
@@ -166,7 +135,7 @@
       "keyword:decision_process: reinforcement learning drift diffusion model"
     ],
     "matched_relevance_terms": [
-      "decision",
+      "decision making",
       "reinforcement learning"
     ]
   }
