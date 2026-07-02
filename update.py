@@ -7,8 +7,8 @@ import pathlib
 from openai import OpenAI
 
 OPENALEX_WORKS_URL = "https://api.openalex.org/works"
-OPENALEX_PER_KEYWORD_LIMIT = 20
-OPENALEX_MAX_ARTICLES = 60
+OPENALEX_PER_KEYWORD_LIMIT = 10
+OPENALEX_MAX_ARTICLES = 30
 
 OPENALEX_QUERIES = {
     "dishonesty": [
@@ -298,6 +298,7 @@ def get_openalex_articles():
     return articles[:OPENALEX_MAX_ARTICLES]
 
 openalex_articles = get_openalex_articles()
+print(f"Fetched {len(openalex_articles)} unique OpenAlex articles for scoring.")
 
 scored_articles = []
 
