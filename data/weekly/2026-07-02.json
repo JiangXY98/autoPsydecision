@@ -48,52 +48,6 @@
     ]
   },
   {
-    "title": "The Influence of Ethical Challenges on Professional Misconduct in the Malaysian Legal Profession: A Conceptual Analysis",
-    "topic_tags": [],
-    "method_tags": [],
-    "research_score": 20,
-    "reasoning_research": "This is a conceptual paper with no original empirical data, no computational modeling, and no methodological rigor typical of decision neuroscience or computational psychology. The analysis is based solely on a literature review with no specified systematic methodology.",
-    "impact_score": 10,
-    "reasoning_impact": "The paper addresses professional ethics in the Malaysian legal profession, which is outside the core domains of self-control, attention, and decision-making in neuroscience or computational psychology. Its relevance to future research in those fields is minimal.",
-    "doi": "https://doi.org/10.52650/tvmnqy95",
-    "journal": "International Journal of Business Management (IJBM)",
-    "source_type": "journal",
-    "created_date": "2026-06-30T00:00:00",
-    "publication_date": "2026-06-29",
-    "openalex_id": "https://openalex.org/W7166503898",
-    "source_queries": [
-      "keyword:dishonesty: dishonesty decision making",
-      "keyword:dishonesty: reputation management dishonesty"
-    ],
-    "matched_relevance_terms": [
-      "behaviour",
-      "decision making",
-      "dishonesty"
-    ]
-  },
-  {
-    "title": "Lavender Marriage and the Failure of Maqasid al-Usrah: Sexual Orientation Deception and the Violation of Wives’ Rights",
-    "topic_tags": [],
-    "method_tags": [],
-    "research_score": 15,
-    "reasoning_research": "The study uses a qualitative netnographic approach with a limited sample of three podcasts, lacking methodological rigor for generalizability. There is no mention of hypothesis testing, quantitative analysis, or replicability, which undermines its reliability in empirical science.",
-    "impact_score": 10,
-    "reasoning_impact": "The research is framed within legal and religious studies (Maqasid al-Usrah) and has no direct relevance to decision neuroscience, self-control, or attention in decision-making. Its potential to influence future directions in these fields is negligible.",
-    "doi": "https://doi.org/10.36701/nukhbah.v12i1.3049",
-    "journal": "NUKHBATUL ULUM Jurnal Bidang Kajian Islam",
-    "source_type": "journal",
-    "created_date": "2026-06-30T00:00:00",
-    "publication_date": "2026-06-27",
-    "openalex_id": "https://openalex.org/W7166510730",
-    "source_queries": [
-      "keyword:dishonesty: reputation management dishonesty"
-    ],
-    "matched_relevance_terms": [
-      "deception",
-      "relationship"
-    ]
-  },
-  {
     "title": "Supporting in Ways That Do Not Align With What We Feel, Believe, or Want: Theorizing About Deceptive/Reluctant Support Provision in Interpersonal Relationships",
     "topic_tags": [],
     "method_tags": [],
@@ -114,29 +68,6 @@
       "behavior",
       "dishonesty",
       "relationship"
-    ]
-  },
-  {
-    "title": "A review on safe reinforcement learning using Lyapunov and barrier functions",
-    "topic_tags": [],
-    "method_tags": [],
-    "research_score": "N/A",
-    "reasoning_research": "N/A",
-    "impact_score": "N/A",
-    "reasoning_impact": "N/A",
-    "doi": "https://doi.org/10.1007/s10462-026-11611-9",
-    "journal": "Artificial Intelligence Review",
-    "source_type": "journal",
-    "created_date": "2025-10-16T00:00:00",
-    "publication_date": "2026-06-29",
-    "openalex_id": "https://openalex.org/W4415237758",
-    "source_queries": [
-      "keyword:decision_process: hierarchical drift diffusion model",
-      "keyword:decision_process: reinforcement learning drift diffusion model"
-    ],
-    "matched_relevance_terms": [
-      "decision making",
-      "reinforcement learning"
     ]
   }
 ]
