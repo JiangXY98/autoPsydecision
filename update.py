@@ -387,6 +387,26 @@ def reconstruct_abstract(inverted_index):
 
     return " ".join(word for _, word in sorted(words))
 
+def extract_authors(authorships, max_authors=8):
+    authors = []
+    for authorship in authorships or []:
+        author = authorship.get("author") or {}
+        name = author.get("display_name")
+        if name and name not in authors:
+            authors.append(name)
+
+    if len(authors) > max_authors:
+        return authors[:max_authors] + ["et al."]
+    return authors
+
+def extract_openalex_keywords(topics, max_keywords=6):
+    keywords = []
+    for topic in topics or []:
+        name = topic.get("display_name")
+        if name and name not in keywords:
+            keywords.append(name)
+    return keywords[:max_keywords]
+
 def parse_openalex_date(value):
     if not value:
         return None
@@ -498,7 +518,9 @@ def add_openalex_work(articles_by_key, work, query_name, keyword):
 
     article = articles_by_key.setdefault(dedupe_key, {
         "title": title,
+        "authors": extract_authors(work.get("authorships")),
         "abstract": abstract,
+        "keywords": extract_openalex_keywords(work.get("topics")),
         "doi": doi or "N/A",
         "journal": journal,
         "source_type": source_type,
@@ -530,6 +552,7 @@ def get_openalex_articles():
         "publication_date",
         "primary_location",
         "authorships",
+        "topics",
         "abstract_inverted_index",
     ])
 
@@ -596,6 +619,9 @@ for abstract_data in openalex_articles:
 
     scored_articles.append({
         "title": title,
+        "authors": abstract_data.get("authors", []),
+        "abstract": abstract_clean,
+        "keywords": abstract_data.get("keywords", []),
         "topic_tags": topic_tags,
         "method_tags": method_tags,
         "research_score": research_score,
@@ -620,15 +646,14 @@ if not scored_articles:
 
 for article_data in scored_articles:
     title = article_data["title"].strip()
+    authors = article_data.get("authors", [])
+    abstract = article_data.get("abstract", "").strip()
     research_score = article_data["research_score"]
     reasoning_research = article_data["reasoning_research"]
     impact_score = article_data["impact_score"]
     reasoning_impact = article_data["reasoning_impact"]
     journal = article_data["journal"].strip()
-    source_type = article_data.get("source_type", "N/A")
-    created_date = article_data.get("created_date", "N/A")
     publication_date = article_data.get("publication_date", "N/A")
-    openalex_id = article_data.get("openalex_id", "N/A")
     source_queries = article_data.get("source_queries", [])
     matched_relevance_terms = article_data.get("matched_relevance_terms", [])
     doi = (article_data["doi"] or "N/A").strip()
@@ -636,22 +661,19 @@ for article_data in scored_articles:
     doi_link = f"https://doi.org/{doi_clean}" if doi_clean != "N/A" and "/" in doi_clean else doi
     topic_tags = article_data.get("topic_tags", [])
     method_tags = article_data.get("method_tags", [])
+    matched_filters = source_queries + [f"term:{term}" for term in matched_relevance_terms]
 
     issue_body += f"- **Title**: {title}\n"
+    issue_body += f"  **Authors**: {', '.join(authors) if authors else 'N/A'}\n"
     issue_body += f"  **Journal**: {journal}\n"
-    issue_body += f"  **Source type**: {source_type}\n"
-    issue_body += f"  **OpenAlex created date**: {created_date}\n"
     issue_body += f"  **Publication date**: {publication_date}\n"
-    issue_body += f"  **Matched queries**: {', '.join(source_queries) if source_queries else 'N/A'}\n"
-    issue_body += f"  **Matched relevance terms**: {', '.join(matched_relevance_terms) if matched_relevance_terms else 'N/A'}\n"
-    issue_body += f"  **Topic tags**: {', '.join(topic_tags) if topic_tags else 'N/A'}\n"
-    issue_body += f"  **Method tags**: {', '.join(method_tags) if method_tags else 'N/A'}\n"
+    issue_body += f"  **Keywords**: {', '.join(article_data.get('keywords', [])) if article_data.get('keywords') else 'N/A'}\n"
+    issue_body += f"  **Abstract**: {abstract if abstract else 'N/A'}\n"
     issue_body += f"  **Research Score**: {research_score}\n"
-    issue_body += f"  **Reasoning (Research)**: {reasoning_research}\n"
     issue_body += f"  **Impact Score**: {impact_score}\n"
-    issue_body += f"  **Reasoning (Impact)**: {reasoning_impact}\n"
+    issue_body += f"  **Reasoning**: Research: {reasoning_research} Impact: {reasoning_impact}\n"
     issue_body += f"  **DOI**: {doi_link}\n"
-    issue_body += f"  **OpenAlex**: {openalex_id}\n\n"
+    issue_body += f"  **Matched filters**: {', '.join(matched_filters) if matched_filters else 'N/A'}\n\n"
 
 def create_github_issue(title, body, access_token):
     url = f"https://api.github.com/repos/JiangXY98/autoPsydecision/issues"
