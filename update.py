@@ -13,54 +13,45 @@ MAX_FUTURE_PUBLICATION_DAYS = 365
 
 OPENALEX_QUERIES = {
     "dishonesty": [
-        "dishonesty decision making",
-        "cheating behavior",
-        "cheating decision making",
-        "deception decision making",
-        "honesty behavior",
-        "honest behavior decision making",
+        "dishonesty",
+        "cheating",
+        "deception",
+        "honesty",
         "ethical decision making",
         "moral decision making",
-        "moral identity dishonesty",
-        "self-concept maintenance dishonesty",
-        "reputation management dishonesty",
-        "prosocial lying",
+        "moral identity",
+        "self-concept maintenance",
+        "reputation management",
     ],
     "decision_process": [
-        "drift diffusion model decision making",
-        "hierarchical drift diffusion model",
-        "HDDM decision making",
-        "evidence accumulation decision making",
-        "sequential sampling model decision making",
-        "reinforcement learning decision making",
-        "reinforcement learning drift diffusion model",
-        "computational psychiatry decision making",
-        "computational modeling decision making",
+        "drift diffusion model",
+        "HDDM",
+        "evidence accumulation",
+        "sequential sampling model",
+        "computational psychiatry",
+        "computational modeling",
+        "reinforcement learning",
     ],
     "cognitive_control": [
-        "cognitive control decision making",
-        "executive control decision making",
-        "self-control decision making",
-        "response inhibition decision making",
-        "conflict monitoring decision making",
+        "cognitive control",
+        "response inhibition",
+        "conflict monitoring",
         "expected value of control",
     ],
     "consumer_decision": [
         "consumer decision making",
-        "consumer behavior decision making",
+        "consumer behavior",
         "value-based decision making",
-        "value-based choice",
-        "purchase decision consumer",
-        "intertemporal choice decision making",
-        "delay discounting decision making",
-        "loss aversion decision making",
-        "risk preference decision making",
+        "intertemporal choice",
+        "delay discounting",
+        "loss aversion",
+        "risk preference",
     ],
     "additional_decision_topics": [
-        "decision conflict decision making",
-        "choice architecture decision making",
-        "moral behavior decision making",
-        "moral choice behavior",
+        "decision conflict",
+        "choice architecture",
+        "moral behavior",
+        "honest behavior",
     ],
 }
 
@@ -70,8 +61,8 @@ RELEVANCE_RULES = {
             "dishonesty",
             "cheating",
             "deception",
+            "honesty",
             "honest behavior",
-            "prosocial lying",
             "moral identity",
             "self concept maintenance",
             "reputation management",
@@ -165,7 +156,6 @@ RELEVANCE_RULES = {
             "consumer behaviour",
             "value based decision",
             "value based choice",
-            "purchase decision",
             "intertemporal choice",
             "delay discounting",
             "loss aversion",
@@ -190,7 +180,7 @@ RELEVANCE_RULES = {
             "choice architecture",
             "moral behavior",
             "moral behaviour",
-            "moral choice",
+            "honest behavior",
         ],
         "domain": [
             "decision",
@@ -210,8 +200,8 @@ RELEVANCE_RULES = {
 STRONG_TITLE_TERMS = {
     "dishonesty": [
         "dishonesty",
-        "cheating behavior",
-        "deception decision making",
+        "cheating",
+        "deception",
         "prosocial lying",
     ],
     "decision_process": [
@@ -231,8 +221,6 @@ STRONG_TITLE_TERMS = {
     "consumer_decision": [
         "consumer decision",
         "consumer behavior",
-        "consumer behaviour",
-        "purchase decision",
         "intertemporal choice",
         "delay discounting",
         "loss aversion",
@@ -242,8 +230,7 @@ STRONG_TITLE_TERMS = {
         "decision conflict",
         "choice architecture",
         "moral behavior",
-        "moral behaviour",
-        "moral choice",
+        "honest behavior",
     ],
 }
 
@@ -513,6 +500,9 @@ def add_openalex_work(articles_by_key, work, query_name, keyword):
     if source_type != "journal":
         return
 
+    if journal.lower().startswith("frontiers in "):
+        return
+
     if not publication_date_is_reasonable(publication_date):
         return
 
@@ -673,6 +663,8 @@ for article_data in scored_articles:
     issue_body += f"  **Impact Score**: {impact_score}\n"
     issue_body += f"  **Reasoning**: Research: {reasoning_research} Impact: {reasoning_impact}\n"
     issue_body += f"  **DOI**: {doi_link}\n"
+    openalex_id = article_data.get('openalex_id', 'N/A')
+    issue_body += f"  **OpenAlex**: {openalex_id}\n"
     issue_body += f"  **Matched filters**: {', '.join(matched_filters) if matched_filters else 'N/A'}\n\n"
 
 def create_github_issue(title, body, access_token):
