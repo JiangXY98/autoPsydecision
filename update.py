@@ -13,46 +13,180 @@ MAX_FUTURE_PUBLICATION_DAYS = 365
 
 OPENALEX_QUERIES = {
     "dishonesty": [
-        "dishonesty",
-        "cheating",
-        "deception",
-        "honesty",
+        "dishonesty decision making",
+        "cheating behavior",
+        "cheating decision making",
+        "deception decision making",
+        "honesty behavior",
+        "honest behavior decision making",
         "ethical decision making",
         "moral decision making",
-        "moral identity",
-        "self-concept maintenance",
-        "reputation management",
+        "moral identity dishonesty",
+        "self-concept maintenance dishonesty",
+        "reputation management dishonesty",
+        "prosocial lying",
     ],
     "decision_process": [
-        "drift diffusion model",
-        "HDDM",
-        "evidence accumulation",
-        "sequential sampling model",
-        "computational psychiatry",
-        "computational modeling",
-        "reinforcement learning",
+        "drift diffusion model decision making",
+        "hierarchical drift diffusion model",
+        "HDDM decision making",
+        "evidence accumulation decision making",
+        "sequential sampling model decision making",
+        "reinforcement learning decision making",
+        "reinforcement learning drift diffusion model",
+        "computational psychiatry decision making",
+        "computational modeling decision making",
     ],
     "cognitive_control": [
-        "cognitive control",
-        "response inhibition",
-        "conflict monitoring",
+        "cognitive control decision making",
+        "executive control decision making",
+        "self-control decision making",
+        "response inhibition decision making",
+        "conflict monitoring decision making",
         "expected value of control",
     ],
     "consumer_decision": [
         "consumer decision making",
-        "consumer behavior",
+        "consumer behavior decision making",
         "value-based decision making",
-        "intertemporal choice",
-        "delay discounting",
-        "loss aversion",
-        "risk preference",
+        "value-based choice",
+        "purchase decision consumer",
+        "intertemporal choice decision making",
+        "delay discounting decision making",
+        "loss aversion decision making",
+        "risk preference decision making",
     ],
     "additional_decision_topics": [
-        "decision conflict",
-        "choice architecture",
-        "moral behavior",
-        "honest behavior",
+        "decision conflict decision making",
+        "choice architecture decision making",
+        "moral behavior decision making",
+        "moral choice behavior",
     ],
+}
+
+RELEVANCE_RULES = {
+    "dishonesty": {
+        "core": [
+            "dishonesty",
+            "cheating",
+            "deception",
+            "honesty",
+            "honest behavior",
+            "prosocial lying",
+            "moral identity",
+            "self concept maintenance",
+            "reputation management",
+        ],
+        "domain": [
+            "decision",
+            "choice",
+            "behavior",
+            "behaviour",
+            "moral",
+            "ethical",
+            "social",
+            "experiment",
+            "reputation",
+            "lying",
+        ],
+    },
+    "decision_process": {
+        "core": [
+            "drift diffusion",
+            "hddm",
+            "evidence accumulation",
+            "sequential sampling",
+            "reinforcement learning",
+            "computational psychiatry",
+            "computational modeling",
+            "computational modelling",
+        ],
+        "domain": [
+            "decision",
+            "choice",
+            "behavior",
+            "behaviour",
+            "cognitive",
+            "psychology",
+            "psychiatry",
+            "neural",
+            "brain",
+            "reward",
+            "participant",
+            "human",
+        ],
+    },
+    "cognitive_control": {
+        "core": [
+            "cognitive control",
+            "executive control",
+            "self control",
+            "response inhibition",
+            "conflict monitoring",
+            "expected value of control",
+        ],
+        "domain": [
+            "decision",
+            "choice",
+            "behavior",
+            "behaviour",
+            "attention",
+            "task",
+            "inhibition",
+            "conflict",
+            "neural",
+            "brain",
+            "participant",
+            "human",
+        ],
+    },
+    "consumer_decision": {
+        "core": [
+            "consumer decision",
+            "consumer behavior",
+            "consumer behaviour",
+            "value based decision",
+            "value based choice",
+            "purchase decision",
+            "intertemporal choice",
+            "delay discounting",
+            "loss aversion",
+            "risk preference",
+        ],
+        "domain": [
+            "consumer",
+            "purchase",
+            "choice",
+            "decision",
+            "preference",
+            "behavior",
+            "behaviour",
+            "reward",
+            "participant",
+            "human",
+        ],
+    },
+    "additional_decision_topics": {
+        "core": [
+            "decision conflict",
+            "choice architecture",
+            "moral behavior",
+            "moral behaviour",
+            "moral choice",
+        ],
+        "domain": [
+            "decision",
+            "choice",
+            "behavior",
+            "behaviour",
+            "experiment",
+            "psychology",
+            "social",
+            "moral",
+            "participant",
+            "human",
+        ],
+    },
 }
 
 access_token = os.getenv('GITHUB_TOKEN')
@@ -146,6 +280,29 @@ Return a valid JSON object only (no extra text):
 
 def strip_html(x: str) -> str:
     return re.sub(r"<[^>]+>", " ", x or "").strip()
+
+def normalize_for_match(x: str) -> str:
+    x = strip_html(x).lower()
+    x = re.sub(r"[-_/]", " ", x)
+    x = re.sub(r"[^a-z0-9\s]", " ", x)
+    return re.sub(r"\s+", " ", x).strip()
+
+def matched_terms(text: str, terms):
+    return [term for term in terms if normalize_for_match(term) in text]
+
+def relevance_matches(query_name: str, title: str, abstract: str):
+    rule = RELEVANCE_RULES.get(query_name)
+    if not rule:
+        return []
+
+    text = normalize_for_match(f"{title} {abstract}")
+    core_matches = matched_terms(text, rule["core"])
+    domain_matches = matched_terms(text, rule["domain"])
+
+    if core_matches and domain_matches:
+        return sorted(set(core_matches + domain_matches))
+
+    return []
 
 def reconstruct_abstract(inverted_index):
     if not inverted_index:
@@ -242,7 +399,7 @@ def openalex_request(params):
     response.raise_for_status()
     return response.json()
 
-def add_openalex_work(articles_by_key, work, source_label):
+def add_openalex_work(articles_by_key, work, query_name, keyword):
     openalex_id = work.get("id") or ""
     doi = work.get("doi") or ""
     if not doi:
@@ -250,6 +407,11 @@ def add_openalex_work(articles_by_key, work, source_label):
     dedupe_key = doi.lower()
 
     title = work.get("title") or work.get("display_name") or "N/A"
+    abstract = reconstruct_abstract(work.get("abstract_inverted_index"))
+    local_matches = relevance_matches(query_name, title, abstract)
+    if not local_matches:
+        return
+
     source = ((work.get("primary_location") or {}).get("source") or {})
     journal = source.get("display_name") or "N/A"
     source_type = source.get("type") or "N/A"
@@ -263,7 +425,7 @@ def add_openalex_work(articles_by_key, work, source_label):
 
     article = articles_by_key.setdefault(dedupe_key, {
         "title": title,
-        "abstract": reconstruct_abstract(work.get("abstract_inverted_index")),
+        "abstract": abstract,
         "doi": doi or "N/A",
         "journal": journal,
         "source_type": source_type,
@@ -271,9 +433,14 @@ def add_openalex_work(articles_by_key, work, source_label):
         "publication_date": publication_date,
         "openalex_id": openalex_id,
         "source_queries": [],
+        "matched_relevance_terms": [],
     })
+    source_label = f"keyword:{query_name}: {keyword}"
     if source_label not in article["source_queries"]:
         article["source_queries"].append(source_label)
+    for term in local_matches:
+        if term not in article["matched_relevance_terms"]:
+            article["matched_relevance_terms"].append(term)
 
 def get_openalex_articles():
     articles_by_key = {}
@@ -331,7 +498,7 @@ def get_openalex_articles():
                 continue
 
             for work in results:
-                add_openalex_work(articles_by_key, work, f"keyword:{query_name}: {keyword}")
+                add_openalex_work(articles_by_key, work, query_name, keyword)
 
     articles = list(articles_by_key.values())
     articles.sort(key=lambda x: x.get("created_date") or "", reverse=True)
@@ -369,6 +536,7 @@ for abstract_data in openalex_articles:
         "publication_date": abstract_data.get("publication_date", "N/A"),
         "openalex_id": abstract_data.get("openalex_id", "N/A"),
         "source_queries": abstract_data.get("source_queries", []),
+        "matched_relevance_terms": abstract_data.get("matched_relevance_terms", []),
     })
 
 issue_title = f"Weekly OpenAlex Literature Report - {datetime.now().strftime('%Y-%m-%d')}"
@@ -389,6 +557,7 @@ for article_data in scored_articles:
     publication_date = article_data.get("publication_date", "N/A")
     openalex_id = article_data.get("openalex_id", "N/A")
     source_queries = article_data.get("source_queries", [])
+    matched_relevance_terms = article_data.get("matched_relevance_terms", [])
     doi = (article_data["doi"] or "N/A").strip()
     doi_clean = doi.replace("doi:", "").replace("https://doi.org/", "").strip()
     doi_link = f"https://doi.org/{doi_clean}" if doi_clean != "N/A" and "/" in doi_clean else doi
@@ -401,6 +570,7 @@ for article_data in scored_articles:
     issue_body += f"  **OpenAlex created date**: {created_date}\n"
     issue_body += f"  **Publication date**: {publication_date}\n"
     issue_body += f"  **Matched queries**: {', '.join(source_queries) if source_queries else 'N/A'}\n"
+    issue_body += f"  **Matched relevance terms**: {', '.join(matched_relevance_terms) if matched_relevance_terms else 'N/A'}\n"
     issue_body += f"  **Topic tags**: {', '.join(topic_tags) if topic_tags else 'N/A'}\n"
     issue_body += f"  **Method tags**: {', '.join(method_tags) if method_tags else 'N/A'}\n"
     issue_body += f"  **Research Score**: {research_score}\n"
