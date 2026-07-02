@@ -1,16 +1,76 @@
-import feedparser
 from datetime import datetime, timezone, timedelta
 import json
 import requests
 import os
 import re
+import pathlib
 from openai import OpenAI
 
-# Example PubMed RSS feed URL
-rss_url = 'https://pubmed.ncbi.nlm.nih.gov/rss/search/1bYz7DSbRS5nPC1Sop1SziAxQ38TJj7lsnpC-_682rLIkEkg-h/?limit=100&utm_campaign=pubmed-2&fc=20251227231501'
+OPENALEX_WORKS_URL = "https://api.openalex.org/works"
+OPENALEX_PER_KEYWORD_LIMIT = 20
+OPENALEX_MAX_ARTICLES = 60
+
+OPENALEX_QUERIES = {
+    "dishonesty": [
+        "dishonesty",
+        "cheating",
+        "deception",
+        "honesty",
+        "ethical decision making",
+        "moral decision making",
+        "moral identity",
+        "self-concept maintenance",
+        "reputation concern",
+        "prosocial lying",
+    ],
+    "decision_process": [
+        "drift diffusion model",
+        "diffusion model decision making",
+        "HDDM",
+        "evidence accumulation",
+        "sequential sampling model",
+        "decision process model",
+        "boundary separation",
+        "drift rate",
+        "nondecision time",
+        "RLDDM",
+    ],
+    "cognitive_control": [
+        "cognitive control",
+        "executive control",
+        "self-control",
+        "response inhibition",
+        "conflict monitoring",
+        "mental effort",
+        "effort allocation",
+        "expected value of control",
+    ],
+    "consumer_decision": [
+        "consumer neuroscience",
+        "consumer decision making",
+        "consumer behavior",
+        "value-based decision",
+        "purchase decision",
+        "choice behavior",
+        "intertemporal choice",
+        "loss aversion",
+        "risk preference",
+        "decision under uncertainty",
+    ],
+    "computational_neuroscience": [
+        "computational psychiatry",
+        "computational cognitive neuroscience",
+        "computational modeling",
+        "latent decision process",
+        "computational phenotyping",
+        "hierarchical Bayesian",
+        "reinforcement learning decision making",
+    ],
+}
 
 access_token = os.getenv('GITHUB_TOKEN')
 deepseekapikey = os.getenv('DEEPSEEK_API_KEY')
+openalex_api_key = os.getenv('OPENALEX_API_KEY')
 
 client = OpenAI(
     api_key=deepseekapikey,
@@ -100,6 +160,17 @@ Return a valid JSON object only (no extra text):
 def strip_html(x: str) -> str:
     return re.sub(r"<[^>]+>", " ", x or "").strip()
 
+def reconstruct_abstract(inverted_index):
+    if not inverted_index:
+        return ""
+
+    words = []
+    for word, positions in inverted_index.items():
+        for position in positions:
+            words.append((position, word))
+
+    return " ".join(word for _, word in sorted(words))
+
 def safe_json_loads(s: str):
     s = (s or "").strip()
     s = s.replace("```json", "").replace("```", "").strip()
@@ -159,48 +230,78 @@ def extract_scores_and_reasons(title: str, abstract: str):
 
     return research_score, reasoning_research, impact_score, reasoning_impact, topic_tags, method_tags
 
-def get_pubmed_abstracts(rss_url):
-    abstracts_with_urls = []
-    feed = feedparser.parse(rss_url)
-    one_week_ago = datetime.now(timezone.utc) - timedelta(weeks=1)
+def openalex_request(params):
+    if not openalex_api_key:
+        raise RuntimeError("OPENALEX_API_KEY is not set")
 
-    for entry in feed.entries:
-        published_raw = entry.get("published")
-        if not published_raw:
-            continue
+    params = dict(params)
+    params["api_key"] = openalex_api_key
+    response = requests.get(OPENALEX_WORKS_URL, params=params, timeout=30)
+    response.raise_for_status()
+    return response.json()
 
-        try:
-            published_date = datetime.strptime(
-                published_raw, '%a, %d %b %Y %H:%M:%S %z'
-            )
-        except ValueError:
-            continue
+def get_openalex_articles():
+    articles_by_key = {}
+    from_date = (datetime.now(timezone.utc) - timedelta(days=7)).date().isoformat()
+    select = ",".join([
+        "id",
+        "doi",
+        "title",
+        "display_name",
+        "publication_date",
+        "primary_location",
+        "abstract_inverted_index",
+    ])
 
-        if published_date >= one_week_ago:
-            title = entry.get("title", "N/A")
+    for query_name, keywords in OPENALEX_QUERIES.items():
+        for keyword in keywords:
+            params = {
+                "search": keyword,
+                "filter": f"from_publication_date:{from_date},type:article",
+                "per-page": OPENALEX_PER_KEYWORD_LIMIT,
+                "sort": "publication_date:desc",
+                "select": select,
+            }
 
-            if getattr(entry, "content", None) and len(entry.content) > 0:
-                abstract = entry.content[0].value
-            else:
-                abstract = entry.get("summary", "")
+            try:
+                results = openalex_request(params).get("results", [])
+            except requests.RequestException as exc:
+                print(f"OpenAlex request failed for {query_name}/{keyword}: {exc}")
+                continue
 
-            doi = entry.get("dc_identifier", "N/A")
-            journal = entry.get("dc_source", "N/A")
+            for work in results:
+                openalex_id = work.get("id") or ""
+                doi = work.get("doi") or ""
+                dedupe_key = (doi or openalex_id).lower()
+                if not dedupe_key:
+                    continue
 
-            abstracts_with_urls.append({
-                "title": title,
-                "abstract": abstract,
-                "doi": doi,
-                "journal": journal
-            })
+                title = work.get("title") or work.get("display_name") or "N/A"
+                source = ((work.get("primary_location") or {}).get("source") or {})
+                journal = source.get("display_name") or "N/A"
 
-    return abstracts_with_urls
+                article = articles_by_key.setdefault(dedupe_key, {
+                    "title": title,
+                    "abstract": reconstruct_abstract(work.get("abstract_inverted_index")),
+                    "doi": doi or "N/A",
+                    "journal": journal,
+                    "publication_date": work.get("publication_date") or "N/A",
+                    "openalex_id": openalex_id,
+                    "source_queries": [],
+                })
+                source_label = f"{query_name}: {keyword}"
+                if source_label not in article["source_queries"]:
+                    article["source_queries"].append(source_label)
 
-pubmed_abstracts = get_pubmed_abstracts(rss_url)
+    articles = list(articles_by_key.values())
+    articles.sort(key=lambda x: x.get("publication_date") or "", reverse=True)
+    return articles[:OPENALEX_MAX_ARTICLES]
+
+openalex_articles = get_openalex_articles()
 
 scored_articles = []
 
-for abstract_data in pubmed_abstracts:
+for abstract_data in openalex_articles:
     title = abstract_data["title"]
     abstract_clean = strip_html(abstract_data["abstract"])
     
@@ -221,11 +322,14 @@ for abstract_data in pubmed_abstracts:
         "impact_score": impact_score,
         "reasoning_impact": reasoning_impact,
         "doi": doi,
-        "journal": journal
+        "journal": journal,
+        "publication_date": abstract_data.get("publication_date", "N/A"),
+        "openalex_id": abstract_data.get("openalex_id", "N/A"),
+        "source_queries": abstract_data.get("source_queries", []),
     })
 
-issue_title = f"Weekly Article Scores and Reasoning - {datetime.now().strftime('%Y-%m-%d')}"
-issue_body = "Below are the article scores and reasoning from the past week:\n\n"
+issue_title = f"Weekly OpenAlex Literature Report - {datetime.now().strftime('%Y-%m-%d')}"
+issue_body = "Below are the OpenAlex article scores and reasoning from the past week:\n\n"
 
 for article_data in scored_articles:
     title = article_data["title"].strip()
@@ -234,21 +338,27 @@ for article_data in scored_articles:
     impact_score = article_data["impact_score"]
     reasoning_impact = article_data["reasoning_impact"]
     journal = article_data["journal"].strip()
+    publication_date = article_data.get("publication_date", "N/A")
+    openalex_id = article_data.get("openalex_id", "N/A")
+    source_queries = article_data.get("source_queries", [])
     doi = (article_data["doi"] or "N/A").strip()
-    doi_clean = doi.replace("doi:", "").strip()
+    doi_clean = doi.replace("doi:", "").replace("https://doi.org/", "").strip()
     doi_link = f"https://doi.org/{doi_clean}" if doi_clean != "N/A" and "/" in doi_clean else doi
     topic_tags = article_data.get("topic_tags", [])
     method_tags = article_data.get("method_tags", [])
 
     issue_body += f"- **Title**: {title}\n"
     issue_body += f"  **Journal**: {journal}\n"
+    issue_body += f"  **Publication date**: {publication_date}\n"
+    issue_body += f"  **Matched queries**: {', '.join(source_queries) if source_queries else 'N/A'}\n"
     issue_body += f"  **Topic tags**: {', '.join(topic_tags) if topic_tags else 'N/A'}\n"
     issue_body += f"  **Method tags**: {', '.join(method_tags) if method_tags else 'N/A'}\n"
     issue_body += f"  **Research Score**: {research_score}\n"
     issue_body += f"  **Reasoning (Research)**: {reasoning_research}\n"
     issue_body += f"  **Impact Score**: {impact_score}\n"
     issue_body += f"  **Reasoning (Impact)**: {reasoning_impact}\n"
-    issue_body += f"  **DOI**: {doi_link}\n\n"
+    issue_body += f"  **DOI**: {doi_link}\n"
+    issue_body += f"  **OpenAlex**: {openalex_id}\n\n"
 
 def create_github_issue(title, body, access_token):
     url = f"https://api.github.com/repos/JiangXY98/autoPsydecision/issues"
@@ -270,8 +380,6 @@ def create_github_issue(title, body, access_token):
         print("Response:", response.text)
 
 create_github_issue(issue_title, issue_body, access_token)
-
-import pathlib
 
 run_date = datetime.now().strftime("%Y-%m-%d")
 out_dir = pathlib.Path("data/weekly")
