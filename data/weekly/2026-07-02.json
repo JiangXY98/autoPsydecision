@@ -1,0 +1,568 @@
+[
+  {
+    "title": "Dynamic Mitochondrial Protein Succinylation Induced by Nutritional Intervention with Omega-3 Polyunsaturated Fatty Acids Elicits Growth Inhibition and Lethality in Prostate Cancer Cells",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": 45,
+    "reasoning_research": "The study presents a novel mechanism linking omega-3 fatty acids to mitochondrial protein succinylation, but the abstract lacks details on sample size, statistical rigor, or replication. Methodological descriptions are sparse, relying only on 'succinylomic profiling and functional validation' without specifics.",
+    "impact_score": 10,
+    "reasoning_impact": "The research is entirely focused on prostate cancer cell biology and mitochondrial metabolism, with no connection to self-control, attention, or decision-making processes. It has negligible relevance to the target field and is unlikely to influence research directions in decision neuroscience or computational psychology.",
+    "doi": "https://doi.org/10.17638/03195029",
+    "journal": "Open MIND",
+    "publication_date": "2031-01-01",
+    "openalex_id": "https://openalex.org/W7127976729",
+    "source_queries": [
+      "decision_process: evidence accumulation"
+    ]
+  },
+  {
+    "title": "Bridging the Gap in Reading Skills: The Role of Home Literacy Environment and Parental Expectations in Chinese Rural-to- Urban Migrant Children",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": "N/A",
+    "reasoning_research": "N/A",
+    "impact_score": "N/A",
+    "reasoning_impact": "N/A",
+    "doi": "https://doi.org/10.17638/03194761",
+    "journal": "Open MIND",
+    "publication_date": "2031-01-01",
+    "openalex_id": "https://openalex.org/W7128644306",
+    "source_queries": [
+      "decision_process: sequential sampling model",
+      "cognitive_control: cognitive control"
+    ]
+  },
+  {
+    "title": "Antecedents and consequences of Green-tech FDI in emerging markets",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": "N/A",
+    "reasoning_research": "N/A",
+    "impact_score": "N/A",
+    "reasoning_impact": "N/A",
+    "doi": "https://doi.org/10.17638/03195308",
+    "journal": "Open MIND",
+    "publication_date": "2031-01-01",
+    "openalex_id": "https://openalex.org/W7128392690",
+    "source_queries": [
+      "consumer_decision: decision under uncertainty"
+    ]
+  },
+  {
+    "title": "COMPARATIVE CRITICAL ANALYSIS OF URBAN DESIGN PROCESSES IN TWO PLANNING SYSTEMS IN SAUDI ARABIA: CASE STUDIES OF THE WATERFRONT DEVELOPMENT IN JEDDAH AND YANBU",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": "N/A",
+    "reasoning_research": "N/A",
+    "impact_score": "N/A",
+    "reasoning_impact": "N/A",
+    "doi": "https://doi.org/10.17638/03194716",
+    "journal": "Open MIND",
+    "publication_date": "2030-01-01",
+    "openalex_id": "https://openalex.org/W7127920137",
+    "source_queries": [
+      "decision_process: decision process model"
+    ]
+  },
+  {
+    "title": "MODELING HOSPITALITY AND TOURISM STRATEGIES",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": "N/A",
+    "reasoning_research": "N/A",
+    "impact_score": "N/A",
+    "reasoning_impact": "N/A",
+    "doi": "https://doi.org/10.7273/000007504",
+    "journal": "Washington State University",
+    "publication_date": "2030-01-01",
+    "openalex_id": "https://openalex.org/W7116362194",
+    "source_queries": [
+      "consumer_decision: choice behavior"
+    ]
+  },
+  {
+    "title": "Probing α-carboxysome biogenesis and modularity with bacterial microcompartment counterparts",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": "N/A",
+    "reasoning_research": "N/A",
+    "impact_score": "N/A",
+    "reasoning_impact": "N/A",
+    "doi": "https://doi.org/10.17638/03195344",
+    "journal": "Open MIND",
+    "publication_date": "2029-01-01",
+    "openalex_id": "https://openalex.org/W7128645309",
+    "source_queries": [
+      "cognitive_control: self-control"
+    ]
+  },
+  {
+    "title": "Culture Audit - Save a Life Pet Rescue",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": 0,
+    "reasoning_research": "The text describes a non-scientific culture audit of a pet rescue organization, not a study in decision neuroscience or computational psychology. There is no evidence of conceptual novelty, methodological rigor, or reliable human data relevant to the specified field.",
+    "impact_score": 0,
+    "reasoning_impact": "The abstract lacks any relevance to self-control, attention, reinforcement learning, or related topics. It offers no implications for future research directions or theory in the target domain.",
+    "doi": "N/A",
+    "journal": "Journal of International Crisis and Risk Communication Research",
+    "publication_date": "2029-01-01",
+    "openalex_id": "https://openalex.org/W7154876116",
+    "source_queries": [
+      "cognitive_control: mental effort"
+    ]
+  },
+  {
+    "title": "Holistic Development Of Personality: A Perspective Of Indian Pedagogy",
+    "topic_tags": [
+      "self_control"
+    ],
+    "method_tags": [],
+    "research_score": 15,
+    "reasoning_research": "The article is a historical and philosophical perspective without empirical data, computational modeling, or methodological rigor. No experimental design, statistical analysis, or reproducible findings are presented.",
+    "impact_score": 10,
+    "reasoning_impact": "The abstract provides no clear implications for decision neuroscience or computational psychology. It does not introduce novel testable hypotheses or offer methodological advancements relevant to self-control or attention in decision-making.",
+    "doi": "https://doi.org/10.5281/zenodo.18468548",
+    "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+    "publication_date": "2028-08-12",
+    "openalex_id": "https://openalex.org/W7127379152",
+    "source_queries": [
+      "cognitive_control: self-control"
+    ]
+  },
+  {
+    "title": "Holistic Development Of Personality: A Perspective Of Indian Pedagogy",
+    "topic_tags": [
+      "self_control",
+      "moral_decision",
+      "social_norms"
+    ],
+    "method_tags": [],
+    "research_score": 5,
+    "reasoning_research": "The abstract provides a historical and philosophical overview of ancient Indian education without any empirical data, computational modeling, or systematic methodology. There is no evidence of experimental design, statistical analysis, or preregistration.",
+    "impact_score": 10,
+    "reasoning_impact": "The work is not directly relevant to decision neuroscience, computational psychology, or the specified themes of self-control and attention in decision-making. It lacks clear implications for future research directions in these fields.",
+    "doi": "https://doi.org/10.5281/zenodo.18468549",
+    "journal": "Open MIND",
+    "publication_date": "2028-08-12",
+    "openalex_id": "https://openalex.org/W7127371715",
+    "source_queries": [
+      "cognitive_control: self-control"
+    ]
+  },
+  {
+    "title": "DESIGNING AND EXPERIMENTING AS THE NEW WAY OF LEARNING – EDUCATIONAL INNOVATION FOR MORE RELEVANCE IN THE AGE OF AI",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": 20,
+    "reasoning_research": "The abstract describes a panel discussion on educational innovation and experiential learning in the age of AI, but provides no empirical data, methodological details, or conceptual novelty within decision neuroscience. The text is speculative and lacks the rigorous design, modeling, or statistical evidence expected in a peer-reviewed journal article.",
+    "impact_score": 15,
+    "reasoning_impact": "The abstract does not address self-control, attention, or core decision-making processes, and offers no clear implications for future research in decision neuroscience or computational psychology. Its focus on organizational learning and AI collaboration is tangential to the field, limiting potential impact.",
+    "doi": "N/A",
+    "journal": "Journal of the Association for Information Systems",
+    "publication_date": "2028-06-01",
+    "openalex_id": "https://openalex.org/W7164977240",
+    "source_queries": [
+      "cognitive_control: executive control",
+      "consumer_decision: value-based decision",
+      "consumer_decision: decision under uncertainty"
+    ]
+  },
+  {
+    "title": "On Zaya (2025) – Marcel van Luit",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": "N/A",
+    "reasoning_research": "N/A",
+    "impact_score": "N/A",
+    "reasoning_impact": "N/A",
+    "doi": "https://doi.org/10.5281/zenodo.19862260",
+    "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+    "publication_date": "2028-04-01",
+    "openalex_id": "https://openalex.org/W7157329317",
+    "source_queries": [
+      "dishonesty: deception"
+    ]
+  },
+  {
+    "title": "On Zaya (2025) – Marcel van Luit",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": "N/A",
+    "reasoning_research": "N/A",
+    "impact_score": "N/A",
+    "reasoning_impact": "N/A",
+    "doi": "https://doi.org/10.5281/zenodo.17776605",
+    "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+    "publication_date": "2028-04-01",
+    "openalex_id": "https://openalex.org/W7108215888",
+    "source_queries": [
+      "dishonesty: deception"
+    ]
+  },
+  {
+    "title": "Human Remains: Everest and the Ontological Afterlives of George Mallory and Andrew Irvine",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": "N/A",
+    "reasoning_research": "N/A",
+    "impact_score": "N/A",
+    "reasoning_impact": "N/A",
+    "doi": "N/A",
+    "journal": "CLOK (University of Central Lancashire)",
+    "publication_date": "2028-01-01",
+    "openalex_id": "https://openalex.org/W7130241212",
+    "source_queries": [
+      "decision_process: evidence accumulation",
+      "decision_process: boundary separation",
+      "cognitive_control: self-control"
+    ]
+  },
+  {
+    "title": "Enhancing Retrofit Design for Office Buildings in Indonesia’s Hot-Humid Climates: Exploring Energy and Comfort Trade-Offs through Multi-Objective Optimisation Framework",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": 0,
+    "reasoning_research": "The article focuses on building energy retrofit optimization in Indonesia's hot-humid climates, which is entirely outside the domains of decision neuroscience and computational psychology. No conceptual or methodological elements relevant to the specified field are present.",
+    "impact_score": 0,
+    "reasoning_impact": "The work has no relevance to self-control, attention, or decision-making processes as defined in the evaluation criteria. Its implications are limited to building energy efficiency and do not influence research directions in the target field.",
+    "doi": "https://doi.org/10.17638/03195397",
+    "journal": "Open MIND",
+    "publication_date": "2028-01-01",
+    "openalex_id": "https://openalex.org/W7128530440",
+    "source_queries": [
+      "decision_process: decision process model",
+      "cognitive_control: conflict monitoring"
+    ]
+  },
+  {
+    "title": "Brain-based digital twins for skilled interceptive movements: computational frameworks for neural-kinematic integration",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": "N/A",
+    "reasoning_research": "N/A",
+    "impact_score": "N/A",
+    "reasoning_impact": "N/A",
+    "doi": "https://doi.org/10.17870/bathspa.00017805",
+    "journal": "ResearchSPAce (Bath Spa University)",
+    "publication_date": "2028-01-01",
+    "openalex_id": "https://openalex.org/W7162566981",
+    "source_queries": [
+      "computational_neuroscience: computational modeling"
+    ]
+  },
+  {
+    "title": "Implementation of an Escape Room Simulation to Decrease Falls in an Inpatient Psychiatric Unit",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": 45,
+    "reasoning_research": "The study uses a pre-post design with a single unit and no control group, limiting internal validity. The sample size is small (70 staff) and the evaluation period is short, reducing confidence in the sustainability of the results.",
+    "impact_score": 15,
+    "reasoning_impact": "The article focuses on a clinical quality improvement project with no direct relevance to decision neuroscience, self-control, or attention. Its implications are confined to fall prevention in psychiatric units and do not inform theory or methods in computational psychology.",
+    "doi": "N/A",
+    "journal": "DigtalCommons @ Texas Medical Center Library (Texas Medical Center)",
+    "publication_date": "2027-12-01",
+    "openalex_id": "https://openalex.org/W7154550088",
+    "source_queries": [
+      "cognitive_control: mental effort"
+    ]
+  },
+  {
+    "title": "Learning-driven prospect and household risk mitigation strategy under uncertain climate risks: a dynamic cumulative prospect theory approach",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": "N/A",
+    "reasoning_research": "N/A",
+    "impact_score": "N/A",
+    "reasoning_impact": "N/A",
+    "doi": "N/A",
+    "journal": "ePrints Soton (University of Southampton)",
+    "publication_date": "2027-08-27",
+    "openalex_id": "https://openalex.org/W7115982060",
+    "source_queries": [
+      "consumer_decision: value-based decision",
+      "consumer_decision: decision under uncertainty"
+    ]
+  },
+  {
+    "title": "White, Heterosexual, Cisgender Male Experiences with Contemporary Masculinity Language",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": "N/A",
+    "reasoning_research": "N/A",
+    "impact_score": "N/A",
+    "reasoning_impact": "N/A",
+    "doi": "N/A",
+    "journal": "USF Scholarship Repository (University of San Francisco)",
+    "publication_date": "2027-08-22",
+    "openalex_id": "https://openalex.org/W7164627138",
+    "source_queries": [
+      "dishonesty: moral identity",
+      "dishonesty: self-concept maintenance",
+      "dishonesty: prosocial lying",
+      "cognitive_control: cognitive control",
+      "cognitive_control: self-control",
+      "cognitive_control: mental effort",
+      "cognitive_control: expected value of control",
+      "consumer_decision: loss aversion",
+      "consumer_decision: risk preference"
+    ]
+  },
+  {
+    "title": "Exploring the Relationships Between Emotional Intelligence, Perceived Organizational Support, Job Satisfaction, and Intent to Stay Among Minnesota School Nurses",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": 35,
+    "reasoning_research": "The study uses a cross-sectional, correlational design with self-report measures and a modest sample of 123 respondents, limiting causal inference and generalizability. No preregistration, advanced modeling, or robustness checks are mentioned, and the reliance on Spearman correlations alone provides weak evidence for the complex relationships proposed.",
+    "impact_score": 20,
+    "reasoning_impact": "The topic is entirely applied to school nursing workforce retention, with no relevance to decision neuroscience, self-control, or attention in decision-making. It does not advance computational or neurocognitive theories, and its implications are confined to a narrow occupational context.",
+    "doi": "N/A",
+    "journal": "RED - a Repository of Digital Collections (Minnesota State University Moorhead)",
+    "publication_date": "2027-05-06",
+    "openalex_id": "https://openalex.org/W7165284361",
+    "source_queries": [
+      "dishonesty: ethical decision making",
+      "dishonesty: moral decision making",
+      "decision_process: decision process model",
+      "cognitive_control: self-control",
+      "cognitive_control: conflict monitoring",
+      "cognitive_control: mental effort",
+      "cognitive_control: effort allocation",
+      "cognitive_control: expected value of control",
+      "consumer_decision: value-based decision",
+      "consumer_decision: decision under uncertainty",
+      "computational_neuroscience: latent decision process"
+    ]
+  },
+  {
+    "title": "Regulatory Landslide Hazard Zoning in New Caledonia: Integrating Temporal Probability in a Quantitative Framework",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": 0,
+    "reasoning_research": "The title and abstract describe a study on landslide hazard zoning, which is unrelated to decision neuroscience or computational psychology. No conceptual novelty, methodological rigor, or data reliability relevant to the specified fields can be assessed.",
+    "impact_score": 0,
+    "reasoning_impact": "The work has no relevance to self-control, attention, or decision-making in the context of the target research area. It cannot influence future research directions in decision neuroscience or computational psychology.",
+    "doi": "N/A",
+    "journal": "HAL (Le Centre pour la Communication Scientifique Directe)",
+    "publication_date": "2027-04-27",
+    "openalex_id": "https://openalex.org/W7130768792",
+    "source_queries": [
+      "decision_process: evidence accumulation",
+      "decision_process: decision process model",
+      "cognitive_control: expected value of control",
+      "consumer_decision: value-based decision",
+      "consumer_decision: decision under uncertainty",
+      "computational_neuroscience: computational modeling"
+    ]
+  },
+  {
+    "title": "Political Uncertainty and Firm-Level Stock Market Reactions in the United States",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": 30,
+    "reasoning_research": "The study uses a small, non-random sample of 14 firms and a basic event study design without advanced modeling or preregistration, limiting methodological rigor. The analysis is purely descriptive and lacks computational or formal statistical modeling, which is standard for the target field of decision neuroscience and computational psychology.",
+    "impact_score": 20,
+    "reasoning_impact": "The article addresses political uncertainty and stock market reactions, which is unrelated to self-control, attention, reinforcement learning, or other core topics in decision neuroscience. Its findings and methods offer little to no influence on theories or future research in the specified field.",
+    "doi": "N/A",
+    "journal": "Lincoln (University of Nebraska)",
+    "publication_date": "2027-04-01",
+    "openalex_id": "https://openalex.org/W7155578308",
+    "source_queries": [
+      "consumer_decision: consumer behavior"
+    ]
+  },
+  {
+    "title": "児童・青年期の反応性愛着障害における腹側線条体の機能不全：機能的MRI 研究",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": "N/A",
+    "reasoning_research": "N/A",
+    "impact_score": "N/A",
+    "reasoning_impact": "N/A",
+    "doi": "https://doi.org/10.34463/0002000763",
+    "journal": "Institutional Repositories DataBase (IRDB)",
+    "publication_date": "2027-03-01",
+    "openalex_id": "https://openalex.org/W7165481795",
+    "source_queries": [
+      "cognitive_control: self-control",
+      "cognitive_control: response inhibition",
+      "cognitive_control: expected value of control"
+    ]
+  },
+  {
+    "title": "児童・青年期の反応性愛着障害における脳内報酬系の機能障害：予備的研究",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": "N/A",
+    "reasoning_research": "N/A",
+    "impact_score": "N/A",
+    "reasoning_impact": "N/A",
+    "doi": "https://doi.org/10.34463/0002000762",
+    "journal": "Institutional Repositories DataBase (IRDB)",
+    "publication_date": "2027-03-01",
+    "openalex_id": "https://openalex.org/W7164761147",
+    "source_queries": [
+      "cognitive_control: expected value of control"
+    ]
+  },
+  {
+    "title": "The Seven Noahide Laws",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": 0,
+    "reasoning_research": "The article is a theological exposition on the Seven Noahide Laws from a religious perspective, citing scriptural and rabbinic sources. It contains no empirical data, computational modeling, or methodological rigor relevant to decision neuroscience or computational psychology.",
+    "impact_score": 0,
+    "reasoning_impact": "The content is purely doctrinal and unrelated to self-control, attention, or decision-making as studied in neuroscience or psychology. It offers no implications for empirical research or theory in these fields.",
+    "doi": "N/A",
+    "journal": "eYLS (Yale Law School)",
+    "publication_date": "2027-01-01",
+    "openalex_id": "https://openalex.org/W7162613458",
+    "source_queries": [
+      "dishonesty: cheating",
+      "dishonesty: deception",
+      "dishonesty: moral identity",
+      "dishonesty: self-concept maintenance",
+      "decision_process: boundary separation",
+      "cognitive_control: self-control",
+      "cognitive_control: expected value of control",
+      "consumer_decision: consumer neuroscience",
+      "consumer_decision: consumer behavior",
+      "consumer_decision: choice behavior"
+    ]
+  },
+  {
+    "title": "Diasporic Sikh masculinities in Ranj Dhaliwal’s \"Daaku\" and Gautam Malkani’s \"Londonstani\"",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": 0,
+    "reasoning_research": "The provided title and abstract are not related to decision neuroscience or computational psychology. They discuss literary analysis of Sikh masculinities in novels, which is outside the scope of the evaluation criteria.",
+    "impact_score": 0,
+    "reasoning_impact": "The content has no relevance to self-control, attention, decision-making, or any topics listed. It cannot influence research in the specified fields.",
+    "doi": "https://doi.org/10.14288/1.0105084",
+    "journal": "cIRcle (University of British Columbia)",
+    "publication_date": "2027-01-01",
+    "openalex_id": "https://openalex.org/W2267749424",
+    "source_queries": [
+      "dishonesty: cheating",
+      "dishonesty: moral decision making",
+      "dishonesty: moral identity",
+      "dishonesty: self-concept maintenance",
+      "dishonesty: reputation concern",
+      "decision_process: decision process model",
+      "decision_process: boundary separation",
+      "cognitive_control: conflict monitoring",
+      "cognitive_control: expected value of control",
+      "consumer_decision: value-based decision",
+      "consumer_decision: purchase decision",
+      "consumer_decision: risk preference"
+    ]
+  },
+  {
+    "title": "The Ethical and Legal Complexities of Regulating Companion AI Chatbots",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": "N/A",
+    "reasoning_research": "N/A",
+    "impact_score": "N/A",
+    "reasoning_impact": "N/A",
+    "doi": "N/A",
+    "journal": "Lund University Publications (Lund University)",
+    "publication_date": "2027-01-01",
+    "openalex_id": "https://openalex.org/W7143585285",
+    "source_queries": [
+      "dishonesty: deception",
+      "dishonesty: ethical decision making",
+      "dishonesty: moral decision making",
+      "dishonesty: moral identity",
+      "cognitive_control: cognitive control",
+      "cognitive_control: mental effort",
+      "consumer_decision: consumer neuroscience",
+      "consumer_decision: consumer decision making",
+      "consumer_decision: consumer behavior",
+      "consumer_decision: choice behavior",
+      "consumer_decision: risk preference",
+      "consumer_decision: decision under uncertainty",
+      "computational_neuroscience: computational cognitive neuroscience",
+      "computational_neuroscience: computational modeling",
+      "computational_neuroscience: reinforcement learning decision making"
+    ]
+  },
+  {
+    "title": "The shadow circuits: transnational adoption, forced disappearance and genocide in Guatemala",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": 10,
+    "reasoning_research": "The article is an ethnographic and historical legal analysis of transnational adoption practices in Guatemala, which is entirely outside the scope of decision neuroscience and computational psychology. It lacks any conceptual or methodological connection to the specified evaluation criteria, such as reinforcement learning, deception, or social norms in decision-making.",
+    "impact_score": 5,
+    "reasoning_impact": "The work is relevant to anthropology, genocide studies, and adoption law, but it has no direct relevance to self-control, attention, or decision-making as defined in the guidelines. Consequently, it is unlikely to influence future research in decision neuroscience or computational psychology.",
+    "doi": "N/A",
+    "journal": "BIROn (Birkbeck, University of London)",
+    "publication_date": "2027-01-01",
+    "openalex_id": "https://openalex.org/W7161461317",
+    "source_queries": [
+      "dishonesty: deception"
+    ]
+  },
+  {
+    "title": "Constitutional Limits on Occupational Licensing Bans as Collateral Consequences of a Criminal Conviction",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": 0,
+    "reasoning_research": "The article is a legal/policy analysis unrelated to decision neuroscience or computational psychology. It does not present any empirical data, modeling, or psychological constructs.",
+    "impact_score": 0,
+    "reasoning_impact": "The article has no relevance to self-control, attention, or decision-making as defined in the specified field. It offers no insights that could influence future neuroscience or psychology research.",
+    "doi": "N/A",
+    "journal": "eYLS (Yale Law School)",
+    "publication_date": "2027-01-01",
+    "openalex_id": "https://openalex.org/W7125880845",
+    "source_queries": [
+      "dishonesty: honesty",
+      "dishonesty: moral decision making",
+      "dishonesty: moral identity",
+      "cognitive_control: self-control",
+      "consumer_decision: decision under uncertainty"
+    ]
+  },
+  {
+    "title": "How Large Language Models Are Reshaping Skills and Job Requirements for Public Health Professionals in Saudi Arabia",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": "N/A",
+    "reasoning_research": "N/A",
+    "impact_score": "N/A",
+    "reasoning_impact": "N/A",
+    "doi": "N/A",
+    "journal": "Scholarship - Claremont (Claremont Colleges)",
+    "publication_date": "2027-01-01",
+    "openalex_id": "https://openalex.org/W7161467877",
+    "source_queries": [
+      "dishonesty: ethical decision making",
+      "decision_process: decision process model"
+    ]
+  },
+  {
+    "title": "Multidisciplinary Practices (MDPs) in Elder Law",
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": 5,
+    "reasoning_research": "The article is on elder law and multidisciplinary practices, which is outside the scope of decision neuroscience and computational psychology. No methodological details or data are provided, making assessment of research quality impossible.",
+    "impact_score": 0,
+    "reasoning_impact": "The topic has no relevance to self-control, attention, reinforcement learning, or any of the specified decision-making domains. It is unlikely to influence research in these fields.",
+    "doi": "N/A",
+    "journal": "eYLS (Yale Law School)",
+    "publication_date": "2027-01-01",
+    "openalex_id": "https://openalex.org/W7162613393",
+    "source_queries": [
+      "dishonesty: ethical decision making",
+      "dishonesty: reputation concern",
+      "cognitive_control: cognitive control",
+      "cognitive_control: self-control",
+      "cognitive_control: mental effort",
+      "consumer_decision: consumer decision making",
+      "consumer_decision: consumer behavior",
+      "consumer_decision: value-based decision",
+      "consumer_decision: purchase decision",
+      "consumer_decision: decision under uncertainty"
+    ]
+  }
+]
