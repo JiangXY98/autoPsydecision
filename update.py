@@ -89,6 +89,17 @@ RELEVANCE_RULES = {
             "economic game",
             "social norm",
         ],
+        "exclude": [
+            "legal profession",
+            "legal studies",
+            "religious education",
+            "islamic",
+            "maqasid",
+            "marriage",
+            "wives rights",
+            "anti corruption",
+            "professional misconduct",
+        ],
     },
     "decision_process": {
         "core": [
@@ -102,7 +113,6 @@ RELEVANCE_RULES = {
             "computational modelling",
         ],
         "domain": [
-            "decision making",
             "choice",
             "behavior",
             "behaviour",
@@ -114,6 +124,14 @@ RELEVANCE_RULES = {
             "reward",
             "participant",
             "human",
+        ],
+        "exclude": [
+            "lyapunov",
+            "barrier function",
+            "barrier functions",
+            "robotics",
+            "autonomous vehicle",
+            "control systems",
         ],
     },
     "cognitive_control": {
@@ -347,6 +365,9 @@ def relevance_matches(query_name: str, title: str, abstract: str):
         return []
 
     text = normalize_for_match(f"{title} {abstract}")
+    if matched_terms(text, rule.get("exclude", [])):
+        return []
+
     core_matches = matched_terms(text, rule["core"])
     domain_matches = matched_terms(text, rule["domain"])
 
