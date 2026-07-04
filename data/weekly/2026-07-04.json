@@ -1,0 +1,85 @@
+[
+  {
+    "title": "25 years of Information Technology and Management: a bibliometric retrospective",
+    "authors": [
+      "Mohammad Sadegh Khorshidi",
+      "José M. Merigó",
+      "Ghassan Beydoun"
+    ],
+    "abstract": "Abstract A 25-year bibliometric retrospective of Information Technology and Management (ITM) characterizes publication growth, citation structure, knowledge foundations, and thematic evolution. A Scopus corpus of 398 citable documents (articles, reviews, and conference papers) for 2000–2024 underpins all ranked performance tables and keyword analyses, complemented by WoS (2007–2024) for science-mapping networks in VOSviewer. The workflow follows a SPAR-4-SLR design and combines productivity and impact indicators with co-citation (journals and documents), bibliographic coupling (documents, authors, institutions, and countries), and keyword co-occurrence analyses implemented via VOSviewer and bibliometrix/biblioshiny, alongside SciVal topic-cluster signals for 2015–2024. Results show stepwise changes in annual output, with a pronounced expansion around 2011–2012 and subsequent stabilization. Citation distributions are highly skewed, with early cohorts containing the strongest outliers and the highest citation density, while recent cohorts exhibit tighter dispersion consistent with shorter citation windows. ITM’s citation canon is anchored in trust, privacy, technology adoption, and IT value creation, while high-velocity recent contributions align with payments, logistics, analytics, and domain-specific IS applications. WoS co-citation structures place ITM at the intersection of core IS journals, decision analytics, enterprise/industrial systems, and behavioral/marketing outlets. Country and institutional patterns indicate a persistent US hub and a marked post-2012 rise in China, reinforcing a dense US–China collaboration axis. SciVal topic clusters highlight strong recent alignment with globally prominent fronts in digital consumer behavior and digital innovation, with particularly high field-weighted impact in recommendation-oriented and selected human-centered analytics clusters. Collectively, the findings firmly position ITM as a mature, internationally integrated journal with durable socio-technical pillars and evolving methodological and topical breadth.",
+    "keywords": [
+      "scientometrics and bibliometrics research",
+      "Big Data and Business Intelligence",
+      "Academic Publishing and Open Access"
+    ],
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": 68,
+    "reasoning_research": "The study employs a rigorous bibliometric methodology (SPAR-4-SLR design, multiple databases, VOSviewer) and provides detailed publication, citation, and network analyses. However, it is a retrospective review rather than an original experimental or modeling study, limiting its novelty and methodological depth in the context of decision neuroscience.",
+    "impact_score": 35,
+    "reasoning_impact": "The paper catalogs the evolution of a specific journal, which is relevant to information systems researchers but has limited direct implications for self-control and attention in decision-making. It does not advance theoretical frameworks or empirical findings in that domain.",
+    "doi": "https://doi.org/10.1007/s10799-026-00505-5",
+    "journal": "Information Technology and Management",
+    "source_type": "journal",
+    "created_date": "2026-07-02T00:00:00",
+    "publication_date": "2026-07-02",
+    "openalex_id": "https://openalex.org/W7166808353",
+    "source_queries": [
+      "keyword:consumer_decision: intertemporal choice"
+    ],
+    "matched_relevance_terms": [
+      "behavior",
+      "consumer",
+      "consumer behavior",
+      "decision",
+      "human"
+    ]
+  },
+  {
+    "title": "Dissociable neurocognitive mechanisms of state and trait anxiety in working memory: Threat-induced alterations in decision dynamics and attenuation of large-scale network reconfiguration",
+    "authors": [
+      "Fei Xin",
+      "Jialuo Lai",
+      "Runyou Liu",
+      "Jianhui Wu",
+      "Q Chen"
+    ],
+    "abstract": "Trait and state anxiety represent dissociable dimensions that influence working memory (WM) through distinct neurocognitive mechanisms. However, how each dimension modulates WM performance and large-scale brain network interactions under threat remains poorly understood. This study disentangled their respective contributions by integrating an interference-suppression WM task with a threat-of-shock paradigm, complemented by hierarchical drift-diffusion modeling (HDDM) and functional network connectivity (FNC) analyses. Threat-induced state anxiety robustly accelerated reaction times across all task conditions, whereas trait anxiety exerted a selective effect, impairing accuracy specifically in the highest-interference condition. HDDM revealed that state anxiety was associated with reduced decision threshold, shortened non-decision time, and task-dependent increases in drift rate. This pattern of effects is consistent with an urgency-driven shift in decision policy toward faster, less cautious responding. FNC analyses indicated that state anxiety attenuated task-evoked network reconfiguration, weakening segregation between the anterior default network (aDN) and task-positive networks (dorsal attention network, frontoparietal control network [FPCN]), while also reducing aDN-posterior default network coupling. Resting-state analyses identified heightened aDN-FPCN anticorrelation as a stable neural correlate of trait anxiety, and this anticorrelation was selectively associated with trait worry in the High Trait Anxiety group. These findings reveal a dissociation: state anxiety drives context-dependent shifts in decision policy and task-evoked network reconfiguration, while trait anxiety manifests primarily as a stable intrinsic network characteristic with selective behavioral expression under low-to-moderate cognitive load.",
+    "keywords": [
+      "Neural and Behavioral Psychology Studies",
+      "Cognitive Functions and Memory",
+      "Functional Brain Connectivity Studies"
+    ],
+    "topic_tags": [
+      "clinical_neuro",
+      "attention",
+      "salience"
+    ],
+    "method_tags": [
+      "hddm",
+      "fmri",
+      "computational_modeling_general"
+    ],
+    "research_score": 90,
+    "reasoning_research": "The study integrates a threat-of-shock paradigm, interference-suppression WM task, HDDM, and FNC analyses to dissociate state and trait anxiety, demonstrating strong methodological rigor and conceptual novelty. The use of hierarchical drift-diffusion modeling and functional network connectivity provides robust, data-driven insights.",
+    "impact_score": 80,
+    "reasoning_impact": "The findings clarify distinct neurocognitive mechanisms of state and trait anxiety in working memory, with clear implications for understanding anxiety disorders and decision-making under threat. The dissociation between context-dependent shifts and stable trait markers may guide future theoretical and clinical research.",
+    "doi": "https://doi.org/10.1016/j.neuroimage.2026.122084",
+    "journal": "NeuroImage",
+    "source_type": "journal",
+    "created_date": "2026-07-01T00:00:00",
+    "publication_date": "2026-06-30",
+    "openalex_id": "https://openalex.org/W7166744626",
+    "source_queries": [
+      "keyword:decision_process: HDDM"
+    ],
+    "matched_relevance_terms": [
+      "behavior",
+      "brain",
+      "cognitive",
+      "drift diffusion",
+      "hddm",
+      "neural"
+    ]
+  }
+]
