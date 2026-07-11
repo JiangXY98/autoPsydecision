@@ -1,0 +1,259 @@
+[
+  {
+    "title": "Social learning dynamically shapes moral decision-making by biasing subjective valuation",
+    "authors": [
+      "Julien Bénistant",
+      "Valentin Guigon",
+      "Alain Nicolas",
+      "Edmund Derrington",
+      "Jean‐Claude Dreher"
+    ],
+    "abstract": "Observing immoral behavior increases one’s dishonesty by social influence and learning processes. The neurocomputational mechanisms underlying such moral contagion remain unclear. We tested different mechanistic hypotheses to account for moral contagion. We used model-based fMRI and a new cheating game in which participants were sequentially placed in honest and dishonest social norm contexts. Participants’ cheating behavior increased in the dishonest norm context but was unchanged in the honest one. The best model to account for behavior indicated that participants’ valuation was dynamically biased by learning that others had cheated. At the group level, this valuation bias was not encoded by any specific brain region. Instead, this neural signal depended on individual differences in conformity, and engaged the bilateral lateral prefrontal cortex. During learning, simulation of others’ cheating behavior was encoded in the posterior superior temporal sulcus. Together, these findings provide a mechanistic understanding of how learning about others’ dishonesty biases individuals’ valuation of cheating but does not alter one’s established preferences.",
+    "keywords": [
+      "Psychology of Moral and Emotional Judgment",
+      "Neural and Behavioral Psychology Studies",
+      "Free Will and Agency"
+    ],
+    "topic_tags": [
+      "deception_dishonesty",
+      "social_norms",
+      "moral_decision"
+    ],
+    "method_tags": [
+      "fmri",
+      "computational_modeling_general"
+    ],
+    "research_score": 75,
+    "reasoning_research": "The study uses a clever cheating game with sequential social norm contexts and model-based fMRI to test multiple mechanistic hypotheses, demonstrating rigorous computational modeling. However, limited details on sample size and preregistration temper the score.",
+    "impact_score": 70,
+    "reasoning_impact": "The findings directly advance understanding of moral contagion via social learning and valuation bias, with clear relevance to dishonesty and social norms. The neural dissociation based on individual differences offers avenues for future research, though the impact is moderate.",
+    "doi": "https://doi.org/10.1371/journal.pbio.3003889",
+    "journal": "PLoS Biology",
+    "source_type": "journal",
+    "created_date": "2026-07-11T00:00:00",
+    "publication_date": "2026-07-10",
+    "openalex_id": "https://openalex.org/W7167915448",
+    "source_queries": [
+      "keyword:dishonesty: dishonesty",
+      "keyword:dishonesty: cheating"
+    ],
+    "matched_relevance_terms": [
+      "behavior",
+      "cheating",
+      "decision making",
+      "dishonesty",
+      "honesty",
+      "participant",
+      "social norm"
+    ]
+  },
+  {
+    "title": "Menggambar dan Mewarnai Wayang Kulit sebagai Strategi Edukasi Budaya Anak",
+    "authors": [
+      "Soni Sadono",
+      "D A W Sintowoko",
+      "Donny Trihanondo"
+    ],
+    "abstract": "This community service activity aims to introduce and strengthen children’s cultural education through drawing and coloring traditional shadow puppets (wayang kulit) as a creative and contextual learning medium. The activity was conducted in a mosque environment as an inclusive non-formal educational space that plays an important role in supporting children’s social, cultural, and character development within the community. The methods implemented included introducing the Pandawa characters, explaining the cultural values and moral messages contained in wayang kulit, guiding children in creating basic wayang illustrations, and facilitating coloring activities that encouraged creativity and individual expression. The participants consisted of children from Madrasah Diniyah, elementary school, and junior high school levels with different educational backgrounds and artistic abilities. The results showed an increase in children’s enthusiasm and awareness toward traditional arts and cultural heritage. Through the activity, children began to recognize character values such as honesty, courage, perseverance, responsibility, and togetherness represented by wayang characters. The activity also encouraged active participation, creativity, and an enjoyable learning experience. Therefore, drawing and coloring wayang kulit can be considered an effective strategy for implementing contextual, interactive, and sustainable cultural education for children.",
+    "keywords": [
+      "Cultural and Artistic Studies",
+      "Coastal Management and Development",
+      "Child Development and Education"
+    ],
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": 10,
+    "reasoning_research": "The article describes a community service activity with no experimental design, statistical analysis, or empirical data. It lacks methodological rigor and does not report any measurable outcomes beyond subjective enthusiasm.",
+    "impact_score": 10,
+    "reasoning_impact": "The topic is unrelated to decision neuroscience or self-control/attention research. The implications are purely educational and cultural, with no clear pathway to influence theories or methods in the field.",
+    "doi": "https://doi.org/10.62383/risoma.v4i4.1837",
+    "journal": "Jurnal Riset Sosial Humaniora dan Pendidikan",
+    "source_type": "journal",
+    "created_date": "2026-07-11T00:00:00",
+    "publication_date": "2026-07-10",
+    "openalex_id": "https://openalex.org/W7167928943",
+    "source_queries": [
+      "keyword:dishonesty: honesty"
+    ],
+    "matched_relevance_terms": [
+      "honesty",
+      "participant"
+    ]
+  },
+  {
+    "title": "Cognitive speed–accuracy dissociation in multiple myeloma: a cross‑sectional study",
+    "authors": [
+      "Sumayyah Patel",
+      "Christopher Parrish",
+      "Frances Seymour",
+      "Melanie Burke"
+    ],
+    "abstract": "Abstract Purpose This study examined whether adults with Multiple Myeloma (MM) show measurable cognitive differences compared with neurologically healthy controls. The primary research question focused on identifying domain-specific cognitive deficits and determining whether standard screening tools adequately capture cognitive abilities. Methods A cross-sectional design compared 45 adults with MM to 40 controls. Participants completed 40–50 min of cognitive and psychological assessments, including the Montreal Cognitive Assessment (MoCA), validated measures of mood and daily functioning, and a digitised cognitive battery assessing key cognitive domains. Group differences in reaction time (RTs) and accuracy were analysed using ANCOVAs adjusting for age and education. Bayesian analyses and EZ drift diffusion modelling (EZ-DDM) were used to characterise evidence strength, prevalence of domain-level inefficiencies, and latent decision-making processes. Results MoCA scores were lower in the MM group, although the group difference did not reach statistical significance. However, a higher proportion of MM participants met the criteria for possible cognitive impairment compared with controls. At the computerised task level, no significant group differences were observed in accuracy or mean RT. RT analyses showed significant effects of cognitive domain, age, and education, but no overall group effect or interaction. Despite this, threshold-based Bayesian analyses indicated that approximately 22% of MM participants exhibited multi-domain RT inefficiencies, with variability most evident in cognitive flexibility and semantic processing. Accuracy-based performance was largely preserved across both groups, with no participants exceeding impairment thresholds. EZ-DDM indicated that group differences were driven by reduced drift rates and prolonged non-decision times in MM, suggesting slower evidence accumulation with slower sensory encoding and/or motor execution. Conclusion Cognitive differences in MM appear subtle and primarily expressed in processing efficiency rather than accuracy. Conventional screening measures and standard group comparisons may not fully capture this variability, particularly at the individual level. These findings support the use of more sensitive analytic approaches to characterise heterogeneous cognitive profiles in MM. Longitudinal and neuroimaging studies may help clarify whether observed inefficiencies reflect underlying neural changes associated with disease and treatment, and how these relate to functional outcomes.",
+    "keywords": [
+      "Multiple Myeloma Research and Treatments",
+      "Cancer-related cognitive impairment studies",
+      "Dementia and Cognitive Impairment Research"
+    ],
+    "topic_tags": [
+      "clinical_neuro",
+      "attention"
+    ],
+    "method_tags": [
+      "ddm",
+      "bayesian_modeling"
+    ],
+    "research_score": 65,
+    "reasoning_research": "The study uses a moderate sample size with appropriate statistical methods including ANCOVA, Bayesian analyses, and EZ drift diffusion modeling. The cross-sectional design limits causal inference, but the methodological rigor is adequate.",
+    "impact_score": 50,
+    "reasoning_impact": "The findings highlight subtle processing speed deficits in multiple myeloma, suggesting the need for more sensitive analytic methods. However, the relevance to broader decision neuroscience topics like self-control or attention is indirect.",
+    "doi": "https://doi.org/10.1186/s12868-026-01024-3",
+    "journal": "BMC Neuroscience",
+    "source_type": "journal",
+    "created_date": "2026-07-11T00:00:00",
+    "publication_date": "2026-07-10",
+    "openalex_id": "https://openalex.org/W7167885614",
+    "source_queries": [
+      "keyword:decision_process: drift diffusion model"
+    ],
+    "matched_relevance_terms": [
+      "cognitive",
+      "drift diffusion",
+      "evidence accumulation",
+      "neural",
+      "participant"
+    ]
+  },
+  {
+    "title": "Neural Decision-Making and Affective Dynamics in Weight Regain after Metabolic and Bariatric Surgery: A Multimodal Longitudinal Computational Psychiatry Study",
+    "authors": [
+      "Zhihong Li",
+      "Qianqian Yang",
+      "Yalian Wang",
+      "Beibei Li",
+      "Yiliminuer Ahemai",
+      "Zimei Li",
+      "Shaohua Wang",
+      "Bujian Pan",
+      "et al."
+    ],
+    "abstract": "To determine whether weight regain after metabolic bariatric surgery reflects a systematic reorganization of neural decision signals elicited by food cues and longitudinal affective states, and to develop an interpretable, trackable, and stratifiable multimodal computational psychiatry framework. This study was based on a multi-timepoint longitudinal cohort of patients undergoing primary metabolic bariatric surgery, integrating a standardized food-choice task, 64-channel EEG, psychometric measures, and longitudinal affective-state data. Food stimuli were first standardized across five domains: subjective experience, health/naturalness attributes, reward-control attributes, nutritional composition, and visual features. EEG data underwent predefined quality-control procedures, after which N2, P3, centroparietal positivity, feedback-related negativity, feedback P3, and frontal theta indices were extracted. Food-choice behavior was decomposed using a hierarchical drift-diffusion model into drift rate, boundary separation, starting point, and non-decision time. A multimodal RT-by-frontal-theta interaction model was then fitted, and GIMME dynamic network modelling was used to characterize shared, subgroup-specific, and individual pathways within affect-reward-control states. Food stimuli were decomposed into 39 auditable variables, forming a continuous representational space spanning health, reward, control, nutritional, and visual-salience dimensions, with high reliability across domains. EEG quality control preserved clinically expected heterogeneity while excluding recordings at high risk of biasing ERP and time-frequency estimates. Behavioral and DDM results showed that the weight-regain group had longer mean reaction times than the maintained-weight-loss group (0.726 s vs. 0.651 s), together with lower drift rate (0.93 vs. 1.27), lower boundary separation (1.20 vs. 1.37), lower starting point (0.42 vs. 0.51), and longer non-decision time (0.31 s vs. 0.27 s). ERP findings indicated that weight-regain-related differences spanned early control/conflict monitoring, posterior stimulus evaluation, evidence accumulation, and feedback processing, with posterior P3/CPP and feedback-related components contributing the dominant late-stage separation. The multimodal interaction model showed an RT-by-frontal-theta interaction of approximately 0.92% points in the primary adjusted model (95% CI, 0.36–1.49), with a consistent direction across alternative model specifications. GIMME identified stable affect-reward-control dynamic pathways and separated three psychological dynamic subtypes: affect-reactive, reward-sensitized, and control-resilient. Weight regain after metabolic bariatric surgery is not merely an endpoint of body-weight change, but a dynamic risk process shaped jointly by food-cue evaluation, evidence-accumulation efficiency, frontal control modulation, and longitudinal affect-reward state transitions. This multimodal computational framework reframes postoperative weight regain as a mechanistically interpretable neurobehavioral phenotype, providing a translational basis for earlier risk stratification, individualized follow-up, and interventions targeting emotion, craving, and control.",
+    "keywords": [
+      "Bariatric Surgery and Outcomes",
+      "Obesity and Health Practices",
+      "Eating Disorders and Behaviors"
+    ],
+    "topic_tags": [
+      "self_control",
+      "attention",
+      "value_based_choice"
+    ],
+    "method_tags": [
+      "ddm",
+      "eeg",
+      "computational_modeling_general"
+    ],
+    "research_score": 88,
+    "reasoning_research": "The study integrates multimodal longitudinal data (EEG, psychometrics, affective states) with computational modeling (hierarchical DDM, GIMME) to investigate weight regain post-surgery, demonstrating strong methodological rigor and conceptual novelty. The careful stimulus standardization and EEG quality control enhance data reliability.",
+    "impact_score": 83,
+    "reasoning_impact": "The findings reframe weight regain as a neurobehavioral phenotype with clear implications for risk stratification and targeted interventions, advancing computational psychiatry in self-control and decision-making contexts. The integration of multiple data modalities and modeling approaches is likely to influence future research on postoperative outcomes.",
+    "doi": "https://doi.org/10.1007/s11695-026-08834-8",
+    "journal": "Obesity Surgery",
+    "source_type": "journal",
+    "created_date": "2026-07-10T00:00:00",
+    "publication_date": "2026-07-10",
+    "openalex_id": "https://openalex.org/W7167830789",
+    "source_queries": [
+      "keyword:decision_process: HDDM"
+    ],
+    "matched_relevance_terms": [
+      "behavior",
+      "choice",
+      "computational psychiatry",
+      "drift diffusion",
+      "evidence accumulation",
+      "neural",
+      "psychiatry",
+      "reward"
+    ]
+  },
+  {
+    "title": "The impact of temperature shocks on households’ saving behaviour in rural Ethiopia",
+    "authors": [
+      "Mohammed Beshir",
+      "Franklin Amuakwa‐Mensah",
+      "Hailu Elias"
+    ],
+    "abstract": "Abstract We examine the impact of temperature shocks on the saving behaviour of rural households in Ethiopia. Two rounds of survey data and time-series temperature data from Climate Engine/Terra Climate are used for this analysis. We find that the probability of household saving falls following an increase in temperature anomalies, measured by standardized deviations, and this impact is channelled through time and risk preferences. More specifically, temperature shocks increase risk-taking and impatience, both of which are linked to a reduced probability of saving. As a result, preserving long-term welfare requires the promotion of commitment-based saving instruments, including saving mechanisms with automatic deductions at harvest time. Our heterogeneity analysis demonstrates that, compared to their counterparts, poor households’ saving behaviour and those without credit access are more affected by temperature shocks. Therefore, policies aimed at mitigating the adverse effects of climate change on household financial outcomes, such as saving, should prioritize these groups.",
+    "keywords": [
+      "Agricultural risk and resilience",
+      "Climate change impacts on agriculture",
+      "Climate Change and Health Impacts"
+    ],
+    "topic_tags": [
+      "impulsivity",
+      "delay_discounting"
+    ],
+    "method_tags": [],
+    "research_score": 65,
+    "reasoning_research": "The study uses two rounds of survey data and high-resolution temperature data, providing a clear empirical strategy. However, the conceptual framework linking temperature shocks to time and risk preferences is not highly novel, and the analysis relies on standard econometric methods without computational modeling.",
+    "impact_score": 58,
+    "reasoning_impact": "The findings are relevant to understanding how environmental shocks affect saving behavior through changes in impatience and risk-taking, but the impact is limited to a specific rural context in Ethiopia. The implications for policy are clear, yet the broader relevance to self-control and attention in decision-making is indirect.",
+    "doi": "https://doi.org/10.1017/s1355770x26100618",
+    "journal": "Environment and Development Economics",
+    "source_type": "journal",
+    "created_date": "2026-07-10T00:00:00",
+    "publication_date": "2026-07-09",
+    "openalex_id": "https://openalex.org/W7167834695",
+    "source_queries": [
+      "keyword:consumer_decision: intertemporal choice"
+    ],
+    "matched_relevance_terms": [
+      "behaviour",
+      "preference",
+      "risk preference"
+    ]
+  },
+  {
+    "title": "Time-averaged drift approximations are inconsistent for inference in drift diffusion models",
+    "authors": [
+      "Sicheng Liu",
+      "Alexander Fengler",
+      "Michael J. Frank",
+      "Matthew Tom Harrison"
+    ],
+    "abstract": "Drift diffusion models (DDMs) have found widespread use in computational neuroscience, cognitive science, mathematical psychology as well as other fields. They model evidence accumulation in simple decision tasks as a stochastic process drifting towards decision barriers. In models where the drift is both time-varying within a trial and variable across trials, the high computational cost for accurate likelihood evaluation has often led to the use of a computationally convenient surrogate for parameter inference, the time-averaged drift approximation (TADA). In each trial, TADA assumes that the time-varying drift rate can be replaced by its temporal average throughout the trial. This approach enables fast parameter inference using analytical likelihood formulas for DDMs with constant drift. In this work, we show that such an estimator is inconsistent: it does not converge to the true drift, posing a risk of biasing scientific conclusions when parameter estimates are obtained by TADA and similar approximations. We provide an elementary proof of this inconsistency in what is perhaps the simplest possible setting: a Brownian motion with piecewise constant drift hitting a one-sided upper boundary. Furthermore, numerical examples based on an attentional DDM (aDDM) show that using TADA leads to systematic misestimation of attentional effects in decision making and can lead to false conclusions in scientific hypothesis testing.",
+    "keywords": [
+      "Neural dynamics and brain function",
+      "Diffusion and Search Dynamics",
+      "Functional Brain Connectivity Studies"
+    ],
+    "topic_tags": [
+      "attention",
+      "sequential_sampling"
+    ],
+    "method_tags": [
+      "ddm",
+      "ssm_eam",
+      "computational_modeling_general"
+    ],
+    "research_score": 88,
+    "reasoning_research": "The article provides an elementary proof of inconsistency for time-averaged drift approximations in DDMs, which is a novel theoretical contribution. Numerical examples with an attentional DDM demonstrate the practical risk of biased parameter estimates. The methodological approach is rigorous, combining analytical proof with computational simulations.",
+    "impact_score": 84,
+    "reasoning_impact": "The finding has direct relevance to researchers using DDMs, particularly in attentional decision-making, as it warns against a common shortcut in inference. The work could influence future modeling practices and hypothesis testing by promoting more accurate estimation methods. The implications for scientific conclusions are clearly articulated.",
+    "doi": "https://doi.org/10.1016/j.jmp.2026.103004",
+    "journal": "Journal of Mathematical Psychology",
+    "source_type": "journal",
+    "created_date": "2025-12-13T00:00:00",
+    "publication_date": "2026-07-07",
+    "openalex_id": "https://openalex.org/W4417295117",
+    "source_queries": [
+      "keyword:decision_process: HDDM"
+    ],
+    "matched_relevance_terms": [
+      "cognitive",
+      "drift diffusion",
+      "evidence accumulation",
+      "psychology"
+    ]
+  }
+]
