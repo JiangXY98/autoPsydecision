@@ -1,0 +1,135 @@
+[
+  {
+    "title": "Brain network dynamics during evidence accumulation in memory task: evidence from fNIRS and drift–diffusion model",
+    "authors": [
+      "Artem Badarin",
+      "Vladimir Antipov",
+      "Susanna Gordleeva",
+      "Vladimir Maksimenko"
+    ],
+    "abstract": "",
+    "keywords": [
+      "Optical Imaging and Spectroscopy Techniques",
+      "Neural and Behavioral Psychology Studies",
+      "Functional Brain Connectivity Studies"
+    ],
+    "topic_tags": [
+      "attention",
+      "sequential_sampling"
+    ],
+    "method_tags": [
+      "ddm",
+      "fnirs",
+      "computational_modeling_general"
+    ],
+    "research_score": 50,
+    "reasoning_research": "Only the title is provided; no abstract to assess methodology, sample, or data reliability. The title suggests a computational approach (DDM) with fNIRS, which is reasonable but insufficient for a rigorous evaluation.",
+    "impact_score": 60,
+    "reasoning_impact": "The topic of evidence accumulation in memory tasks is relevant to decision neuroscience, but without details, the potential impact on self-control or attention research is unclear. The combined use of fNIRS and DDM is promising but speculative.",
+    "doi": "https://doi.org/10.1140/epjs/s11734-026-02527-0",
+    "journal": "The European Physical Journal Special Topics",
+    "source_type": "journal",
+    "created_date": "2026-07-18T00:00:00",
+    "publication_date": "2026-07-17",
+    "openalex_id": "https://openalex.org/W7169539296",
+    "source_queries": [
+      "keyword:decision_process: drift diffusion model"
+    ],
+    "matched_relevance_terms": [
+      "brain",
+      "drift diffusion",
+      "evidence accumulation"
+    ]
+  },
+  {
+    "title": "Badminton Players’ Expert Advantage in Anticipation Based on Visual and Auditory Cues: Evidence from the Drift Diffusion Model",
+    "authors": [
+      "Senlin Lan",
+      "栩 石",
+      "Ya Gao",
+      "Guanchen Zhou",
+      "Zhihua Yang",
+      "Chuntian Wang",
+      "Ye Mao",
+      "X Wang",
+      "et al."
+    ],
+    "abstract": "Anticipation is central to perceptual–cognitive expertise in badminton, but the decision mechanisms through which experts use visual and auditory cues remain unclear. This study examined expert–novice differences in unimodal anticipation and latent decision processes estimated by a hierarchical drift diffusion model (HDDM). Sixty-six participants (33 experts and 33 novices) completed a landing-region anticipation task under visual-only and auditory-only conditions. Behavioral performance was analyzed using mixed analyses of variance (ANOVAs), and accuracy and reaction time were jointly modeled with HDDM parameters: boundary separation (a), drift rate (v), non-decision time (t), and starting-point bias (z). Experts showed higher overall accuracy than novices, F(1, 64) = 56.46, p &lt; 0.001, ηp2 = 0.469, whereas reaction time did not differ significantly by group. The auditory-only condition produced higher accuracy, F(1, 64) = 12.69, p = 0.001, ηp2 = 0.165, but longer reaction times, F(1, 64) = 150.32, p &lt; 0.001, ηp2 = 0.701. HDDM results showed higher drift rates in experts under both visual-only (BF10 = 1992.845) and auditory-only (BF10 = 24.354) conditions; auditory-only anticipation also involved higher boundary separation (BF10 = 53.095). These findings suggest that badminton expertise is associated with higher anticipatory accuracy and more efficient evidence accumulation under unimodal cue conditions, while auditory-only anticipation may also involve a more cautious decision threshold.",
+    "keywords": [
+      "Sport Psychology and Performance",
+      "Sports Analytics and Performance",
+      "Sports Performance and Training"
+    ],
+    "topic_tags": [
+      "attention",
+      "salience"
+    ],
+    "method_tags": [
+      "ddm",
+      "hddm",
+      "computational_modeling_general"
+    ],
+    "research_score": 75,
+    "reasoning_research": "The study uses a hierarchical drift diffusion model (HDDM) with a reasonable sample size (66 participants), providing strong methodological rigor. The design is clear, and Bayesian factor analyses support the findings, though no preregistration is mentioned. The focus on unimodal anticipation in a specific sports context limits generalizability.",
+    "impact_score": 70,
+    "reasoning_impact": "The findings offer insights into expert decision processes in sports, which may influence future research on perceptual-cognitive expertise and applications of HDDM. However, the direct relevance to broader self-control and attention theories is moderate, given the domain-specific focus.",
+    "doi": "https://doi.org/10.3390/bs16071203",
+    "journal": "Behavioral Sciences",
+    "source_type": "journal",
+    "created_date": "2026-07-17T00:00:00",
+    "publication_date": "2026-07-16",
+    "openalex_id": "https://openalex.org/W7168679606",
+    "source_queries": [
+      "keyword:decision_process: HDDM"
+    ],
+    "matched_relevance_terms": [
+      "behavior",
+      "cognitive",
+      "drift diffusion",
+      "evidence accumulation",
+      "hddm",
+      "participant"
+    ]
+  },
+  {
+    "title": "Theta and gamma transcranial alternating current stimulation (tACS) modulate Mandarin consonant and lexical tone perception",
+    "authors": [
+      "Yaxuan Wang",
+      "Keke Yu",
+      "Shuqi Yin",
+      "Baishen Liang",
+      "Ruiming Wang"
+    ],
+    "abstract": "Abstract A theta/gamma neural activity mechanism has been postulated to explain the auditory sampling of hierarchical syllable-phoneme structure with corresponding speech rates or linguistic hierarchies (theta for syllable and gamma for phoneme). Yet, whether such a mechanism is generalizable to Mandarin Chinese, a tonal language, where lexical tones are at syllable length but function as phonemic cues, is unclear. In this study, we applied transcranial alternating current stimulation (tACS) with theta or gamma currents over bilateral temporal areas in healthy Mandarin-speaking participants during a consonant or tone identification task in quiet or noisy environments. Results showed that theta tACS impaired both consonant and tone identification in quiet and prolonged reaction times across tasks and environments. Moreover, it reduced the psychometric slope for consonant identification in quiet, indicating decreased perceptual sensitivity and less distinct category boundaries. Gamma tACS, however, only delayed tone identification in quiet. Besides, both theta and gamma tACS modulated perceptual decision-making parameters in quiet, leading to increased boundary thresholds (cautiousness of decision) and altered response biases in the perceptual decision of both consonants and tones, as evidenced by the hierarchical drift-diffusion model (HDDM). These findings indicate that the perception of Mandarin consonants and lexical tones is causally supported by syllable-length theta activity, presumably reflecting syllable-level holistic representations, regardless of environment. Gamma activity, however, is presumably engaged in supporting fast-changing and fine-grained acoustic features in a modulatory manner. Theoretical explanations from historical linguistics and implications for clinical or educational applications are also provided.",
+    "keywords": [
+      "Neuroscience and Music Perception",
+      "Phonetics and Phonology Research",
+      "Neurobiology of Language and Bilingualism"
+    ],
+    "topic_tags": [
+      "sequential_sampling"
+    ],
+    "method_tags": [
+      "hddm"
+    ],
+    "research_score": 85,
+    "reasoning_research": "The study uses a causal neurostimulation technique (tACS) combined with a hierarchical drift-diffusion model to examine auditory perception in Mandarin, showing strong methodological rigor. The design includes multiple tasks and environments, and the findings are clearly linked to theoretical mechanisms.",
+    "impact_score": 70,
+    "reasoning_impact": "While relevant to speech perception and neural oscillation theories, the article's direct relevance to self-control and decision-making is limited. It may influence research on perceptual decision-making in tonal languages but is not broadly impactful across decision neuroscience.",
+    "doi": "https://doi.org/10.1162/nol.a.285",
+    "journal": "Neurobiology of Language",
+    "source_type": "journal",
+    "created_date": "2026-07-17T00:00:00",
+    "publication_date": "2026-07-15",
+    "openalex_id": "https://openalex.org/W7169140269",
+    "source_queries": [
+      "keyword:decision_process: HDDM"
+    ],
+    "matched_relevance_terms": [
+      "drift diffusion",
+      "hddm",
+      "neural",
+      "participant"
+    ]
+  }
+]
