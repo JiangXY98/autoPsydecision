@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Cognitive training increases sensitivity to internal uncertainty during decision-making",
+    "authors": [
+      "Caleb Stone",
+      "Jason B. Mattingley",
+      "Nathan J. Evans",
+      "Dragan Rangelov"
+    ],
+    "abstract": "Metacognitive awareness of decision quality is important for adaptive decision-making. One marker of decision quality is the strength of internal evidence accumulation. Increased sensitivity to evidence accumulation thus offers a potential mechanism by which decision-makers learn to become better judges of their choices. To test this hypothesis, we trained two groups of participants (N=34 per group) to reproduce the motion direction of one of two sequentially presented dot-motion stimuli over three sessions. Participants in the forced-choice group were instructed which stimulus to respond to, whereas those in the free-choice group chose which stimulus they responded to. This manipulation was designed to target the instrumental value of metacognitive awareness, as participants in the free-choice group could use metacognition to optimise their choices. Before and after training, participants completed a near-transfer 2AFC motion-discrimination task and provided metacognitive judgments while having their brain activity recorded using electroencephalography (EEG). These pre- and post-training sessions allowed us to assess how training altered the relationship between evidence accumulation and metacognitive awareness. Evidence accumulation was measured using the centroparietal positivity (CPP), derived from the EEG data, and the drift rate, obtained from drift-diffusion modelling. Participants in both groups performed better and exhibited improved metacognition following training. Importantly, training increased sensitivity to drift rate and the pre-decisional CPP in the free-choice group, and increased sensitivity to the post-decisional CPP in the forced-choice group. These results demonstrate that cognitive training can increase sensitivity to internal markers of decision quality, providing novel insights into the neurocognitive mechanisms underlying training-induced improvements in metacognition.",
+    "keywords": [
+      "Decision-Making and Behavioral Economics",
+      "Leadership, Behavior, and Decision-Making Studies",
+      "Innovation, Sustainability, Human-Machine Systems"
+    ],
+    "topic_tags": [
+      "attention",
+      "salience",
+      "sequential_sampling"
+    ],
+    "method_tags": [
+      "eeg",
+      "ddm"
+    ],
+    "research_score": 78,
+    "reasoning_research": "The study employs a clear experimental design with two groups, pre-post training, and uses both EEG and drift-diffusion modeling to investigate metacognition. Sample size is moderate (N=34 per group), and the results are coherently linked to the hypothesis. However, no preregistration or effect size reporting is mentioned.",
+    "impact_score": 72,
+    "reasoning_impact": "The findings demonstrate that cognitive training can enhance sensitivity to internal decision quality markers, which has implications for improving metacognitive abilities. This could influence future research on cognitive training interventions and the neural mechanisms of metacognition, though direct applications to self-control or attention are not explicitly stated.",
+    "doi": "https://doi.org/10.1152/jn.00545.2025",
+    "journal": "Journal of Neurophysiology",
+    "source_type": "journal",
+    "created_date": "2025-10-10T00:00:00",
+    "publication_date": "2026-07-22",
+    "openalex_id": "https://openalex.org/W4410529413",
+    "source_queries": [
+      "keyword:decision_process: HDDM"
+    ],
+    "matched_relevance_terms": [
+      "brain",
+      "choice",
+      "cognitive",
+      "drift diffusion",
+      "evidence accumulation",
+      "participant"
+    ]
+  }
+]
