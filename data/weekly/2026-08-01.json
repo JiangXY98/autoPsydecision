@@ -1,0 +1,89 @@
+[
+  {
+    "title": "From adoption to interaction: examining human-GenAI engagement patterns, ethical tensions, and educational trade-offs in nursing education",
+    "authors": [
+      "Meichun Yang",
+      "Jiahui Long",
+      "Yaolei He",
+      "Ruifeng Meng",
+      "Caixia Ling",
+      "Qijun Long",
+      "Jianjun Wen"
+    ],
+    "abstract": "Abstract While generative AI (GenAI) tools such as DeepSeek are increasingly embedded in higher education, existing research has predominantly focused on accuracy, bias, and adoption, with limited attention to the nature of human–GenAI interaction in learning. This study examines how nursing students interact with GenAI and how distinct interaction patterns shape cognitive, behavioral, and affective outcomes, as well as ethical risks in professional training contexts. A cross-sectional mixed-methods design was employed, integrating a rapid review, survey data ( n = 401), and qualitative interviews ( n = 30). Quantitative data were analyzed using descriptive statistics, correlations, and regression, while qualitative data underwent thematic analysis to identify recurring interaction patterns. Four dominant interaction patterns emerged: (1) passive consumption, characterized by uncritical acceptance of outputs; (2) efficiency-driven use, where GenAI functions as a productivity shortcut; (3) dependent interaction, reflecting overreliance and reduced self-directed learning; and (4) critical engagement, involving verification and reflective use. These patterns are associated with divergent outcomes. Efficiency-driven and dependent interactions were associated with greater perceived task efficiency and performance, but were also associated with lower critical thinking, reduced motivation, and increased academic dishonesty. In contrast, critical engagement supports deeper learning but demands higher AI literacy and effort. Ethical risks—including misinformation, fabricated references, and misalignment with clinical standards—are most pronounced under passive and dependent use. The findings suggest that educational outcomes are shaped not merely by GenAI adoption but by interaction quality. This study advances a shift toward interaction-centered frameworks, emphasizing the need for structured, critical, and ethically grounded GenAI engagement in higher education.",
+    "keywords": [
+      "Artificial Intelligence in Healthcare and Education",
+      "AI in Service Interactions",
+      "Ethics and Social Impacts of AI"
+    ],
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": "N/A",
+    "reasoning_research": "N/A",
+    "impact_score": "N/A",
+    "reasoning_impact": "N/A",
+    "doi": "https://doi.org/10.1186/s12912-026-05132-7",
+    "journal": "BMC Nursing",
+    "source_type": "journal",
+    "created_date": "2026-08-01T00:00:00",
+    "publication_date": "2026-07-31",
+    "openalex_id": "https://openalex.org/W7171939638",
+    "source_queries": [
+      "keyword:dishonesty: dishonesty"
+    ],
+    "matched_relevance_terms": [
+      "behavior",
+      "dishonesty",
+      "honesty"
+    ]
+  },
+  {
+    "title": "Shared and disorder-specific computational mechanisms of interference and response inhibition in schizophrenia and major depressive disorder",
+    "authors": [
+      "Tongyi Zhang",
+      "Sirui Wang",
+      "Haoyang Shi",
+      "Jia Li",
+      "Xiaolong Yang",
+      "Jin Jiao",
+      "Xiaoning Huo",
+      "Xin Zhao"
+    ],
+    "abstract": "Inhibitory control deficits are consistently observed in both schizophrenia (SCZ) and major depressive disorder (MDD), yet whether these impairments reflect shared tansdiagnostic mechanisms or disorder-specific dysfunction remains poorly understood. We recruited N = 259 participants ( n = 87 SCZ, n = 86 MDD, n = 86 healthy controls) who completed Stroop and Go/No-Go tasks assessing interference and response inhibition, respectively. Hierarchical drift-diffusion modeling (HDDM) was used to decompose behavioral performance into latent computational parameters. Both patient groups exhibited significant behavioral impairments across most measures, with SCZ showing greater severity. At the computational level, reduced drift rate—reflecting less efficient evidence accumulation—emerged as a core transdiagnostic deficit across both inhibitory subcomponents and both disorders, with more pronounced reductions in SCZ. By contrast, prolonged non-decision time was disorder-differentiating, being consistently elevated across both tasks in SCZ but, in MDD, confined to response inhibition and not robust to processing-speed adjustment. Within-group clinical correlates further diverged, relating to negative-symptom severity and illness duration in SCZ and to current depressive symptom severity in MDD, although these diagnosis-specific associations were not directly compared across disorders. Machine learning classification corroborated these findings, with drift rate serving as the primary shared contributor to patient–control discrimination (area under the receiver operating characteristic curve [AUC] = 0.762–0.846), and non-decision time on the interference task the top-ranked feature in the SCZ–MDD classifier (AUC = 0.718). Together, these findings delineate shared versus disorder-specific computational signatures of inhibitory control impairment in SCZ and MDD, and suggest that computational phenotyping of inhibitory control may serve as a quantitative adjunct in precision psychiatry. Preregistration: This study was preregistered with the Chinese Clinical Trial Registry prior to data collection (registration number: ChiCTR2500111117; https://www.chictr.org.cn/showproj.html?proj=290089 ).",
+    "keywords": [
+      "Functional Brain Connectivity Studies",
+      "Schizophrenia research and treatment",
+      "Mental Health Research Topics"
+    ],
+    "topic_tags": [
+      "inhibitory_control",
+      "attention",
+      "clinical_neuro"
+    ],
+    "method_tags": [
+      "hddm",
+      "computational_modeling_general"
+    ],
+    "research_score": 82,
+    "reasoning_research": "The study uses a large, preregistered sample (N=259) with clinical groups and healthy controls, employs hierarchical drift-diffusion modeling to decompose task performance, and includes machine-learning classification with reported AUCs. The design is rigorous, though the abstract does not provide detailed effect sizes, cross-validation procedures, or direct statistical comparisons of diagnosis-specific associations.",
+    "impact_score": 78,
+    "reasoning_impact": "The findings identify shared (drift rate) and disorder-specific (non-decision time) computational mechanisms in schizophrenia and major depressive disorder, which could inform computational phenotyping in precision psychiatry. The relevance to inhibitory control and attention is clear, but the abstract does not demonstrate broader or immediate impact beyond suggesting future research directions.",
+    "doi": "https://doi.org/10.1038/s41398-026-04345-3",
+    "journal": "Translational Psychiatry",
+    "source_type": "journal",
+    "created_date": "2026-08-01T00:00:00",
+    "publication_date": "2026-07-31",
+    "openalex_id": "https://openalex.org/W7172026664",
+    "source_queries": [
+      "keyword:decision_process: HDDM"
+    ],
+    "matched_relevance_terms": [
+      "behavior",
+      "drift diffusion",
+      "evidence accumulation",
+      "hddm",
+      "participant",
+      "psychiatry"
+    ]
+  }
+]
