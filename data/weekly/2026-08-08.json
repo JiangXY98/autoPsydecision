@@ -1,0 +1,250 @@
+[
+  {
+    "title": "AI Intimacy and Gendered Interactions: How Design Asymmetries, User Responses, and Moral Reasoning Shape Gender Stereotypes in AI Companions",
+    "authors": [
+      "Jinyuan Zhan",
+      "Renwen Zhang",
+      "Kokil Jaidka"
+    ],
+    "abstract": "As AI companions become increasingly embedded in intimate contexts, concerns about gendered design have intensified. Drawing on 1,272 YouTube videos and 21 related identifiable products, this study examines how gender stereotypes are reinforced and challenged in human-AI interactions. We introduce a multidimensional codebook capturing stereotypes in personal traits, physical appearance, professional capabilities, and relationship roles. Findings reveal a pronounced design asymmetry: female-presenting AI companions far more frequently encode gender stereotypes, often relying on physically attractive embodiment. Users predominantly reinforce these portrayals, while challenges tend to target conventional relationship roles rather than physical appearance. Notably, resistance to female stereotypes often invokes moral framing, including care/harm, fairness/cheating, authority/subversion, and sanctity/degradation, suggesting that gender stereotypes may be moralized rather than mere descriptive biases. We argue that gender stereotypes in AI companions are co-constructed through a design–response mechanism with implications for responsible AI design.",
+    "keywords": [
+      "Ethics and Social Impacts of AI",
+      "AI in Service Interactions",
+      "Social Robot Interaction and HRI"
+    ],
+    "topic_tags": [
+      "social_norms",
+      "moral_decision"
+    ],
+    "method_tags": [],
+    "research_score": 65,
+    "reasoning_research": "The study leverages a large dataset of 1,272 YouTube videos and 21 products, which provides substantial qualitative data. However, the methodology appears primarily descriptive and lacks experimental controls or inferential statistics, limiting its rigor. The introduced codebook is a strength, but reliability and validation details are not described.",
+    "impact_score": 75,
+    "reasoning_impact": "This work directly addresses pressing concerns about gender stereotypes in AI companions, a topic with growing societal relevance. The finding that stereotype resistance is often moralized could shape future research on moral reasoning in human-AI interaction and inform responsible AI design practices. Its interdisciplinary relevance spans human-computer interaction, ethics, and gender studies.",
+    "doi": "https://doi.org/10.1080/10447318.2026.2708441",
+    "journal": "International Journal of Human-Computer Interaction",
+    "source_type": "journal",
+    "created_date": "2026-08-08T00:00:00",
+    "publication_date": "2026-08-07",
+    "openalex_id": "https://openalex.org/W7201885856",
+    "source_queries": [
+      "keyword:dishonesty: cheating"
+    ],
+    "matched_relevance_terms": [
+      "cheating",
+      "relationship"
+    ]
+  },
+  {
+    "title": "Self-Concept and Its Influencing Factors Among Young Filipino Adults Living with a Colostomy: A Qualitatively Driven Embedded Mixed-Methods Study",
+    "authors": [
+      "Leird Dennis Robles",
+      "Wireen Leila Dator"
+    ],
+    "abstract": "Introduction: Ostomy surgery can alter body image, daily functioning, self-esteem, and self-perception, making adjustment important during young adulthood. However, evidence on self-concept among young Filipino adults with an ostomy remains limited. Objective: This study explored self-concept and its influencing factors among young Filipino adults living with a colostomy and developed a preliminary framework. Methods: A qualitatively driven embedded mixed-methods design was used. Six participants aged 18–39 years were purposively recruited. The quantitative component used an 18-item questionnaire adapted from Goñi et al. (2011) to assess self-fulfillment, autonomy, emotional self-concept, and ethical self-concept (honesty), while semi-structured interviews comprised the qualitative component. Quantitative data were summarized using weighted means, and interview data were analyzed using Braun and Clarke’s six-phase thematic analysis. Findings were integrated through a joint display. Results: Mean scores were good for self-fulfillment (M = 3.00), autonomy (M = 2.54), and emotional self-concept (M = 2.87), and very good for ethical self-concept (M = 3.50). Three themes emerged: (1) Confronting Changes in Body Perception and Daily Functioning; (2) Managing Internal and Social Burdens; and (3) Building Resilience Through Layered Support and Connections. Integration informed a preliminary framework linking self-concept with sociodemographic circumstances, physical challenges, internal and social burdens, and family, cultural, peer, and community support. Conclusion: Despite body-image, emotional, and functional challenges, participants reported favorable self-concept. Their narratives highlighted resilience, family relationships, cultural values, and peer networks as important resources during adjustment. These findings may inform culturally responsive, person-centered nursing support for young adults living with a colostomy.",
+    "keywords": [
+      "Stoma care and complications",
+      "Congenital gastrointestinal and neural anomalies",
+      "Childhood Cancer Survivors' Quality of Life"
+    ],
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": 60,
+    "reasoning_research": "The study uses a mixed-methods design but relies on a very small purposive sample (N=6), limiting generalizability. The quantitative component is a brief adapted questionnaire with descriptive statistics only, while the qualitative analysis follows a recognized thematic approach. No preregistration or robust statistical modeling is present, but the methodological integration via joint display is a strength.",
+    "impact_score": 50,
+    "reasoning_impact": "The findings are relevant to culturally responsive nursing care for young adults with colostomies, particularly in the Filipino context. However, the study does not directly address core self-control, attention, or decision-making processes, limiting its influence on computational or neurocognitive research. Its impact is likely confined to clinical nursing and qualitative health research.",
+    "doi": "https://doi.org/10.70848/cnj.v3i2.111",
+    "journal": "Celebes Nursing Journal.",
+    "source_type": "journal",
+    "created_date": "2026-08-08T00:00:00",
+    "publication_date": "2026-08-07",
+    "openalex_id": "https://openalex.org/W7201841968",
+    "source_queries": [
+      "keyword:dishonesty: honesty"
+    ],
+    "matched_relevance_terms": [
+      "honesty",
+      "participant",
+      "relationship"
+    ]
+  },
+  {
+    "title": "The Impact of Cognitive Biases on Investment and Financial Decision-making in Nigeria",
+    "authors": [
+      "Abiola A. Sofayo",
+      "Temitope A. Anisulowo",
+      "Boluwatife O. Anthony"
+    ],
+    "abstract": "Behavioural finance explains how cognitive biases can lead investors to make systematic errors when making investment decisions, potentially resulting in poor or harmful outcomes. Biases such as overconfidence and regret or loss aversion distort investors’ perceptions and judgement, influencing investment and financial decision-making and contributing to suboptimal financial planning and risk-taking behaviour. This study therefore determines the impact of cognitive biases on investment and financial decision-making among investors in Nigeria. A survey strategy was adopted. The study population comprised 400 individual investors selected in Nigeria to ensure diversity in economic development and cultural context. The Taro Yamane formula was used to calculate a sample size of 200. A structured questionnaire containing three sections, A, B, and C, was used for data collection. Two hundred copies of the questionnaire were administered online to participants via Google Forms using a purposive sampling technique; 161 were completed correctly and submitted for analysis. Descriptive statistics (frequency counts, percentages, means, and standard deviations) and inferential statistics, including linear regression analysis, were applied at the 0.05 level of significance. The results revealed that the two selected cognitive biases had a weak and statistically insignificant positive impact on investment and financial decision-making among selected active individual investors in Nigeria (F = 2.641, p = 0.106 &gt; 0.05). In addition, R = 0.128, R2 = 0.016, and adjusted R2 = 0.010 indicate that overconfidence bias and loss/regret aversion bias explained only 1.6% of the variation in investment and financial decision-making. The study was limited by its online survey design, its reliance on self-reported responses, and its focus on two cognitive biases. These constraints should be considered when interpreting the findings on investment and financial decision-making in Nigeria. The study examines the impact of overconfidence bias and loss/regret aversion bias on investment and financial decision-making among Nigerian investors in 2026. study concluded that cognitive biases exerted a weak and statistically insignificant positive impact on investment and financial decision-making among Nigerian investors. It recommended that financial advisers be trained to identify signs of cognitive bias in clients’ decision-making. Regulators, universities, and financial institutions should expand investor education initiatives to raise awareness of overconfidence bias and loss/regret aversion bias. Finally, policymakers should continue to monitor how emerging financial products, including cryptocurrencies and AI-driven investments, interact with cognitive biases.",
+    "keywords": [
+      "Decision-Making and Behavioral Economics",
+      "Financial Markets and Investment Strategies",
+      "Financial Literacy, Pension, Retirement Analysis"
+    ],
+    "topic_tags": [
+      "value_based_choice",
+      "belief_learning"
+    ],
+    "method_tags": [],
+    "research_score": 35,
+    "reasoning_research": "The study uses a self-report online survey with a modest sample (161 investors) and relies on simple linear regression, which limits methodological rigor. The insignificant result and very low explained variance (R²=0.016) suggest weak evidence, and no preregistration or advanced modeling is mentioned.",
+    "impact_score": 30,
+    "reasoning_impact": "The findings indicate a weak and insignificant effect of two cognitive biases on financial decision-making, offering limited theoretical or practical advancement. While the topic is relevant to behavioral finance, the inconclusive results and narrow scope provide little momentum for future research or policy.",
+    "doi": "https://doi.org/10.9734/ajeba/2026/v26i82345",
+    "journal": "Asian Journal of Economics Business and Accounting",
+    "source_type": "journal",
+    "created_date": "2026-08-08T00:00:00",
+    "publication_date": "2026-08-07",
+    "openalex_id": "https://openalex.org/W7201871156",
+    "source_queries": [
+      "keyword:consumer_decision: loss aversion"
+    ],
+    "matched_relevance_terms": [
+      "behaviour",
+      "decision",
+      "loss aversion",
+      "participant"
+    ]
+  },
+  {
+    "title": "Evolutionary Game Behavior of Stakeholders in Existing Building EMC Based on Prospect Theory and Policy Incentives",
+    "authors": [
+      "Lihong Li",
+      "Mingxuan Xing",
+      "Rui Zhu"
+    ],
+    "abstract": "Energy Management Contracting (EMC) is important for scaling energy-saving retrofits in existing buildings, yet policy incentives often fail when stakeholders perceive costs, benefits, and enforcement risks differently. This study aims to examine how subjective cognitive biases affect strategic interactions among governments, energy service companies (ESCOs), and energy-consuming units (ECUs) in China’s existing-building EMC market. Prospect theory is introduced into a tripartite evolutionary game model, and replicator dynamics with MATLAB R2024a simulations are used to analyze policy incentives, regulatory constraints, and behavioral parameters. The simulation results show that, among conventional policy parameters, moderate incentives and bilateral penalties are more effective than simply increasing subsidies or imposing unilateral punishment; when regulatory costs exceed a sustainable range, active supervision becomes unstable and cooperative implementation is weakened. Among prospect-theory parameters, higher loss aversion increases the perceived burden of fiscal and regulatory costs, while lower probability weighting reduces the perceived certainty of inspection and punishment. Reducing γ from 0.69 to 0.4 substantially weakens deterrence, and increasing λ from 1.5 to 2.25 intensifies strategic fluctuations. These findings provide a behavioral basis for designing staged EMC governance policies and offer practical implications for improving the stability and effectiveness of existing-building EMC implementation.",
+    "keywords": [
+      "Social Acceptance of Renewable Energy",
+      "Electric Power System Optimization",
+      "Noise Effects and Management"
+    ],
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": "N/A",
+    "reasoning_research": "N/A",
+    "impact_score": "N/A",
+    "reasoning_impact": "N/A",
+    "doi": "https://doi.org/10.3390/su18168058",
+    "journal": "Sustainability",
+    "source_type": "journal",
+    "created_date": "2026-08-08T00:00:00",
+    "publication_date": "2026-08-07",
+    "openalex_id": "https://openalex.org/W7201863676",
+    "source_queries": [
+      "keyword:consumer_decision: loss aversion"
+    ],
+    "matched_relevance_terms": [
+      "behavior",
+      "loss aversion"
+    ]
+  },
+  {
+    "title": "Risk appetite-enhanced game-theoretic approach for modelling mandatory lane-changing behaviour in freeway merging areas",
+    "authors": [
+      "Bingtong Wang",
+      "Shunchao Wang",
+      "Gaili He"
+    ],
+    "abstract": "Addressing adverse effects on traffic safety resulting from mandatory lane changes presents a significant challenge, necessitating the development of an empirically accurate method that incorporates drivers’ risk appetite into modelling merging behaviour. Game theory serves as a commonly utilized approach for analysing interactive lane-changing behaviour and accurately predicting various vehicle actions. This study introduces a game-theoretical decision-making model tailored for mandatory lane changes at freeway merging areas. The proposed model adopts a non-cooperative decision-making approach involving two players: the driver of the mainline vehicle and the on-ramp vehicle. The payoff function, encompassing both efficiency-based and safety-based payoffs, is asymmetrically designed to evaluate safety loss and efficiency gain, adhering to the principles of prospect theory. Specifically, an S-shaped value function is formulated to assess the payoffs, and a first-best weighting function considering loss aversion is established within the framework of probability perception. A bilevel optimization approach is employed to estimate the model parameters. The upper level entails a nonlinear programming problem aimed at minimizing the squared difference between observed and predicted strategies, while the lower-level programming seeks the Nash equilibrium solution. Vehicle trajectory data is utilized for model calibration and validation purposes. Validation on the US-101 and I-80 datasets shows that the proposed model achieves detection rates of 92.14% and 92.34%, respectively. The corresponding validation errors are also reported using MAE and RMSE, rather than treating MAE as classification accuracy. Comparative results against representative game-theoretic mandatory lane-changing models further indicate that incorporating prospect-theory-based loss aversion improves both behavioural interpretability and predictive performance.",
+    "keywords": [
+      "Traffic control and management",
+      "Traffic and Road Safety",
+      "Autonomous Vehicle Technology and Safety"
+    ],
+    "topic_tags": [],
+    "method_tags": [
+      "computational_modeling_general"
+    ],
+    "research_score": 78,
+    "reasoning_research": "The study presents a novel integration of prospect theory into a game-theoretic model of mandatory lane-changing, with asymmetric payoff functions and a bilevel optimization for parameter estimation. Validation on two real-world datasets (US-101 and I-80) with high detection rates and proper error metrics (MAE, RMSE) demonstrates methodological rigor. The comparative analysis against existing models further supports the robustness of the proposed approach.",
+    "impact_score": 35,
+    "reasoning_impact": "The article primarily contributes to traffic engineering and driver behavior modeling, with minimal direct relevance to self-control, attention, or value-based decision-making as typically studied in decision neuroscience. While it incorporates risk preference and loss aversion, its implications for theoretical models of decision-making are limited. It may influence future research on game-theoretic models in transportation, but not the target field of self-control and attention.",
+    "doi": "https://doi.org/10.1371/journal.pone.0355386",
+    "journal": "PLoS ONE",
+    "source_type": "journal",
+    "created_date": "2026-08-08T00:00:00",
+    "publication_date": "2026-08-07",
+    "openalex_id": "https://openalex.org/W7201846990",
+    "source_queries": [
+      "keyword:consumer_decision: loss aversion"
+    ],
+    "matched_relevance_terms": [
+      "behaviour",
+      "decision",
+      "loss aversion"
+    ]
+  },
+  {
+    "title": "Preparing Preservice Teachers for AI-Supported Classrooms: Perceptions and Competencies, and Psychometric Characteristics of the Survey Instrument",
+    "authors": [
+      "Aslihan Unal",
+      "John Hobe"
+    ],
+    "abstract": "Preparing future educators for technology-enhanced learning environments has become increasingly important as artificial intelligence (AI) continues to influence teaching and learning. Guided by the Intelligent Technological Pedagogical Content Knowledge (i-TPACK) framework, this mixed-methods study examined preservice teachers’ perceptions of AI and the competencies they considered necessary for effective AI integration. Participants included 108 preservice teachers enrolled in a teacher preparation program at a public university in the southeastern United States. Data were collected using a survey containing Likert-scale and open-ended questions. Quantitative data were analyzed using descriptive statistics, exploratory factor analysis, and independent-samples t-tests, while qualitative responses were analyzed using thematic coding. The exploratory factor analysis identified a four-factor empirical structure that partially corresponded with the original theoretical domains, with varying levels of internal consistency. Preservice teachers generally viewed AI favorably and recognized its potential to support teaching and learning. Participants with internship experience reported significantly higher scores for perceived changes brought by AI and reasons for using AI than those without internship experience. Qualitative findings identified five competencies considered important for responsible AI integration: AI literacy, prompt engineering, critical evaluation, ethical AI use, and pedagogical balance. Participants also expressed concerns about academic dishonesty, misinformation, overreliance on AI, reduced critical thinking, and loss of human interaction. The findings highlight the importance of preparing preservice teachers to integrate AI in pedagogically meaningful and ethically responsible ways.",
+    "keywords": [
+      "Online Learning and Analytics",
+      "Teaching and Learning Programming",
+      "Educational Strategies and Epistemologies"
+    ],
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": 45,
+    "reasoning_research": "The study employs a mixed-methods design with a modest sample (N=108) and uses standard psychometric methods (EFA, t-tests, thematic coding). However, the theoretical contribution is limited and the instrument's psychometric properties are only partially confirmed, with varying internal consistency.",
+    "impact_score": 20,
+    "reasoning_impact": "The article addresses AI integration in teacher education, which is outside the core domains of self-control, attention, and decision-making. Its relevance to decision neuroscience or computational psychology is indirect at best, and it is unlikely to influence theory or research directions in these fields.",
+    "doi": "https://doi.org/10.3390/educsci16081252",
+    "journal": "Education Sciences",
+    "source_type": "journal",
+    "created_date": "2026-08-07T00:00:00",
+    "publication_date": "2026-08-06",
+    "openalex_id": "https://openalex.org/W7197041798",
+    "source_queries": [
+      "keyword:dishonesty: dishonesty",
+      "keyword:dishonesty: cheating"
+    ],
+    "matched_relevance_terms": [
+      "dishonesty",
+      "honesty",
+      "participant"
+    ]
+  },
+  {
+    "title": "A Cluster-Based Comparative Analysis of Economic Conditions and Consumer Spending Patterns in Cameroon and Nigeria",
+    "authors": [
+      "Gilbert Ntoh Abe",
+      "Mbayong Napoleon Arrey",
+      "Kezeta Samuel Bili Tchatat",
+      "Ndabobi Titahong Ezekiel",
+      "Ojong Obelle"
+    ],
+    "abstract": "This study examines the relationship between economic conditions and consumer spending patterns in Cameroon and Nigeria, two of sub-Saharan Africa's largest economies. Using a quantitative, cross-national survey design, the research surveyed 750 respondents (370 from Cameroon, 380 from Nigeria) across major urban centres to assess their economic perceptions and spending behaviours. The study employed Kolmogorov-Smirnov normality testing, K-means clustering, one-way ANOVA, and CHAID decision tree analysis to identify distinct consumer segments and key factors influencing spending behaviour. Three consumer clusters emerged: \"Cautious Spenders\" (32.7%), \"Inflation-Conscious Consumers\" (37.1%), and \"Optimistic High Spenders\" (30.2%), each characterised by unique economic perceptions and spending patterns. Job security perception emerged as the primary factor differentiating consumers between the two countries (F(2,747) = 929.725, p &lt; .001, η² = .713), with Nigerians showing more polarised perceptions compared to Cameroonians. Despite an overall economic optimism across both countries, reflected in high mean scores for economic outlook (M = 4.79, SD = 0.71) and economic stability perception (M = 4.64, SD = 0.85), the study revealed nuanced differences in how economic factors influence spending, particularly on essential goods. The findings suggest that while there are similarities in consumer behavior between Cameroon and Nigeria, significant differences exist that transcend national boundaries. These insights challenge the notion of homogeneous national markets and highlight the need for segmented approaches in marketing and economic policy. The study contributes to the growing body of research on consumer behavior in developing economies and provides valuable insights for businesses and policymakers operating in these dynamic African markets. It underscores the importance of considering economic perceptions in understanding consumer spending patterns in sub-Saharan Africa. Businesses operating in these markets should prioritise consumer cluster profiles over country-level generalisations, directing value-and-security messaging at Cautious Spenders and inflation-hedging positioning at Inflation-Conscious Consumers.",
+    "keywords": [
+      "Economic Growth and Development",
+      "COVID-19 Pandemic Impacts",
+      "Financial Literacy, Pension, Retirement Analysis"
+    ],
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": 55,
+    "reasoning_research": "The study uses a cross-national survey with a reasonable sample size and applies appropriate statistical techniques (K-means clustering, ANOVA, CHAID) to identify consumer segments. However, the design is purely observational and exploratory, with no preregistration or causal inference, and the reliance on self-reported perceptions may introduce bias.",
+    "impact_score": 30,
+    "reasoning_impact": "While the findings may be useful for marketing and policy in Cameroon and Nigeria, the article has limited relevance to the core topics of self-control, attention, and decision-making in neuroscience or computational psychology. It does not advance theory or methods in these fields, and its implications are primarily applied and regional.",
+    "doi": "https://doi.org/10.62154/ajmbr.2026.023.01022",
+    "journal": "African Journal of Management and Business Research",
+    "source_type": "journal",
+    "created_date": "2026-08-07T00:00:00",
+    "publication_date": "2026-08-06",
+    "openalex_id": "https://openalex.org/W7196926901",
+    "source_queries": [
+      "keyword:consumer_decision: intertemporal choice"
+    ],
+    "matched_relevance_terms": [
+      "behavior",
+      "behaviour",
+      "consumer",
+      "consumer behavior",
+      "decision"
+    ]
+  }
+]
