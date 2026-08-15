@@ -1,0 +1,147 @@
+[
+  {
+    "title": "Generative AI and Academic Integrity: A Sociological Perspective",
+    "authors": [
+      "Teena -",
+      "Megha Sharma",
+      "Seema Boliya -"
+    ],
+    "abstract": "Generative artificial intelligence (AI) has entered higher education quickly, and it has brought back old sociological questions about how academic misconduct gets defined, spread, and controlled. This paper does not treat AI-assisted writing as just a quicker way to plagiarise. Instead, it argues that generative AI shakes the very norms that academic integrity has always relied on. Using classical sociological theories of deviance — strain theory, neutralization theory, social learning theory, and institutional theory — along with recent research on AI in higher education, the paper looks at how AI blurs the line between help and authorship, how “cheating” is a socially built category applied unevenly, how detection tools carry linguistic and economic bias, and why institutional policies often look better than they work. The paper concludes that academic integrity is not something technology can simply threaten or destroy. It is something built continuously through institutional design, peer relationships, and resources that are not shared equally among students. Keywords: generative artificial intelligence, academic integrity, sociology of deviance, higher education, academic dishonesty",
+    "keywords": [
+      "Academic integrity and plagiarism",
+      "Artificial Intelligence in Healthcare and Education",
+      "Ethics and Social Impacts of AI"
+    ],
+    "topic_tags": [
+      "social_norms",
+      "deception_dishonesty"
+    ],
+    "method_tags": [],
+    "research_score": 45,
+    "reasoning_research": "The paper offers a conceptual synthesis of sociological theories (strain, neutralization, social learning, institutional theory) to examine generative AI's impact on academic integrity. However, it lacks empirical data, experimental design, or formal modeling, making methodological rigor low. The novelty is moderate but limited to theoretical perspective.",
+    "impact_score": 30,
+    "reasoning_impact": "The article addresses academic integrity and AI, which is tangentially related to self-control and attention in decision-making but not directly relevant to the core focus of decision neuroscience or computational psychology. It may influence sociological discourse on deviance but is unlikely to shape research directions in the specified fields.",
+    "doi": "https://doi.org/10.36948/ijfmr.2026.v08i04.85690",
+    "journal": "International Journal For Multidisciplinary Research",
+    "source_type": "journal",
+    "created_date": "2026-08-15T00:00:00",
+    "publication_date": "2026-08-14",
+    "openalex_id": "https://openalex.org/W7203455193",
+    "source_queries": [
+      "keyword:dishonesty: dishonesty",
+      "keyword:dishonesty: cheating"
+    ],
+    "matched_relevance_terms": [
+      "cheating",
+      "dishonesty",
+      "honesty",
+      "relationship"
+    ]
+  },
+  {
+    "title": "TheRelationshipBetween Business Ethics and Distribution Channels in Efforts to Increase Sales Volume at CV Aneka Jaya",
+    "authors": [
+      "Ammar Abdillah s"
+    ],
+    "abstract": "This study aims to examine the implementation of business ethics and the effectiveness of distribution channels in influencing sales volume at CV Aneka Jaya Malang. The study was motivated by a decline in sales volume from 90% in 2023 to 80% in 2024 and 70% in 2025, despite the company’s consistent application of ethical business practices and its established relationships with business partners. This study employed a descriptive qualitative approach using a single case study design. Data were collected through structured interviews, direct non-participant observation, and documentation involving the company’s President Director, Operations Manager, and representatives of three partner stores. Data validity was ensured through source triangulation, technique triangulation, and member checking. The findings indicate that business ethics, particularly honesty, transparency, fair pricing, product responsibility, effective complaint handling, and integrity in partnership relationships, contribute significantly to maintaining partner trust, customer loyalty, and purchase intentions. However, ethical practices alone were insufficient to sustain sales volume when distribution operations encountered technical constraints. The study found that aging delivery vehicles, traffic congestion, extreme weather, and delivery delays frequently caused product shortages at partner stores, resulting in missed sales opportunities. Meanwhile, the company’s centralized distribution system, inventory control, FIFO stock rotation, minimum stock thresholds, and the use of Transportation Management System (TMS) and GPS technologies supported product availability and distribution efficiency. The study concludes that business ethics and distribution channels play complementary roles in sustaining sales performance. Business ethics create trust and purchase intentions, while reliable distribution converts these intentions into actual transactions. Therefore, improving fleet reliability and digital inventory management is essential for restoring and strengthening sales volume sustainability.",
+    "keywords": [
+      "Supply Chain Resilience and Risk Management",
+      "Management and Optimization Techniques",
+      "Leadership, Behavior, and Decision-Making Studies"
+    ],
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": 35,
+    "reasoning_research": "The study is a qualitative single case study using interviews and observations, with no quantitative analysis or preregistration. The sample is very small (one company, two executives, three partner representatives), and the findings are descriptive rather than hypothesis-driven. The conceptual novelty is limited, as it applies well-known business ethics concepts to a specific small business context.",
+    "impact_score": 10,
+    "reasoning_impact": "The article does not address self-control, attention, or decision-making mechanisms central to the target field. It is narrowly focused on a single company's sales operations and has no theoretical or methodological relevance to computational psychology or neuroscience. Future research directions in the field would be unlikely to draw on this work.",
+    "doi": "https://doi.org/10.64530/ijbams.v2i2.66",
+    "journal": "IJBAMS International Journal of Business Accounting Management Social Science",
+    "source_type": "journal",
+    "created_date": "2026-08-15T00:00:00",
+    "publication_date": "2026-08-15",
+    "openalex_id": "https://openalex.org/W7203442557",
+    "source_queries": [
+      "keyword:dishonesty: honesty"
+    ],
+    "matched_relevance_terms": [
+      "honesty",
+      "participant",
+      "relationship"
+    ]
+  },
+  {
+    "title": "Complementary and opponent value signals in the human brain support choosing the best and avoiding the worst",
+    "authors": [
+      "Clarissa Baratin",
+      "Alizée Lopez‐Persem",
+      "Philippe Kahane",
+      "Lorella Minotti",
+      "Jiří Hammer",
+      "Petr Marusič",
+      "Anca Nica",
+      "Sylvain Rheims",
+      "et al."
+    ],
+    "abstract": "Whether the brain encodes the subjective value of pleasant and unpleasant situations via a single integrated circuit or through distinct pathways remains unresolved. How such signals guide choice across contexts also remains unclear. To address these questions, we recorded intracerebral activity from participants who rated pleasant and unpleasant scenarios and then made binary choices across domains and frames. Ventromedial prefrontal cortex (vmPFC) broadband gamma activity (BGA, 50–150 Hz) tracked the value of pleasant items during rating and choice, correlating positively with the most pleasant item irrespective of choice frame. Similarly, anterior insula (aIns) BGA tracked the value of unpleasant items during rating and choice, correlating negatively with the most unpleasant item irrespective of choice frame. Relative value signals in the vmPFC and aIns diverged most strongly when item domain and choice frame conflicted. These findings reveal complementary neural systems for pleasant and unpleasant valuation and their role in value-based choices. Intracranial recordings reveal complementary and opponent value signals in ventromedial prefrontal cortex and anterior insula that encode pleasant and unpleasant value and guide human choice.",
+    "keywords": [
+      "Neural and Behavioral Psychology Studies",
+      "Neuroscience and Music Perception",
+      "Aesthetic Perception and Analysis"
+    ],
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": "N/A",
+    "reasoning_research": "N/A",
+    "impact_score": "N/A",
+    "reasoning_impact": "N/A",
+    "doi": "https://doi.org/10.1038/s41467-026-76593-2",
+    "journal": "Nature Communications",
+    "source_type": "journal",
+    "created_date": "2026-08-15T00:00:00",
+    "publication_date": "2026-08-14",
+    "openalex_id": "https://openalex.org/W7203474249",
+    "source_queries": [
+      "keyword:consumer_decision: intertemporal choice",
+      "keyword:consumer_decision: loss aversion"
+    ],
+    "matched_relevance_terms": [
+      "choice",
+      "human",
+      "participant",
+      "value based choice"
+    ]
+  },
+  {
+    "title": "Advertising Investment as a Supplement to Utility Theory: Explaining Chinese Luxury Consumers’ Behaviour 2025",
+    "authors": [
+      "Ziqi Zhao"
+    ],
+    "abstract": "For a long time, China's luxury goods market has been dominated by neoclassical utility theory, but this theory cannot grasp the core symbolic value and social value of market behaviour. This study fills this research gap by constructing an extended utility model with advertising investment as the core endogenous variable and combining the preliminary survey data of Chinese luxury consumers in 2025. The model adds linear social utility terms to the logarithmic Cobb-Douglas utility function ( γ Ax ) to quantify the impact of advertising on payment willingness and budget allocation. The research results show that the traditional utility theory cannot explain China's luxury consumption, because advertising reshapes the utility function through the \"Mianzi\" social utility. Advertising shapes utility through multiple paths - including social dimensions, experience dimensions and financial dimensions - and presents significant income heterogeneity: the absolute increase in luxury spending of high-income consumers is greater, while the proportion of social utility of low-income consumers is higher. In all groups, advertising reduces price sensitivity and increases willingness to pay by embedding symbolic values. This research provides a quantifiable supplement to the traditional utility theory and lays the methodological foundation for modelling culture-specific consumer behaviour.",
+    "keywords": [
+      "Consumer Behavior in Brand Consumption and Identification",
+      "Consumer Market Behavior and Pricing",
+      "Financial Literacy, Pension, Retirement Analysis"
+    ],
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": "N/A",
+    "reasoning_research": "N/A",
+    "impact_score": "N/A",
+    "reasoning_impact": "N/A",
+    "doi": "https://doi.org/10.61173/2nf3vz87",
+    "journal": "Finance & Economics",
+    "source_type": "journal",
+    "created_date": "2026-08-14T00:00:00",
+    "publication_date": "2026-08-13",
+    "openalex_id": "https://openalex.org/W7202351706",
+    "source_queries": [
+      "keyword:consumer_decision: intertemporal choice"
+    ],
+    "matched_relevance_terms": [
+      "behaviour",
+      "consumer",
+      "consumer behaviour"
+    ]
+  }
+]
