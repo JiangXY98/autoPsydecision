@@ -1,0 +1,117 @@
+[
+  {
+    "title": "Pruned Exact Linear Time Method for Multiple Change‐Point Detection in Aberrant Responses",
+    "authors": [
+      "Yujie Lu",
+      "Yinhong He"
+    ],
+    "abstract": "Abstract In educational measurement, examinees' response patterns often undergo abrupt transitions due to factors such as cheating, random guessing, or test fatigue. These transition points are defined as change points. Accurate identification of aberrant responses is crucial for ensuring test reliability and validity. However, most existing research on aberrant response detection focuses solely on single change‐point scenarios. Such methods may be inadequate when examinees exhibit multiple behavioral transitions during a test. This study developed a multiple change‐point detection method for response behavior based on the Pruned Exact Linear Time (PELT) algorithm. To address the limitations of fixed penalty criteria in balancing detection power and Type I error control, this study employed an adaptive penalty calibration method based on the false‐positive rate. Simulation results showed that the proposed method controlled the Type I error rate at approximately 5% while achieving overall, single‐change‐point, and multiple‐change‐point detection rates of 75%, 78%, and 70%, respectively. Empirical analysis of the PISA 2015 financial literacy data revealed that approximately 21% of test‐takers exhibited detectable response pattern shifts, with 29% of these test‐takers exhibiting multiple change points, demonstrating the method's applicability in real‐world low‐stakes testing contexts.",
+    "keywords": [
+      "Psychometric Methodologies and Testing",
+      "Student Assessment and Feedback",
+      "Reliability and Agreement in Measurement"
+    ],
+    "topic_tags": [],
+    "method_tags": [],
+    "research_score": "N/A",
+    "reasoning_research": "N/A",
+    "impact_score": "N/A",
+    "reasoning_impact": "N/A",
+    "doi": "https://doi.org/10.1111/jedm.70060",
+    "journal": "Journal of Educational Measurement",
+    "source_type": "journal",
+    "created_date": "2026-08-29T00:00:00",
+    "publication_date": "2026-08-28",
+    "openalex_id": "https://openalex.org/W7204582359",
+    "source_queries": [
+      "keyword:dishonesty: cheating"
+    ],
+    "matched_relevance_terms": [
+      "behavior",
+      "cheating"
+    ]
+  },
+  {
+    "title": "Do patient individuals care less about status? Experimental evidence",
+    "authors": [
+      "Alpaslan Akay",
+      "Nur Banu Kartal"
+    ],
+    "abstract": "Using survey experiments, we examine how patience, or the ability to delay gratification, relates to positional concerns. We argue that impatience may intensify concerns about relative income and consumption, whereas patient individuals may be less status-oriented because they pursue long-term goals and invest to improve their future position. In computerised stated-preference experiments, we elicited respondents’ degree of positionality regarding monthly after-tax income, job prestige, a luxury house, and a luxury car from 392 respondents. We relate these measures to subjective patience and socio-demographic and economic individual characteristics. Patience is negatively associated with positional concerns, particularly for income and job prestige. To mitigate endogeneity concerns, we include broad proxies ranging from personality traits and locus of control to risk preferences, envy, subjective well-being, and religiosity. The findings suggest that patient individuals are less motivated by status, with important implications for behavioural economics, welfare analysis, and public policies addressing consumption and inequality.",
+    "keywords": [
+      "Psychological Well-being and Life Satisfaction",
+      "Social Power and Status Dynamics",
+      "Experimental Behavioral Economics Studies"
+    ],
+    "topic_tags": [
+      "self_control",
+      "impulsivity",
+      "value_based_choice"
+    ],
+    "method_tags": [],
+    "research_score": 72,
+    "reasoning_research": "The study uses stated-preference survey experiments with a clear sample size of 392 respondents, and includes various controls to mitigate endogeneity concerns, which strengthens internal validity. However, reliance on subjective patience and lack of preregistration or behavioral validation of positional concerns limits methodological rigor.",
+    "impact_score": 68,
+    "reasoning_impact": "The findings linking patience to reduced status concerns have clear implications for behavioral economics and public policy, particularly regarding consumption and inequality. The research may influence future work on individual differences in time preferences and social comparison, though its direct relevance to neurocognitive mechanisms is indirect.",
+    "doi": "https://doi.org/10.1080/15140326.2026.2704275",
+    "journal": "Journal of Applied Economics",
+    "source_type": "journal",
+    "created_date": "2026-08-28T00:00:00",
+    "publication_date": "2026-08-27",
+    "openalex_id": "https://openalex.org/W7204463055",
+    "source_queries": [
+      "keyword:consumer_decision: intertemporal choice"
+    ],
+    "matched_relevance_terms": [
+      "behaviour",
+      "preference",
+      "risk preference"
+    ]
+  },
+  {
+    "title": "Effort and substance use: differentiating tobacco use through reinforcement learning of effort based decision making",
+    "authors": [
+      "Kasey P. Spry",
+      "Jazmyne James",
+      "Alison Oliveto",
+      "Michael J. Mancino",
+      "Kenneth T. Kishida",
+      "Merideth A. Addicott"
+    ],
+    "abstract": "BACKGROUND: Effort-based decision making evaluates rewards relative to the effort required to obtain it, an important process of healthy goal-directed motivation and behavior. Computational models provide mechanistic insights underlying choice behavior and potential alterations in neuropsychiatric disorders, including substance use disorders. We applied computational models to effort-based choice behavior to characterize underlying decision processes and if these mechanisms differ by substance use status. METHODS: Participants completed the Effort Expenditure for Rewards Task, choosing between low- and high-effort options for monetary rewards varying in magnitude and probability. Participants met criteria for no tobacco use (n = 23), current tobacco use disorder (n = 26), former tobacco use disorder (n = 22), and tobacco and opioid use disorder (n = 29). Computational models from two families, Subjective Value and Reinforcement Learning, were fit and compared. Parameters from the best-fitting model underwent principal components analysis and linear discriminant analysis. RESULTS: Temporal difference reinforcement learning model demonstrated greater model evidence and predictive accuracy, indicating better fit to effort-based choice behavior. Principal components analysis revealed meaningful multivariate distinctions: PC1 differentiated all groups except individuals without tobacco use versus individuals with tobacco use disorder; PC3 distinguished tobacco and opioid use disorder from all other groups. Linear discriminant analysis demonstrated group separation with 76% classification accuracy. CONCLUSIONS: A reinforcement learning framework better explained participants' effort-based choice behavior. Substance use status relates to dynamic behavioral changes (i.e. learning) as measured by the multivariate combination of learning rate, future discounting, and choice temperature.",
+    "keywords": [
+      "Neural and Behavioral Psychology Studies",
+      "Decision-Making and Behavioral Economics",
+      "Behavioral Health and Interventions"
+    ],
+    "topic_tags": [
+      "effort_decision",
+      "reinforcement_learning",
+      "self_control"
+    ],
+    "method_tags": [
+      "rl_modeling",
+      "computational_modeling_general"
+    ],
+    "research_score": 72,
+    "reasoning_research": "The study uses a computational modeling approach with two model families and robust model comparison metrics, and includes multiple substance use groups with reasonable sample sizes. However, the abstract does not mention preregistration or details on data reliability beyond classification accuracy, and the sample sizes are modest.",
+    "impact_score": 76,
+    "reasoning_impact": "The finding that reinforcement learning better explains effort-based choice and that substance use status affects learning parameters has clear implications for understanding motivation and addiction. It may influence future computational psychiatry research on substance use disorders, particularly regarding dynamic learning processes.",
+    "doi": "https://doi.org/10.1007/s10827-026-00953-6",
+    "journal": "Journal of Computational Neuroscience",
+    "source_type": "journal",
+    "created_date": "2026-03-18T00:00:00",
+    "publication_date": "2026-08-28",
+    "openalex_id": "https://openalex.org/W7137873797",
+    "source_queries": [
+      "keyword:decision_process: computational psychiatry"
+    ],
+    "matched_relevance_terms": [
+      "behavior",
+      "choice",
+      "participant",
+      "reinforcement learning",
+      "reward"
+    ]
+  }
+]
